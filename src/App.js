@@ -1,28 +1,45 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  Route,
+  Link,
+  // Switch,
+  Redirect
+} from 'react-router-dom';
+// import { BrowerRouter as Router , Route , Link } from 'react-router-dom'
+import './css/App.css';
+import TopNav from "./components/TopNav";
+import ListBlock from "./components/ListBlock.js"
+import BottomView from "./components/BottomView"
+import icon from './css/icon.png';
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      tab : 0 
+    }
+  }
+  tabChange = (key) => {
+      this.setState((state,props)=>{
+        return {tab : key}
+      })
+      // console.log('tabChange' + key)
+    } 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <div>
+          <div className="topNav">
+          <header>
+            <h2><img src={icon} alt="logo"/>線上便民服務系統</h2>
+          </header>
+          <div className="topNav"><TopNav activeTab={this.state.tab} tabChangeHandler={(key) => this.tabChange(key)}/></div>
+          </div>
+          <BottomView tab={this.state.tab}/>
+
+        
+
       </div>
     );
   }
 }
-
 export default App;
