@@ -27,12 +27,12 @@ class App extends Component {
     } 
   render() {
     return (
-        <div>
-          <div className="topNav">
+        <div className="marginWrap">
+          <div className="marginWrap">
           <header>
             <h2><img src={icon} alt="logo"/>線上便民服務系統</h2>
           </header>
-          <div className="topNav"><TopNav activeTab={this.state.tab} tabChangeHandler={(key) => this.tabChange(key)}/></div>
+          <div className="marginWrap"><TopNav activeTab={this.state.tab} tabChangeHandler={(key) => this.tabChange(key)}/></div>
           </div>
           <BottomView tab={this.state.tab}/>
 

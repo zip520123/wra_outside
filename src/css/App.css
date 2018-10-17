@@ -17,6 +17,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 } */
+.marginWrap {
+  margin : 10px;
+}
 .topNav {
   margin: 10px;
 }

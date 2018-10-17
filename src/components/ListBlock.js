@@ -13,10 +13,10 @@ class Atag extends Component {
   }
 }
 const ALink = ({name}) => (
-  <div><Link to={`/form/${name}`}>{name}</Link></div>
+  <div><Link to={`/form/${name}`}><h4>{name}</h4></Link></div>
 )
 const ABlank = ({url , name}) => ( <div>
-  <a href={url} target="_blank" rel="noopener noreferrer">{name}</a>
+  <a href={url} target="_blank" rel="noopener noreferrer"><h4>{name}</h4></a>
 </div>)
 class ListBlock extends Component {
   
