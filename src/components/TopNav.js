@@ -22,9 +22,9 @@ class TopNav extends Component {
         <NavItem componentClass={Link} href="/form" to="/form" eventKey={0} >
             <h4>一般表單</h4>
         </NavItem>
-        <NavItem componentClass={Link} href="/reservation" to="/reservation" eventKey={1} >
+        {/* <NavItem componentClass={Link} href="/reservation" to="/reservation" eventKey={1} >
             <h4>線上預約</h4>
-        </NavItem>
+        </NavItem> */}
         <NavItem componentClass={Link} href="/retrieve" to="/retrieve" eventKey={2} >
             <h4>申辦進度查詢</h4>
         </NavItem>

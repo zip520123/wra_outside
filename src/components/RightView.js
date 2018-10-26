@@ -25,11 +25,6 @@ class RightView extends Component {
         return (
             <div>
                 {this.renderSwitch(id)}
-                {/* {(id === "建造執照申請") ? (
-                <h3>是</h3>
-            ):(
-                <h3>{this.props.match.params.id}</h3>
-            )} */}
             </div>
         )
     }
@@ -37,7 +32,6 @@ class RightView extends Component {
     renderSwitch = (key) => {
         switch (key) {
             case '建造執照申請':
-
                 return (
                     <React.Fragment>
                     <PageHeader>
@@ -115,7 +109,7 @@ class RightView extends Component {
               <Row>
                   <Col xs={6} md={6}>
                   {/* <PanelView title="肆、作業內容： " body="流程圖說明：如後附件。" /> */}
-                  <Panel bsStyle="primary">
+                    <Panel bsStyle="primary">
                         <Panel.Heading>
                         <Panel.Title componentClass="h3">肆、作業內容：</Panel.Title>
                         </Panel.Heading>
@@ -171,14 +165,27 @@ class RightView extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={12} md={6}>
+                        {/* <Col xs={12} md={6}>
                             <PanelView title="肆、作業內容： " body="流程說明：如後附件。" />
-                        </Col>
+                        </Col> */}
                         <Col xs={12} md={6}>
-                        {/* <PanelView title="檔案下載" body={<DownloadButton clickHandler={()=>{
-                                console.log("clickHandler")
-                            }} />} /> */}
-                            
+                            <Panel bsStyle="primary">
+                                <Panel.Heading>
+                                <Panel.Title componentClass="h3">肆、作業內容：</Panel.Title>
+                                </Panel.Heading>
+                                <Panel.Body>流程圖說明：如後附件。
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1861/建造執照-變更設計-設計建築師簽證負責項目表.pdf" name="建造執照（變更設計）設計建築師簽證負責項目表.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1860/建築師簽證案件自主檢查表.pdf" name="建築師簽證案件自主檢查表.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1859/建築物結構與設備專業技師簽證報告.pdf" name="建築物結構與設備專業技師簽證報告.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1858/結構抽查項目表.pdf" name="結構抽查項目表.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1857/拆除同意書.pdf" name="拆除同意書.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1856/違章建物自行拆除切結書.pdf" name="違章建物自行拆除切結書.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1855/加強山坡地建築管理與技術規範檢核表.pdf" name="加強山坡地建築管理與技術規範檢核表.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1854/公寓大廈規約草約.pdf" name="公寓大廈規約草約.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1853/建造執照作業流程圖.pdf" name="建造執照作業流程圖.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1852/山坡地雜或雜併建照申請案加強查核表.pdf" name="山坡地雜或雜併建照申請案加強查核表.pdf" />
+                                </Panel.Body>
+                            </Panel>
                         </Col>
                     </Row>
                 </>
