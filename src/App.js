@@ -13,6 +13,14 @@ import BottomView from "./components/BottomView"
 import RightView from "./components/RightView"
 import ListBlock , { ArchBlock ,EnvBlock ,DirtyWater,WaterSource , WaterKeepBlock , FileBlock} from "./components/ListBlock"
 import icon from './css/logo.png';
+import archMengerImage from './css/archMenger.png'
+import drtyWater from './css/drtyWater.png'
+import envEdu from './css/envEdu.png'
+import exampleForm from './css/exampleForm.png'
+import fileUse from './css/fileUse.png'
+import followup from './css/followup.png'
+import waterFeedbake from './css/waterFeedbake.png'
+import waterkeep from './css/waterkeep.png'
 import { PanelGroup ,Panel , Row , Col} from 'react-bootstrap';
 
 class App extends Component {
@@ -78,30 +86,30 @@ class PanelWraper extends Component {
 const Home = () =>(<>
   <Row >
   <Col xs={3}>
-    <Link to={`/form/archMenger`}><img className="imgButton" src={'/resource/archMenger.png'} alt=""/></Link>
+    <Link to={`/form/archMenger`}><img className="imgButton" src={archMengerImage} alt=""/></Link>
   </Col>
   <Col xs={3}>
-    <Link to={`/form/drtyWater`}><img className="imgButton" src={'/resource/drtyWater.png'} alt=""/></Link>
+    <Link to={`/form/drtyWater`}><img className="imgButton" src={drtyWater} alt=""/></Link>
   </Col>
   <Col xs={3}>
-    <Link to={`/form/envEdu`}><img className="imgButton" src={'/resource/envEdu.png'} alt=""/></Link>
+    <Link to={`/form/envEdu`}><img className="imgButton" src={envEdu} alt=""/></Link>
   </Col>
   <Col xs={3}>
-    <Link to={`/form/fileUse`}><img className="imgButton" src={'/resource/fileUse.png'} alt=""/></Link>
+    <Link to={`/form/fileUse`}><img className="imgButton" src={fileUse} alt=""/></Link>
   </Col>
 </Row>
 <Row>
   <Col xs={3}>
-  <Link to={`/form/waterFeedbake`}><img className="imgButton" src={'/resource/waterFeedbake.png'} alt=""/></Link>
+  <Link to={`/form/waterFeedbake`}><img className="imgButton" src={waterFeedbake} alt=""/></Link>
   </Col>
   <Col xs={3}>
-  <Link to={`/form/waterkeep`}><img className="imgButton" src={'/resource/waterkeep.png'} alt=""/></Link>
+  <Link to={`/form/waterkeep`}><img className="imgButton" src={waterkeep} alt=""/></Link>
   </Col>
   <Col xs={3}>
-  <Link to={`/form/followup`}><img className="imgButton" src={'/resource/followup.png'} alt=""/></Link>
+  <Link to={`/form/followup`}><img className="imgButton" src={followup} alt=""/></Link>
   </Col>
   <Col xs={3}>
-  <Link to={`/form/exampleForm`}><img className="imgButton" src={'/resource/exampleForm.png'} alt=""/></Link>
+  <Link to={`/form/exampleForm`}><img className="imgButton" src={exampleForm} alt=""/></Link>
   </Col>
 </Row></>
 )
