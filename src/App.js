@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import {
   Route,
   Link,
-  // Switch,
+  Switch,
   Redirect
 } from 'react-router-dom';
 // import { BrowerRouter as Router , Route , Link } from 'react-router-dom'
 import './css/App.css';
 import TopNav from "./components/TopNav";
-// import ListBlock from "./components/ListBlock.js"
 import BottomView from "./components/BottomView"
 import RightView from "./components/RightView"
-import ListBlock , { ArchBlock ,EnvBlock ,DirtyWater,WaterSource , WaterKeepBlock , FileBlock} from "./components/ListBlock"
+import FilePageView from "./components/FilePageView"
+import HomePage from "./components/HomePage"
+import { ArchBlock ,EnvBlock ,DirtyWater,WaterSource , WaterKeepBlock , FileBlock} from "./components/ListBlock"
 import icon from './css/logo.png';
 import archMengerImage from './css/archMenger.png'
 import drtyWater from './css/drtyWater.png'
@@ -37,22 +38,27 @@ class App extends Component {
     } 
   render() {
     return (<>
-        <header>
+        {/* <header>
             <Link to={`/`}><h1 id="topH1"><img id="headerImage" src={icon} alt="logo"/>臺北水源特定區管理局申辦e櫃台</h1></Link>
-        </header>
-        <div style={{width : '90%', margin:'auto'}}>
-          <div className="marginWrap">
-            {/* <TopNav activeTab={this.state.tab} tabChangeHandler={(key) => this.tabChange(key)}/> */}
-            <Route exact path="/" component={Home} />
+        </header> */}
+        <div style={{width : '100%' , height : '100%', margin:'auto'}}>
+          {/* <div className="marginWrap"> */}
+
+            <Route exact path="/" component={HomePage} />
+            {/* <Route exact path="/" component={Home} /> */}
+            <Route path="/fileUse" component={FilePageView}></Route>
             <Route path="/form/:id" component={PanelWraper}></Route>
-            <Route path="/form/*/:id" component={RightView}></Route>
-          
-          </div>
+            <Route path="/form/:class/:id" component={RightView}></Route>
+            
+          {/* </div> */}
       </div>
       </>
     );
   }
 }
+const NoMatch = ({match}) => (
+  <p>NoMatch </p>
+)
 class PanelWraper extends Component {
   render () {
     const id = this.props.match.params.id
@@ -95,7 +101,7 @@ const Home = () =>(<>
     <Link to={`/form/envEdu`}><img className="imgButton" src={envEdu} alt=""/></Link>
   </Col>
   <Col xs={3}>
-    <Link to={`/form/fileUse`}><img className="imgButton" src={fileUse} alt=""/></Link>
+    <Link to={`/fileUse`}><img className="imgButton" src={fileUse} alt=""/></Link>
   </Col>
 </Row>
 <Row>
