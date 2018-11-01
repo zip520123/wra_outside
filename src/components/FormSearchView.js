@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { BannerView } from './HomePage.js'
 import GoBackView from './GoBackView'
-var style = {width : '30%' ,
-        height : '100%' ,
+var style = {width : '32%' ,
+        height : '99%' ,
         float: 'left',
         backgroundColor:'#2c4e4c' , 
         color:'white',
@@ -19,7 +19,7 @@ var style = {width : '30%' ,
         justifyContent: 'center',
         alignItems: 'center'
         }
-class FilePageView extends Component {
+class FormSearchView extends Component {
     clickHandler = (e) => {
         this.props.history.goBack()
     }
@@ -27,13 +27,13 @@ class FilePageView extends Component {
         var centerTextStyle = {
             transform: 'translateY(1000%)'
         }
-        return <>
-            <div style={style}>
-                <h1 style={centerTextStyle}>檔卷應用申請</h1>
+        return (<>
+        <div style={style}>
+                <h1 style={centerTextStyle}>申辦進度查詢</h1>
             </div>
-            <BannerView style={{...style}}></BannerView>
+            <BannerView />
             <GoBackView clickHandler={this.clickHandler}></GoBackView>
-        </>
+        </>)
     }
 }
-export default FilePageView
+export default FormSearchView

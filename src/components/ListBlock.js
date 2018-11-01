@@ -20,7 +20,10 @@ ALink.defaultProps = {
     url : ""
   }
 };
-const ABlank = ({url , name}) => ( <div>
+export const AWhite = ({url , name}) => (
+  <a style={{color: 'white'}} href={url} target="_blank" rel="noopener noreferrer">{name}</a>
+) 
+export const ABlank = ({url , name}) => ( <div>
   <a href={url} target="_blank" rel="noopener noreferrer"><h4>{name}</h4></a>
 </div>)
 export const ArchBlock = ({match}) => (<><Panel.Heading>

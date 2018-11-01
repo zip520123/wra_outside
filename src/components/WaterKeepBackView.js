@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { BannerView } from './HomePage.js'
 import GoBackView from './GoBackView'
 var style = {width : '30%' ,
@@ -19,7 +19,7 @@ var style = {width : '30%' ,
         justifyContent: 'center',
         alignItems: 'center'
         }
-class FilePageView extends Component {
+class WaterKeepBackView extends Component {
     clickHandler = (e) => {
         this.props.history.goBack()
     }
@@ -27,13 +27,13 @@ class FilePageView extends Component {
         var centerTextStyle = {
             transform: 'translateY(1000%)'
         }
-        return <>
+        return (<>
             <div style={style}>
-                <h1 style={centerTextStyle}>檔卷應用申請</h1>
+                <h1 style={centerTextStyle}><a style={{color: 'white'}} href="http://child.wratb.gov.tw/ct_welfare/WRAllowance" target="_blank" rel="noopener noreferrer">水源保育與回饋</a></h1>
             </div>
-            <BannerView style={{...style}}></BannerView>
+            <BannerView style={{...style}} />
             <GoBackView clickHandler={this.clickHandler}></GoBackView>
-        </>
+        </>)
     }
 }
-export default FilePageView
+export default WaterKeepBackView

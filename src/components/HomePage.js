@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import banner from './resource/banner.png'
 import { Row , Col } from 'react-bootstrap';
-import archButton from './resource/archButton.png'
-var style = {width : '30%' ,
-        height : '100%' ,
+import archButton from './resource/mainPageButton/archButton.png'
+import drtyWaterButton from './resource/mainPageButton/drtyWaterButton.png'
+import envEduButton from './resource/mainPageButton/envEduButton.png'
+import exampleFormButton from './resource/mainPageButton/exampleFormButton.png'
+import fileUseButton from './resource/mainPageButton/fileUseButton.png'
+import formSearchButton from './resource/mainPageButton/formSearchButton.png'
+import waterKeepBackButton from './resource/mainPageButton/waterKeepBack.png'
+import waterKeepButton from './resource/mainPageButton/waterKeepButton.png'
+var Bannerstyle = {width : '32%' ,
+        height : '99%' ,
         float: 'left',
         backgroundColor:'#2c4e4c' , 
         color:'white',
@@ -20,76 +27,78 @@ var style = {width : '30%' ,
         justifyContent: 'center',
         alignItems: 'center'
         }
-const BannerView = () => (
-    <Link to={`/`}><div style={{...style , content:`url(${banner})`, padding: '0px'}} ></div>
+export const BannerView = () => (
+    <Link to={`/`}><div style={{...Bannerstyle , content:`url(${banner})`, padding: '0px'}} ></div>
             </Link>
 )
 class HomePage extends Component {
     render() {
-        var style = {width : '30%' ,
-        height : '100%' ,
-        float: 'left',
-        backgroundColor:'#2c4e4c' , 
-        color:'white',
-        borderStyle: 'solid',
-        borderWidth: '5px',
-        borderColor: '#d1c0a6',
-        padding : '20px',
-        // margin: '10px 0px 0px 20px',
-
-        textAlign: 'center',
-        justifyContent: 'center',
-        alignItems: 'center'
-        }
         var centerTextStyle = {
             transform: 'translateY(1000%)'
         }
         var cellStyle = {
             width: '100%',
-            height : '23%',
+            height : '24%',
             backgroundColor:'#2c4e4c',
             color:'white',
             borderStyle: 'solid',
             borderWidth: '5px',
             borderColor: '#d1c0a6',
             padding : '20px',
-            // marginTop: '20px',
-            margin : '10px 10px'
+            marginTop: '10px',
+            marginLeft: '10px',
+            marginRight: '0px',
+            marginBottom: '10px',
         }
         var imageStyle = {
             display : 'block',
-            margin : '10% auto'}
+            margin : '0% auto'}
+        var leftWidthStyle = {width : '33%',float: 'left',height: '100%'}
         return (<>
-            <div style={{width : '30%',float: 'left',height: '100%'}}>
+            <div style={leftWidthStyle}>
+                <Link to={`/arch`}>
                 <div style={{...cellStyle }}>
                     <img style={imageStyle} src={archButton} alt=""/>
                 </div>
+                </Link>
+                <Link to={`/envEdu`}>
                 <div style={{...cellStyle }}>
-                    <img style={imageStyle} src={archButton} alt=""/>
+                    <img style={imageStyle} src={envEduButton} alt=""/>
                 </div>
-                <div style={{...cellStyle }}>
-                    <img style={imageStyle} src={archButton} alt=""/>
-                </div>
-                <div style={{...cellStyle }}>
-                    <img style={imageStyle} src={archButton} alt=""/>
-                </div>
-
+                </Link>
+                <Link to={`/waterKeepView`}>
+                    <div style={{...cellStyle }}>
+                        <img style={imageStyle} src={waterKeepButton} alt=""/>
+                    </div>
+                </Link>
+                <Link to={`/dirtyWaterView`}>
+                    <div style={{...cellStyle }}>
+                        <img style={imageStyle} src={drtyWaterButton} alt=""/>
+                    </div>
+                </Link>
             </div>
-            <BannerView style={{...style}} />
-            <div style={{width : '30%',float: 'left',height: '100%'}}>
+            <BannerView  />
+            <div style={leftWidthStyle}>
+                <Link to={`/waterKeepBack`}>
+                    <div style={{...cellStyle }}>
+                        <img style={imageStyle} src={waterKeepBackButton} alt=""/>
+                    </div>
+                </Link>
+                <Link to={`/fileUse`}>
+                    <div style={{...cellStyle }}>
+                        <img style={imageStyle} src={fileUseButton} alt=""/>
+                    </div>
+                </Link>
+                <Link to={`/exampleForm`}>
+                    <div style={{...cellStyle }}>
+                        <img style={imageStyle} src={exampleFormButton} alt=""/>
+                    </div>
+                </Link>
+                <Link to={`/formSearch`}>
                 <div style={{...cellStyle }}>
-                    <img style={imageStyle} src={archButton} alt=""/>
+                    <img style={imageStyle} src={formSearchButton} alt=""/>
                 </div>
-                <div style={{...cellStyle }}>
-                    <img style={imageStyle} src={archButton} alt=""/>
-                </div>
-                <div style={{...cellStyle }}>
-                    <img style={imageStyle} src={archButton} alt=""/>
-                </div>
-                <div style={{...cellStyle }}>
-                    <img style={imageStyle} src={archButton} alt=""/>
-                </div>
-                
+                </Link>
             </div>
         </>)
     }

@@ -22,8 +22,14 @@ import fileUse from './css/fileUse.png'
 import followup from './css/followup.png'
 import waterFeedbake from './css/waterFeedbake.png'
 import waterkeep from './css/waterkeep.png'
+import WaterKeepView from './components/WaterKeepView'
+import DirtyWaterView from './components/DirtyWaterView'
+import WaterKeepBackView from './components/WaterKeepBackView'
+import EnvEduView from './components/EnvEduView'
 import { PanelGroup ,Panel , Row , Col} from 'react-bootstrap';
-
+import ArchView from './components/ArchView'
+import ExampleForm from './components/ExampleForm'
+import FormSearchView from './components/FormSearchView'
 class App extends Component {
   constructor(props){
     super(props)
@@ -47,6 +53,13 @@ class App extends Component {
             <Route exact path="/" component={HomePage} />
             {/* <Route exact path="/" component={Home} /> */}
             <Route path="/fileUse" component={FilePageView}></Route>
+            <Route path="/waterKeepView" component={WaterKeepView}></Route>
+            <Route path="/dirtyWaterView" component={DirtyWaterView}></Route>
+            <Route path="/waterKeepBack" component={WaterKeepBackView}></Route>
+            <Route path="/arch" component={ArchView}></Route>
+            <Route path="/envEdu" component={EnvEduView}></Route>
+            <Route path="/exampleForm" component={ExampleForm}></Route>
+            <Route path="/formSearch" component={FormSearchView}></Route>
             <Route path="/form/:id" component={PanelWraper}></Route>
             <Route path="/form/:class/:id" component={RightView}></Route>
             
