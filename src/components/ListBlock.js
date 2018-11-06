@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './ListBlock.css';
 import {PanelGroup,Panel} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 class Atag extends Component {
@@ -20,6 +19,13 @@ ALink.defaultProps = {
     url : ""
   }
 };
+export const DivLink = ({name , match , cellStyle , centerTextStyle}) => (
+    <Link to={`${match.url}/${name}`}>
+        <div style={cellStyle}>
+            <h1 style={centerTextStyle}>{name}</h1>
+        </div> 
+    </Link>
+)
 export const AWhite = ({url , name}) => (
   <a style={{color: 'white'}} href={url} target="_blank" rel="noopener noreferrer">{name}</a>
 ) 

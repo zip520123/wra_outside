@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {PageHeader, Panel , Row , Col , Button} from 'react-bootstrap'
 
-const DownloadLink = ({url , name}) => (
+export const DownloadLink = ({url , name}) => (
     <div><a href={url} target="_blank" rel="noopener noreferrer" download><h4>{name}</h4></a></div>
   )
-const PanelView = ({title , body , button}) => (
+export const PanelView = ({title , body , button}) => (
                     <Panel bsStyle="primary">
                         <Panel.Heading>
                         <Panel.Title componentClass="h3">{title}</Panel.Title>
@@ -18,7 +18,6 @@ const PanelView = ({title , body , button}) => (
                         </Panel.Body>
                     </Panel>
 )
-const DownloadButton = ({clickHandler})=>(<Button bsStyle="primary" onClick={clickHandler}>表單下載</Button>)
 class RightView extends Component {
     render() {
         const id = this.props.match.params.id

@@ -1,68 +1,944 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import { BannerView } from './HomePage.js'
 import GoBackView from './GoBackView'
-var style = {width : '30%' ,
-        height : '100%' ,
-        float: 'left',
-        backgroundColor:'#2c4e4c' , 
+import { DivLink ,ABlank} from './ListBlock'
+import {PageHeader, Panel , Row , Col } from 'react-bootstrap'
+import {PanelView , DownloadLink} from './RightView'
+class ArchView extends Component {
+    clickHandler = (e) => {
+        this.props.history.goBack()
+    }
+    render() {
+        return (<>
+            <Route path={`${this.props.match.path}/:topicId`} component={this.topicIdLayer} />
+            <Route
+                exact
+                path={this.props.match.path}
+                render={this.defaultLayer}
+            />
+            {/* <Route path={`${this.props.match.path}/:topicId`} component={()=>(<BannerView />)} />
+            <Route
+                exact
+                path={this.props.match.path}
+                render={()=>(<BannerView />)}
+            /> */}
+        </>)
+    }
+    div33widthStyle = {width : '33%',float: 'left',height: '100%'}
+    centerTextStyle = {
+        position: 'relative',
+        transform: 'translateY(-50%)',
+        top: '50%',
+        margin: '0px',
+        textAlign: 'center'
+    }
+    cellStyle = {
+        width: '100%',
+        height : '24%',
+        backgroundColor:'#2c4e4c',
         color:'white',
         borderStyle: 'solid',
         borderWidth: '5px',
         borderColor: '#d1c0a6',
         padding : '20px',
         marginTop: '10px',
-        marginLeft: '20px',
+        marginLeft: '10px',
         marginRight: '0px',
-        marginBottom: '20px',
-        textAlign: 'center',
-        justifyContent: 'center',
-        alignItems: 'center'
-        }
-        var cellStyle = {
-            width: '100%',
-            height : '23%',
-            backgroundColor:'#2c4e4c',
-            color:'white',
-            borderStyle: 'solid',
-            borderWidth: '5px',
-            borderColor: '#d1c0a6',
-            padding : '20px',
-            marginTop: '10px',
-            marginLeft: '10px',
-            marginRight: '0px',
-            marginBottom: '10px',
-        }
-class ArchView extends Component {
-    clickHandler = (e) => {
-        this.props.history.goBack()
+        marginBottom: '10px',
     }
-    render() {
-        var centerTextStyle = {
-            position: 'relative',
-            transform: 'translateY(-50%)',
-            top: '50%',
-            margin: '0px',
-            textAlign: 'center'
-        }
-        return (<>
-            <div style={{width : '30%',float: 'left',height: '100%'}}>
-                <div style={cellStyle}>
-                    <h1 style={centerTextStyle}>建築管理-建築管理</h1>
-                </div>
-                <div style={cellStyle}>
-                    <h1 style={centerTextStyle}>建築管理-施工管理</h1>
-                </div>
-                <div style={cellStyle}>
-                    <h1 style={centerTextStyle}>建築管理-使用管理</h1>
-                </div>
-                <div style={cellStyle}>
-                    <h1 style={centerTextStyle}>建築管理-其他項</h1>
-                </div>
-            </div>
-            <BannerView style={{...style}} />
-            <GoBackView clickHandler={this.clickHandler}></GoBackView>
-        </>)
+    defaultLayer = () => {
+        return <><div style={this.div33widthStyle}>
+        <DivLink name="建築管理-建築管理" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+        <DivLink name="建築管理-施工管理" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+        <DivLink name="建築管理-使用管理" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+        <DivLink name="建築管理-其他項" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+        </div>
+        <BannerView />
+        <GoBackView clickHandler={this.clickHandler}></GoBackView>
+    </>
     }
+    topicIdLayer = ({match})=>{
+        const id = match.params.topicId
+        var cellStyle = {...this.cellStyle , height : '15.5%'} 
+        switch (id) {
+            case '建築管理-建築管理':
+            cellStyle = {...this.cellStyle , height : '15.5%'} 
+            return (
+                <><div style={this.div33widthStyle}>
+                    <DivLink name="建造執照申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="拆除執照申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="招牌廣告及樹立廣告許可申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="現有巷道認定申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="建築線申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="無障礙生活環境宣導專頁" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                </div>
+                <BannerView />
+                <GoBackView clickHandler={this.clickHandler}></GoBackView>
+                </>
+              );
+            
+            case '建築管理-施工管理':
+            cellStyle = {...this.cellStyle , height : '19%'} 
+            return (
+                <><div style={this.div33widthStyle}>
+                    <DivLink name="施工勘驗（放樣申報）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="施工勘驗（開工申報）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="施工勘驗（各層施工勘驗）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="變更起、承、監造人申請 " match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="開工、竣工展期申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                </div>
+                <BannerView />
+                <GoBackView clickHandler={this.clickHandler}></GoBackView>
+                </>
+              );
+            case '建築管理-使用管理':
+            cellStyle = {...this.cellStyle , height : '7.2%'} 
+            return (
+                <><div style={this.div33widthStyle}>
+                    <DivLink name="室內裝修許可（竣工查驗）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="室內裝修許可（書面審查）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="變更使用執照申請（竣工查驗）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="變更使用執照申請（書面審查） " match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="建築物使用項目更動報備" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="建築物分（併）戶申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="機械遊樂設施檢查申報" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="建築物公共安全檢查申報" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="使用執照遺失、補發" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="使用執照存根申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="使用執照申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="使用執照更正" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                </div>
+                <BannerView />
+                <GoBackView clickHandler={this.clickHandler}></GoBackView>
+                </>
+              );
+            case '建築管理-其他項':
+            cellStyle = {...this.cellStyle , height : '19%'} 
+            return (
+                <><div style={this.div33widthStyle}>
+                    <DivLink name="土地使用分區證明" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="執照圖說影印" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="公有畸零地合併使用證明" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="法定空地分割" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="合法房屋證明" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                </div>
+                <BannerView />
+                <GoBackView clickHandler={this.clickHandler}></GoBackView>
+                </>
+              );
+            case '建造執照申請':
+            return (
+                <div className='marginWrap'>
+                
+                <React.Fragment>
+                <PageHeader>
+                    {id}
+                </PageHeader>
+            <Row className="show-grid">
+            <Col xs={12} md={6}>
+                <PanelView title="壹、目的：" body="為利民眾申請建照，以加速建照核發速度。" />
+            </Col>
+            <Col xs={12} md={6}>
+                {/* <PanelView title="貳、相關法令及規定：" body={<>
+                    一、 建築法第三十四條。<br />二、 新北市建築管理規則。<br />三、 山坡地建築管理辦法。 </>
+                } */}
+                <PanelView title="貳、相關法令及規定：" body={
+                    `一、 建築法第三十四條。
+                    二、 新北市建築管理規則。
+                    三、 山坡地建築管理辦法。`
+                }
+                />
+            </Col>
+            </Row>
+            <Row>
+            <Col sm={12} md={12}>
+            <PanelView title="參、民眾應附證件、書表、表單、附件： " body="
+一、建造執照申請書、雜項執照申請書、變更設計申請書(請至全國建築管理資訊系統入口網http://cpabm.cpami.gov.tw/index.jsp下載表單)。
+二、建築物(增建、變更設計)概要表。(同上項) 
+三、起造人名冊。（起造人二人以上時檢附）(同第一項) 
+四、委託書。(同第一項)
+五、建築師簽證表。(同第一項) 
+六、建造執照（變更設計）設計建築師簽證負責項目表。(如附件) 
+七、屬公共建築物者應檢附無障礙培訓講習證書。(97年7月1日以後之培訓證書) 
+八、建築師簽證案件自主檢查表。(如附件) 
+九、建築物結構與設備專業技師簽證報告。(如附件) 
+十、結構抽查項目表。(如附件) 
+十一、地籍圖謄本或土地所有權狀影本（載明與正本相符）。 
+十二、土地登記(簿)謄本(第一類)或土地所有權狀影本（載明與正本相符）。 
+十三、土地使用權同意書。(同第一項) 
+十四、原有合法建築物證明文件(正本)。 
+十五、雜項使用執照及基本圖說。 
+十六、申請基地相片。 
+十七、基地四周地籍套繪圖。(另檢附光碟資料) 
+十八、建造執照正本。（變更設計時檢附） 
+十九、使用共同壁協定書。(同第一項) 
+二 十、拆除執照申請書。(同第一項) （併案辦理拆照時檢附） 
+二十一、拆除同意書(如附件)及建築物權利證明（建物登記謄本或合法房屋證明文件）。（如有共同壁檢附拋棄書）（併案辦理拆照時檢附） 
+二十二、建築物拆除位置、平面、立面圖。（併案辦理拆照時檢附） 
+二十三、違章建物自行拆除切結書。（併案辦理拆照時檢附）(如附件) 
+二十四、建築線指定圖或免指示（定）建築線證明文件。
+二十五、公寓大廈住戶規約草約。(3戶以上(含3戶)需檢附) 
+二十六、專有、共用、約定專用、約定共用標示之詳圖。(無者免附) 
+二十七、都市計畫文件。(無者免附) 
+二十八、原住民族委員會同意函。(屬原住民保留地者需檢附) 
+二十九、實施環境影響評估文件（或免實施環境影響說明書）。 
+三 十、水土保持計畫文件。(位於山坡地者需檢附） 
+三十一、建造執照加強山坡地建築管理與技術規範檢核表。(位於山坡地者需檢附） 
+三十二、山坡地雜或雜併建照申請案加強查核表。(105.6.28起掛號案件者應檢附)
+三十三、環境地質圖、山崩潛感圖、土地利用潛力圖。（均須將基地按比例套繪）
+三十四、有無位於地質敏感區查詢結果。(列印查詢結果)
+三十五、經審查通過之基地地質調查及地質安全評估結果報告及證明文件。(位於地質敏感區者需檢附)
+三十六、擋土設施與主體建築共構剖面圖。(擋土設施與主體建築共構者檢附、擋土牆高度超過6公尺者送外審)
+三十七、雨水貯留滯洪及涵養水分再利用相關設施設計書件。
+三十八、綠建築專章檢討設計資料。
+三十九、施工說明書。
+四 十、工程設計圖。（建築法第32條規定之建築物工程圖樣及說明書）
+四十一、下水道設置申請書圖。
+四十二、消防審查核准證明文件。
+四十三、室內裝修申請書及圖說。
+四十四、都市設計審議通過文件。（屬土管要點第13條規定者應檢附）
+四十五、結構計算書。
+四十六、鑽探報告書。
+四十七、其他相關（證明）文件資料。" />
+            
+            </Col>
+          </Row>
+          <Row>
+              <Col xs={6} md={6}>
+              {/* <PanelView title="肆、作業內容： " body="流程圖說明：如後附件。" /> */}
+                <Panel bsStyle="primary">
+                    <Panel.Heading>
+                    <Panel.Title componentClass="h3">肆、作業內容：</Panel.Title>
+                    </Panel.Heading>
+                    <Panel.Body>流程圖說明：如後附件。
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1861/建造執照-變更設計-設計建築師簽證負責項目表.pdf" name="建造執照（變更設計）設計建築師簽證負責項目表.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1860/建築師簽證案件自主檢查表.pdf" name="建築師簽證案件自主檢查表.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1859/建築物結構與設備專業技師簽證報告.pdf" name="建築物結構與設備專業技師簽證報告.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1858/結構抽查項目表.pdf" name="結構抽查項目表.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1857/拆除同意書.pdf" name="拆除同意書.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1856/違章建物自行拆除切結書.pdf" name="違章建物自行拆除切結書.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1855/加強山坡地建築管理與技術規範檢核表.pdf" name="加強山坡地建築管理與技術規範檢核表.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1854/公寓大廈規約草約.pdf" name="公寓大廈規約草約.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1853/建造執照作業流程圖.pdf" name="建造執照作業流程圖.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1852/山坡地雜或雜併建照申請案加強查核表.pdf" name="山坡地雜或雜併建照申請案加強查核表.pdf" />
+                    </Panel.Body>
+                </Panel>
+              </Col>
+              <Col xs={6} md={6}>
+              {/* <PanelView title="檔案下載" body={<DownloadButton clickHandler={()=>{
+                            console.log("clickHandler")
+                        }} />} /> */}
+              </Col>
+          </Row>
+          </React.Fragment></div>)
+          case '拆除執照申請':
+          return <div className='marginWrap'>
+                    <PageHeader>
+                        {id}
+                    </PageHeader>
+                    <Row>
+                        <Col xs={12} md={6}>
+                            <PanelView title="壹、目的：" body="為落實行政與技術分立，特訂定本標準作業程序，以制度化、透明化縮短 核照時程，提昇行政效率。" />
+                        </Col>
+                        <Col xs={12} md={6}>
+                        <PanelView title="貳、相關法令及規定： " body="一、建築法及其相關規定。 
+二、新北市建築管理規則及其相關規定。 
+三、建築物結構設備專業工程技師簽證規則。" />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col xs={12} md={12}>
+                        <PanelView title="參、民眾應附證件、書表、表單、附件： " body="一、拆除執照申請書。 (如附件) 
+二、申請人名冊。 (如附件)
+三、申請基地照片。(包含門牌) 
+四、委託書。(非設計人本人洽辦時檢附) (如附件)
+五、違章建物自行拆除切結書。(如附件) 
+六、地籍圖謄本。
+七、土地登記謄本。（按地號次序排列） 
+八、建築物權利證明。（建物登記簿謄本或合法房屋證明文件） 
+九、拆除同意書。（如有共同壁者檢附拋棄書）(如附件) 
+十、建築物拆除位置、平面、立面圖。(含計算式) "  />
+                        </Col>
+                    </Row>
+                    <Row>
+                        {/* <Col xs={12} md={6}>
+                            <PanelView title="肆、作業內容： " body="流程說明：如後附件。" />
+                        </Col> */}
+                        <Col xs={12} md={6}>
+                            <Panel bsStyle="primary">
+                                <Panel.Heading>
+                                <Panel.Title componentClass="h3">肆、作業內容：</Panel.Title>
+                                </Panel.Heading>
+                                <Panel.Body>流程圖說明：如後附件。
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1861/建造執照-變更設計-設計建築師簽證負責項目表.pdf" name="建造執照（變更設計）設計建築師簽證負責項目表.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1860/建築師簽證案件自主檢查表.pdf" name="建築師簽證案件自主檢查表.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1859/建築物結構與設備專業技師簽證報告.pdf" name="建築物結構與設備專業技師簽證報告.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1858/結構抽查項目表.pdf" name="結構抽查項目表.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1857/拆除同意書.pdf" name="拆除同意書.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1856/違章建物自行拆除切結書.pdf" name="違章建物自行拆除切結書.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1855/加強山坡地建築管理與技術規範檢核表.pdf" name="加強山坡地建築管理與技術規範檢核表.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1854/公寓大廈規約草約.pdf" name="公寓大廈規約草約.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1853/建造執照作業流程圖.pdf" name="建造執照作業流程圖.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1852/山坡地雜或雜併建照申請案加強查核表.pdf" name="山坡地雜或雜併建照申請案加強查核表.pdf" />
+                                </Panel.Body>
+                            </Panel>
+                        </Col>
+                    </Row>
+                </ div>
+            case '招牌廣告及樹立廣告許可申請':
+                return <div className='marginWrap'>
+                <PageHeader>
+                    {id}
+                </PageHeader>
+                <Row>
+                    <Col xs={12} md={6}>
+                        <PanelView title="壹、相關法令及規定：" body="建築法、招牌廣告及樹立廣告管理辦法。" />
+                    </Col>
+                    <Col xs={12} md={6}>
+                    <PanelView title="貳、應附證件、書表、表單、附件：" body="一、申請書（如附件）。
+二、招牌廣告及樹立廣告設計圖說（如附件範例）。
+三、設置處所現場照片。
+四、招牌廣告及樹立廣告安全證明書（如附件）。
+五、招牌廣告及樹立廣告設置處所使用權同意書（如附件）。
+六、設置處所之所有權證明文件。(申請地面樹立廣告者，應加附地籍圖謄本及土地登記謄本)
+七、委託書。
+八、申請人身分證或營利事業登記證影本。
+　　九、承造廠商營利事業登記證影本。
+十、公寓大廈區分所有權人會議同意之文件。" />
+                    </Col>
+                </Row>
+                <Row>
+                    {/* <Col xs={12} md={6}>
+                        <PanelView title="肆、作業內容： " body="流程說明：如後附件。" />
+                    </Col> */}
+                    <Col xs={12} md={6}>
+                        <Panel bsStyle="primary">
+                            <Panel.Heading>
+                            <Panel.Title componentClass="h3">參、作業內容：</Panel.Title>
+                            </Panel.Heading>
+                            <Panel.Body>流程圖說明：如後附件。
+                                <DownloadLink url="https://www.wratb.gov.tw/media/1873/招牌廣告及樹立廣告安全證明書.pdf" name="招牌廣告及樹立廣告安全證明書.pdf" />
+                                <DownloadLink url="https://www.wratb.gov.tw/media/1872/招牌廣告及樹立廣告許可申請書.pdf" name="招牌廣告及樹立廣告許可申請書.pdf" />
+                                <DownloadLink url="https://www.wratb.gov.tw/media/1871/招牌廣告及樹立廣告許可作業流程說明.pdf" name="招牌廣告及樹立廣告許可作業流程說明.pdf" />
+                                <DownloadLink url="https://www.wratb.gov.tw/media/1870/招牌廣告及樹立廣告設置處所使用權同意書.pdf" name="招牌廣告及樹立廣告設置處所使用權同意書.pdf" />
+                                <DownloadLink url="https://www.wratb.gov.tw/media/1869/廣告物設計圖說範例.pdf" name="廣告物設計圖說範例.pdf" />
+                            </Panel.Body>
+                        </Panel>
+                    </Col>
+                </Row>
+            </ div>
+            case '施工勘驗（放樣申報）':
+            return <div className='marginWrap'>
+            <PageHeader>
+                {id}
+            </PageHeader>
+            <Row>
+                <Col xs={12} md={6}>
+                    <PanelView title="壹、目的：" body="為落實專業分工及審查權責劃分，加強便民措施，特制定本作業程序。" />
+                </Col>
+                <Col xs={12} md={6}>
+                <PanelView title="貳、相關法令及規定： " body="建築法第五十六條。" />
+                </Col>
+            </Row>
+            <Row>
+                <Col xs={12} md={12}>
+                <PanelView title="參、民眾應附證件、書表、表單、附件： " body="一、建築工程勘驗申報書（2份）。 (如附件)
+二、建造執照或雜項執照正本。 
+三、建築工程必需勘驗部分申報表（2份）。(如附件)
+四、建築物監造(監督、查核)報告表（2份）。(如附件)
+五、建築物施工中營造業專任工程人員督察紀錄表（2份）。(如附件)
+六、建築執照起造人施工品質管理查核表。(公共建築工程應檢附)
+七、各分項工程之建築執照承造人勘驗項目施工自主檢查表。(如附件)
+八、監造人現地勘驗查核報告表。(如附件)
+九、委託書。
+十、基地鑑界(複丈)成果圖。
+　　十一、領得建造(雜項)執照建築基地入侵紅火蟻現場清查紀錄表。
+十二、鄰房現況鑑定報告。
+十三、建造執照加註應附之文件。
+十四、建築施工日誌。(如附件)
+十五、部分放樣勘驗必須檢附已核備之書圖（2份）。
+十六、下列核准書圖應置於工地備驗：建造執照書圖副本原卷(含工程圖樣及說明書)、建築線指定書圖副本、開工報告書副本原卷（含報備結構詳圖）。"  />
+                </Col>
+            </Row>
+            <Row>
+                <Col xs={12} md={6}>
+                    <PanelView title="肆、其他： " body="一、本局所轄建築工程必須勘驗部分由承造人會同監造人申報，申報次日得繼續施工。
+二、前一樓層混凝土強度試驗報告書應委託經中華民國實驗室認證體系認可實驗室試驗並出具報告，並經監造人查核符合建築技術規則建築構造篇規定。
+三、現況照片至少應能呈現工地周圍及申報該樓層相對位置、該樓層所有範圍申報前現況。" />
+                </Col> 
+                <Col xs={12} md={6}>
+                    <Panel bsStyle="primary">
+                        <Panel.Heading>
+                        <Panel.Title componentClass="h3">檔案下載</Panel.Title>
+                        </Panel.Heading>
+                        <Panel.Body>
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1888/各分項工程施工自主檢查表.pdf" name="各分項工程施工自主檢查表.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1887/建築工程必須勘驗部分申報表.pdf" name="建築工程必須勘驗部分申報表.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1886/建築工程勘驗申報書.pdf" name="建築工程勘驗申報書.pdf " />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1885/建築物施工中營造業專任工程人員督察紀錄表.pdf" name="建築物施工中營造業專任工程人員督察紀錄表.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1884/建築物施工日誌.pdf" name="建築物施工日誌.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1883/建築物監造-監督-查核-報告表.pdf" name="建築物監造(監督、查核)報告表.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1882/領得建造-雜項-執照建築基地入侵紅火蟻現場清查紀錄表.pdf" name="領得建造(雜項)執照建築基地入侵紅火蟻現場清查紀錄表.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1881/委託書.pdf" name="委託書.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1880/監造人現地勘驗查核報告表.pdf" name="監造人現地勘驗查核報告表.pdf" />
+                            
+                        </Panel.Body>
+                    </Panel>
+                </Col>
+            </Row>
+        </ div>
+        case '施工勘驗（開工申報）':
+        return <div className='marginWrap'>
+            <PageHeader>
+                {id}
+            </PageHeader>
+            <Row>
+                <Col xs={12} md={6}>
+                    <PanelView title="壹、目的：" body="為落實專業分工及審查權責劃分，加強便民措施，特制定本作業程序。" />
+                </Col>
+                <Col xs={12} md={6}>
+                <PanelView title="貳、相關法令及規定： " body="建築法第五十六條。" />
+                </Col>
+            </Row>
+            <Row>
+                <Col xs={12} md={12}>
+                <PanelView title="參、申報開工應備證件、書表、表單、附件：" body="一、開工申報書（3份）。 (如附件)
+二、建造執照或雜項執照正本。 
+三、起造人名冊(起造人2以上自行檢附)。(如附件)
+四、營造業承攬建築工程開工查報表（3份）。(如附件)
+五、營造廠完稅證明文件。
+六、建築施工計畫書。(內含工程概要、監造計畫、施工品質管制計畫、安全衛生計畫、剩餘土石方處理計畫、施工防災計畫、水土保持施工許可證)
+七、繳交空污費收據。
+八、事業廢棄物清理計畫核准函(得於放樣勘驗前，送本局備查)。
+九、結構詳圖。
+十、現況照片。
+十一、領得建造(雜項)執照建築基地入侵紅火蟻現場清查紀錄表。"  />
+                </Col>
+            </Row>
+            <Row>
+                <Col xs={12} md={6}>
+                    <PanelView title="肆、附註： " body="一、本局所轄建築工程必須勘驗部分由承造人會同監造人申報，申報次日得繼續施工。
+二、剩餘土石方處理計畫得於放樣前另向本局辦理備查事宜，但需於建築施工計畫書註明。
+三、現況照片至少應能呈現工地周圍及申報相對位置。" />
+                </Col> 
+                <Col xs={12} md={6}>
+                    <Panel bsStyle="primary">
+                        <Panel.Heading>
+                        <Panel.Title componentClass="h3">檔案下載</Panel.Title>
+                        </Panel.Heading>
+                        <Panel.Body>
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1893/起造人名冊.pdf" name="起造人名冊.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1892/剩餘土石方處理計畫書.pdf" name="剩餘土石方處理計畫書.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1891/開工申報書.pdf" name="開工申報書.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1890/開工查報表.pdf" name="開工查報表.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1889/領得建造-雜項-執照建築基地入侵紅火蟻現場清查紀錄表.pdf" name="領得建造(雜項)執照建築基地入侵紅火蟻現場清查紀錄表.pdf" />
+                        </Panel.Body>
+                    </Panel>
+                </Col>
+            </Row>
+        </ div>
+        case '室內裝修許可（竣工查驗）':
+        return <div className='marginWrap'>
+        <PageHeader>
+            {id}
+        </PageHeader>
+        <Row>
+            <Col xs={12} md={6}>
+                <PanelView title="壹、目的：" body="依建築相關法令，作書圖文件實質內容審查和現場竣工查驗，及查核建築師是否依規定簽證負責，以強化行政作業效能。" />
+            </Col>
+            <Col xs={12} md={6}>
+            <PanelView title="貳、相關法令及規定： " body="依建築物室內裝修管理辦法及內政部八十六年五月二十日台（八六）內營字第八六七二八四二函規定者，得經由查驗人員辦理竣工查驗簽章負責後，逕送本局核發室內裝修合格證明。" />
+            </Col>
+        </Row>
+        <Row>
+            <Col xs={12} md={12}>
+            <PanelView title="參、民眾應附證件、書表、表單、附件：" body="一、室內裝修竣工查驗申請書 (如附件)。 
+二、歷次退件函影本（第一次掛號免附）。 
+三、建築物室內裝修許可函影本。 
+四、違建項目簽證表及違建相片（含索引平面圖）(如附件)。 
+五、委託書(如附件)。 
+六、建築物室內裝修施工業登記證影本或營造業登記證書。 
+七、建築物室內裝修專業技術人員登記證。 
+八、建築物室內裝修竣工材料書 (如附件)。 
+九、建築物室內裝修材料計算表。 
+十、經認證之裝修竣工材料合格證明。 
+十一、室內裝修竣工查驗合格證明書 (如附件)。 
+十二、消防局審查許可文件。 
+十三、建築物室內裝修竣工查驗表 (如附件)。 
+十四、室內裝修施工業者及人員聘任切結書(如附件)。 
+十五、竣工圖說（2份）。 
+十六、竣工照片及示意圖 
+　　　　(一)樓梯及平台淨寬、梯級尺寸照片 
+　　　　(二)防火區劃設施照片 
+　　　　(三)各隔間照片 
+　　　　(四)出入口及防火門照片 
+　　　　(五)走廊淨寬照片 
+　　　　(六)直通樓梯走廊之總寬度照片 
+　　　　(七)緊急進口照片 
+　　　　(八)停車空間照片 
+(九)浴廁、廚房機能態樣相片"  />
+            </Col>
+        </Row>
+        <Row>
+            <Col xs={12} md={6}>
+                <Panel bsStyle="primary">
+                    <Panel.Heading>
+                    <Panel.Title componentClass="h3">肆、流程圖：如後附件。</Panel.Title>
+                    </Panel.Heading>
+                    <Panel.Body>
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1927/申請建築執照送件審圖手續人員名單.pdf" name="申請建築執照送件審圖手續人員名單.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1926/委託書.pdf" name="委託書.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1925/室內裝修施工業者及人員聘任切結書.pdf" name="室內裝修施工業者及人員聘任切結書.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1923/室內裝修竣工查驗合格證明書.pdf" name="室內裝修竣工查驗合格證明書.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1922/室內裝修竣工查驗作業流程表.pdf" name="室內裝修竣工查驗作業流程表.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1921/建築物室內裝修竣工材料書.pdf" name="建築物室內裝修竣工材料書.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1920/建築物室內裝修竣工查驗表.pdf" name="建築物室內裝修竣工查驗表.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1919/建築執照各項專業報告書檢討切結書.pdf" name="建築執照各項專業報告書檢討切結書.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1918/違章項目簽證表.pdf" name="違章項目簽證表.pdf" />
+                    </Panel.Body>
+                </Panel>
+            </Col>
+        </Row>
+    </ div>
+        case '現有巷道認定申請':
+        return <div className='marginWrap'>
+        <PageHeader>
+            {id}
+        </PageHeader>
+        <Row>
+            <Col xs={12} md={6}>
+                <PanelView title="壹、相關法令及規定：" body="建築法、新北市建築管理規則及內政部93年8月2日內授營建管字第0930085627號函示辦理本局轄區內現有巷道之認定業務。" />
+            </Col>
+            <Col xs={12} md={6}>
+            <PanelView title="貳、應附證件、書表、表單、附件：" body='一、申請書（如附件）。
+二、地籍圖謄本(3個月內)。
+三、土地登記簿謄本。
+四、區公所出具現有巷道通行時間(即通行20年)函件。(逕向所在地區公所辦理)
+五、航測圖第一版及第三版(供研判現有巷道通行時間)。(無備具區公所證明文件時檢附)
+六、1/500現況圖。
+七、1/500地籍套繪圖。
+八、地籍位置圖。
+九、基地現況照片（申請日期近況照片或數位業列印相片，尺寸以3"×5"為準）。' />
+            </Col>
+        </Row>
+        <Row>
+            <Col xs={12} md={12}>
+            <PanelView title="參、民眾應附證件、書表、表單、附件：" body="一、室內裝修竣工查驗申請書 (如附件)。 
+二、歷次退件函影本（第一次掛號免附）。 
+三、建築物室內裝修許可函影本。 
+四、違建項目簽證表及違建相片（含索引平面圖）(如附件)。 
+五、委託書(如附件)。 
+六、建築物室內裝修施工業登記證影本或營造業登記證書。 
+七、建築物室內裝修專業技術人員登記證。 
+八、建築物室內裝修竣工材料書 (如附件)。 
+九、建築物室內裝修材料計算表。 
+十、經認證之裝修竣工材料合格證明。 
+十一、室內裝修竣工查驗合格證明書 (如附件)。 
+十二、消防局審查許可文件。 
+十三、建築物室內裝修竣工查驗表 (如附件)。 
+十四、室內裝修施工業者及人員聘任切結書(如附件)。 
+十五、竣工圖說（2份）。 
+十六、竣工照片及示意圖 
+(一)樓梯及平台淨寬、梯級尺寸照片 
+(二)防火區劃設施照片 
+(三)各隔間照片 
+(四)出入口及防火門照片 
+(五)走廊淨寬照片 
+(六)直通樓梯走廊之總寬度照片 
+(七)緊急進口照片 
+(八)停車空間照片 
+(九)浴廁、廚房機能態樣相片
+"
+ />
+            </Col>
+        </Row>
+        <Row>
+            <Col xs={12} md={6}>
+                <Panel bsStyle="primary">
+                    <Panel.Heading>
+                    <Panel.Title componentClass="h3">肆、流程圖：如後附件。</Panel.Title>
+                    </Panel.Heading>
+                    <Panel.Body>
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1875/申請書.pdf" name="申請書.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1874/現有巷道申請作業流程說明.pdf" name="現有巷道申請作業流程說明.pdf" />
+                    </Panel.Body>
+                </Panel>
+            </Col>
+        </Row>
+    </ div>
+    case '施工勘驗（各層施工勘驗）':
+    return <div className='marginWrap'>
+    <PageHeader>
+        {id}
+    </PageHeader>
+    <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="壹、目的：" body="為落實專業分工及審查權責劃分，加強便民措施，特制定本作業程序。" />
+        </Col>
+        <Col xs={12} md={6}>
+        <PanelView title="貳、相關法令及規定：" body='建築法第五十六條。' />
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={12}>
+        <PanelView title="參、民眾應附證件、書表、表單、附件：" body="一、建築工程勘驗申報書（2份）。 (如附件)
+二、建造執照或雜項執照正本。 )
+三、建築工程必需勘驗部分申報表（2份）。(如附件)
+四、建築物監造(監督、查核)報告表（2份）。(如附件)
+五、建築施工日誌。(如附件)
+六、建築物施工中營造業專任工程人員督察紀錄表（2份）。(如附件)
+七、建築執照起造人施工品質管理查核表(公共建築工程應檢附)。
+八、各分項工程之建築執照承造人勘驗項目施工自主檢查表。(如附件)
+九、部分施工勘驗必須檢附已核備之書圖（2份）。
+十、剩餘土石方運送憑證收執聯、已簽證之處理紀錄表及合法收容處理場所完成處理明文件。
+十一、建築物新拌混凝土氯離子含量檢測報告單（前次勘驗）。
+十二、混凝土抗壓強度試驗報告書（前次勘驗）。
+十三、預拌混凝土品質保證書。
+十四、鋼筋(含鋼鐵建材)無輻射污染證明書及保證書。
+十五、現況照片。
+十六、下列核准書圖應置於工地備驗：建造執照書圖副本原卷(含工程圖樣及說明書)、建築線指定書圖副本、開工報告書副本原卷（含報備結構詳圖）。"  />
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={6}>
+            <Panel bsStyle="primary">
+                <Panel.Heading>
+                <Panel.Title componentClass="h3">肆、其他： </Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                <h4>一、本局所轄建築工程必須勘驗部分由承造人會同監造人申報，申報次日得繼續施工。</h4>
+                <h4>二、前一樓層混凝土強度試驗報告書應委託經中華民國實驗室認證體系認可實驗室試驗並出具報告，並經監造人查核符合建築技術規則建築構造篇規定。</h4>
+                <h4>三、現況照片至少應能呈現工地周圍及申報該樓層相對位置、該樓層所有範圍申報前現況。</h4>
+                </Panel.Body>
+            </Panel>
+        </Col>
+        <Col xs={12} md={6}>
+        <Panel bsStyle="primary">
+                <Panel.Heading>
+                <Panel.Title componentClass="h3">檔案下載</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                <DownloadLink url="https://www.wratb.gov.tw/media/1900/各分項工程施工自主檢查表.pdf" name="各分項工程施工自主檢查表.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1899/建築工程必須勘驗部分申報表.pdf" name="建築工程必須勘驗部分申報表.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1898/建築工程勘驗申報書.pdf" name="建築工程勘驗申報書.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1897/建築物施工中營造業專任工程人員督察紀錄表.pdf" name="建築物施工中營造業專任工程人員督察紀錄表.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1896/建築物施工日誌.pdf" name="建築物施工日誌.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1895/建築物監造-監督-查核-報告表.pdf" name="建築物監造(監督、查核)報告表.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1894/領得建造-雜項-執照建築基地入侵紅火蟻現場清查紀錄表.pdf" name="領得建造(雜項)執照建築基地入侵紅火蟻現場清查紀錄表.pdf" />
+                </Panel.Body>
+            </Panel>
+        </Col>
+    </Row>
+</ div>
+        case '室內裝修許可（書面審查）':
+        return <div className='marginWrap'>
+        <PageHeader>
+            {id}
+        </PageHeader>
+        <Row>
+            <Col xs={12} md={6}>
+                <PanelView title="壹、相關法令及規定：" body="依建築法第七十七條之二規定辦理。" />
+            </Col>
+            <Col xs={12} md={6}>
+            <PanelView title="貳、民眾應附證件、書表、表單、附件： " body='一、建築物室內裝修圖說申請書。(如附件) 
+二、建築物室內裝修簽證表。(如附件) 
+三、歷次退件函影本。(第一次掛號者免附) 
+四、違建項目簽證表。(如附件) 
+五、原使用執照或存根聯影本。
+六、委託書。(如附件) 
+七、建築物使用權同意書。(如附件) 
+八、建物登記第一類謄本。 
+九、室內裝修查核圖說合格證明書。 
+十、消防局審查許可文件。 
+十一、建築師安全鑑定書。 
+十二、建物測量成果圖。 
+十三、原使用執照竣工圖(申請範圍著色) 
+　　　(一)基地位置、地盤圖、面積計算表 
+　　　(二)當層平面圖 
+十四、設計圖說3份。' />
+            </Col>
+        </Row>
+        <Row>
+            <Col xs={12} md={12}>
+            <PanelView title="參、作業內容：" body="室內裝修書面審查流程表：如後附件。"  />
+            </Col>
+        </Row>
+        <Row>
+            <Col xs={12} md={6}>
+                <Panel bsStyle="primary">
+                    <Panel.Heading>
+                    <Panel.Title componentClass="h3">檔案下載</Panel.Title>
+                    </Panel.Heading>
+                    <Panel.Body>
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1936/申請建築執照送件審圖手續人員名單.pdf" name="申請建築執照送件審圖手續人員名單.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1935/委託書.pdf" name="委託書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1934/室內裝修查核圖說合格證明書.pdf" name="室內裝修查核圖說合格證明書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1933/室內裝修圖說審查申請書.pdf" name="室內裝修圖說審查申請書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1932/室內裝修圖說審查流程表.pdf" name="室內裝修圖說審查流程表.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1931/室內裝修簽證表.pdf" name="室內裝修簽證表.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1930/建築物使用權同意書.pdf" name="建築物使用權同意書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1929/建築師安全鑑定書.pdf" name="建築師安全鑑定書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1928/違章項目簽證表.pdf" name="違章項目簽證表.pdf" />
+                    </Panel.Body>
+                </Panel>
+            </Col>
+            
+        </Row>
+    </ div>
+        case '變更使用執照申請（竣工查驗）':
+        return <div className='marginWrap'>
+        <PageHeader>
+            {id}
+        </PageHeader>
+        <Row>
+            <Col xs={12} md={6}>
+                <PanelView title="壹、目的：" body="依建築相關法令〔且適用於十層以下（含第十層）樓地板面積在三百平方公尺以下（含三百平方公尺）、十層樓以上樓地板面積在一百平方公尺以下且變更類組為D5、G2、G3、H2、F3或符合建築法第七十三條執行要點第十條規範者〕，訂定書圖文件以強化行政作業效率及簡化作業流程。" />
+            </Col>
+            <Col xs={12} md={6}>
+            <PanelView title="貳、相關法令及規定：" body='依建築法第七十三條規定及其執行要點辦理。' />
+            </Col>
+        </Row>
+        <Row>
+            <Col xs={12} md={12}>
+            <PanelView title="參、民眾應附證件、書表、表單、附件：" body="一、變更使用執照申請書。 (如附件) 
+二、變更使用執照概要表。 (如附件) 
+三、書面審查核准函。 
+四、變更使用執照檢討項目簽證表。 (如附件)
+五、委託書(申請人委託建築師)。(如附件) 
+六、門牌增編或保留證明（未涉及建築物分（併）戶者免附）。 
+七、消防局審查許可文件 。 
+八、使用執照之變更使用工程完竣報告表。 (如附件)
+九、竣工照片及示意圖 
+(一)樓梯及平台淨寬、梯級尺寸照片 
+(二)防火區劃設施照片 
+(三)各隔間照片 
+(四)出入口及防火門照片 
+(五)走廊淨寬照片 
+(六)直通樓梯走廊之總寬度照片 
+(七)緊急進口照片 
+(八)停車空間照片 
+十、竣工圖說。 
+十一、建築執照各項專業報告書檢討切結書。 (如附件) "  />
+            </Col>
+        </Row>
+        <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="肆、其他： " body="如涉及分(併)戶或室內裝修均得併案辦理，其審查流程不變。"  />
+            </Col>
+            <Col xs={12} md={6}>
+                <Panel bsStyle="primary">
+                    <Panel.Heading>
+                    <Panel.Title componentClass="h3">伍、作業內容：一、流程說明：如流程圖。</Panel.Title>
+                    </Panel.Heading>
+                    <Panel.Body>
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1947/申請建築執照送件審圖手續人員名單.pdf" name="申請建築執照送件審圖手續人員名單.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1946/使用執照之變更使用工程完竣報告表.pdf" name="使用執照之變更使用工程完竣報告表.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1945/委託書.pdf" name="委託書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1944/建築師安全鑑定書.pdf" name="建築師安全鑑定書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1943/建築執照各項專業報告書檢討切結書.pdf" name="建築執照各項專業報告書檢討切結書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1942/違建項目簽證表.pdf" name="違建項目簽證表.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1941/變更使用執照申請書.pdf" name="變更使用執照申請書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1940/變更使用執照竣工勘驗審查表.pdf" name="變更使用執照竣工勘驗審查表.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1939/變更使用執照概要表.pdf" name="變更使用執照概要表.pdf" />
+                    <DownloadLink url="hhttps://www.wratb.gov.tw/media/1938/變更使用執照檢討項目簽證表.pdf" name="變更使用執照檢討項目簽證表.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1937/變更竣工審查流程圖.pdf" name="變更竣工審查流程圖.pdf" />
+                    </Panel.Body>
+                </Panel>
+            </Col>
+        </Row>
+    </ div>
+        case '土地使用分區證明':
+        return <div className='marginWrap'>
+        <PageHeader>
+            {id}
+        </PageHeader>
+        <Row>
+        <Col xs={12} md={6}>
+        <Panel bsStyle="primary">
+                    <Panel.Heading>
+                    <Panel.Title componentClass="h3">線上申請</Panel.Title>
+                    </Panel.Heading>
+                    <Panel.Body>
+                    <ABlank url="http://child.wratb.gov.tw/apply/PublicApply.aspx" name="線上申請（請點此）" />
+                    </Panel.Body>
+                </Panel>
+        </Col>
+        </Row>
+        <Row>
+            <Col xs={12} md={6}>
+                <PanelView title="壹、說明：" body="台北水源特定區內居民為瞭解轄內都市計畫實施情形，得向本局（經濟部水利署台北水源特定區管理局）申請土地使用分區（或公共設施用地）證明。" />
+            </Col>
+            <Col xs={12} md={6}>
+            <PanelView title="貳、應備書件： " body='一、請依式填寫申請書一份。 (如附件) 
+二、於完成地籍分割地區，檢具標示有欲申請土地地號之地籍圖謄本（正本）一份。' />
+            </Col>
+        </Row>
+        <Row>
+            <Col xs={12} md={12}>
+            <PanelView title="參、申請機關：" body="本局。"  />
+            </Col>
+        </Row>
+        <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="肆、注意事項： " body="一、都市計畫土地使用分區（或公共設施用地）證明之使用分區（或公共設施用地）係依據已公告實施之都市計畫圖及地籍套繪圖核對，僅供參考之用，若作為實施之據應依現地指示建築線為準。 
+二、都市計畫土地使用分區（或公共設施用地）證明，係就申請地號查核都市土地使用分區（或公共設施用地）及計畫說明書中之特殊土地使規定，如以市重劃方式整體開發及公共設施負擔比例之規定等予以查列，至計畫書中其他土地使用分區管制，如使用類別，使用性質、建蔽率、容積率、高度、前後院、側院及開發限制等之其他限制規定，請逕洽都市計畫主管機關查詢。 
+三、證明書有效期間依證明書所載為準。 
+四、本證明當核發後有關土地位置、地號或都市計畫內容如經依法公告、變更應以公告變更者為準，不再另行通知。"  />
+            </Col>
+            <Col xs={12} md={6}>
+                <Panel bsStyle="primary">
+                    <Panel.Heading>
+                    <Panel.Title componentClass="h3">伍、作業內容：流程圖如後附件。</Panel.Title>
+                    </Panel.Heading>
+                    <Panel.Body>
+                    <DownloadLink url="https://www.wratb.gov.tw/media/2006/土地使用分區證明核發流程圖.pdf" name="土地使用分區證明核發流程圖.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/2005/土地使用分區證明書-填寫範例.pdf" name="土地使用分區證明書(填寫範例).pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/2004/土地清冊.pdf" name="土地清冊.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/2003/土地清冊-填寫範例.pdf" name="土地清冊(填寫範例).pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/2002/使用分區流程圖.gif" name="使用分區流程圖.gif" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/2001/使用分區申請書.doc" name="使用分區申請書.doc" />
+                    </Panel.Body>
+                </Panel>
+            </Col>
+        </Row>
+    </ div>
+    case '執照圖說影印':
+    return <div className='marginWrap'>
+    <PageHeader>
+        {id}
+    </PageHeader>
+    <Row>
+    <Col xs={12} md={6}>
+    <Panel bsStyle="primary">
+                <Panel.Heading>
+                <Panel.Title componentClass="h3">線上申請</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                <ABlank url="http://child.wratb.gov.tw/apply/PhoCopyDraw.aspx" name="線上申請（請點此）" />
+                </Panel.Body>
+            </Panel>
+    </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="壹、目的：" body="提供民眾申請建築執照卷內之文件、圖說之影印。" />
+        </Col>
+        <Col xs={12} md={6}>
+        <PanelView title="貳、相關法令及規定： " body='依據建築法第七十條及內政部七五、四十台內營字第三六八九七０號及七十四年四月十七日台內營字第三○二○一九號函辦理。' />
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={12}>
+        <PanelView title="參、民眾應附證件、書表、表單、附件： " body="一、申請書(如附件） 
+(一)註明使建照年度字號（查詢方式如下）： 
+1.依使照謄本上記載 
+2.依建物登記簿謄本上記載 
+3.依建物測量成果圖上記載 
+4.以土地地號向建管課套繪室查套繪圖 
+5.其他相關單位記錄 
+(二)註明申請範圍
+二、房屋權利證明文件 
+(一)建物登記謄本正本 
+(二)建物所有權狀影本 
+(三)建物測量成果圖 
+(四)公寓大廈管理組織報備證明 
+(五)房屋稅單 
+(六)買賣、租賃契約 
+(七)法院告訴證明文件 
+(八)其他可佐證之文件 
+※(一)至(八)項擇一 
+(九)雙方印章(房屋所有權人及申請人)"  />
+        </Col>
+    </Row>
+    <Row>
+    <Col xs={12} md={6}>
+        <PanelView title="肆、內部作業使用表單附件：" body="略"  />
+        </Col>
+        <Col xs={12} md={6}>
+        <PanelView title="伍、名詞解釋：" body="略"  />
+        </Col>
+    </Row>
+    <Row>
+    <Col xs={12} md={6}>
+        <PanelView title="陸、申請人資格： " body="一、建築物所有權 
+二、權利關係人或法律上有利害關係者。 
+三、受委託人(應備委託書及雙方身分證影印本)"  />
+        </Col>
+        <Col xs={12} md={6}>
+            <Panel bsStyle="primary">
+                <Panel.Heading>
+                <Panel.Title componentClass="h3">檔案下載</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                <DownloadLink url="https://www.wratb.gov.tw/media/2007/影印圖說申請書.pdf" name="影印圖說申請書.pdf" />
+                </Panel.Body>
+            </Panel>
+        </Col>
+    </Row>
+</ div>
+        case '公有畸零地合併使用證明':
+        return <div className='marginWrap'>
+    <PageHeader>
+        {id}
+    </PageHeader>
+    <Row>
+    <Col xs={12} md={6}>
+    <Panel bsStyle="primary">
+                <Panel.Heading>
+                <Panel.Title componentClass="h3">線上申請</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                <ABlank url="http://child.wratb.gov.tw/apply/PublicLandApp.aspx" name="線上申請（請點此）" />
+                </Panel.Body>
+            </Panel>
+    </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="壹、目的：" body="提昇辦理公有畸零地合併使用證明作業效率，以維護人民應有之權益。" />
+        </Col>
+        <Col xs={12} md={6}>
+        <PanelView title="貳、民眾應檢附證件、書表、表單附件：" body='一、申請書 (如附件）3份。 
+二、申請合併使用範圍圖3份 。 
+三、合併使用範圍之土地登記第一類謄本。 
+四、合併使用範圍地籍圖謄本。 
+五、建築線指示圖。 
+六、土地使用分區證明。
+七、鄰接道路寬度證明文件。
+八、現況照片（需標明拍攝位置、方向）。' />
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={12}>
+        <PanelView title="參：" body="委辦人應檢附委託書及雙方身分證明文件影本。"  />
+        </Col>
+    </Row>
+    <Row>
+    <Col xs={12} md={6}>
+        <PanelView title="肆、作業內容： " body="流程說明：如後附件。"  />
+        </Col>
+        <Col xs={12} md={6}>
+            <Panel bsStyle="primary">
+                <Panel.Heading>
+                <Panel.Title componentClass="h3">檔案下載</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                <DownloadLink url="https://www.wratb.gov.tw/media/2009/公有畸零地合併使用證明申請作業流程說明.pdf" name="公有畸零地合併使用證明申請作業流程說明.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/2008/公有畸零地合併使用證明申請書.pdf" name="公有畸零地合併使用證明申請書.pdf" />
+                </Panel.Body>
+            </Panel>
+        </Col>
+    </Row>
+   
+</ div>
+            default :
+            break
+        }
+        return <div style={this.div33widthStyle}><PageHeader>
+        {id}
+    </PageHeader></div>
+    }
+
 }
 export default ArchView

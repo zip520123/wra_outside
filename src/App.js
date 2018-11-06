@@ -44,14 +44,8 @@ class App extends Component {
     } 
   render() {
     return (<>
-        {/* <header>
-            <Link to={`/`}><h1 id="topH1"><img id="headerImage" src={icon} alt="logo"/>臺北水源特定區管理局申辦e櫃台</h1></Link>
-        </header> */}
         <div style={{width : '100%' , height : '100%', margin:'auto'}}>
-          {/* <div className="marginWrap"> */}
-
             <Route exact path="/" component={HomePage} />
-            {/* <Route exact path="/" component={Home} /> */}
             <Route path="/fileUse" component={FilePageView}></Route>
             <Route path="/waterKeepView" component={WaterKeepView}></Route>
             <Route path="/dirtyWaterView" component={DirtyWaterView}></Route>
@@ -60,10 +54,9 @@ class App extends Component {
             <Route path="/envEdu" component={EnvEduView}></Route>
             <Route path="/exampleForm" component={ExampleForm}></Route>
             <Route path="/formSearch" component={FormSearchView}></Route>
-            <Route path="/form/:id" component={PanelWraper}></Route>
-            <Route path="/form/:class/:id" component={RightView}></Route>
+            {/* <Route path="/form/:id" component={PanelWraper}></Route>
+            <Route path="/form/:class/:id" component={RightView}></Route> */}
             
-          {/* </div> */}
       </div>
       </>
     );

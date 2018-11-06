@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import goBackImage from './resource/goBack.png'
+// import goBackImage from './resource/goBack.png'
+var goBackImage = '/images/goBack.png'
 class GoBackView extends Component {
     clickHandler = (e) => {
         this.props.clickHandler()

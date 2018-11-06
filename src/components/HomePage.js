@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import banner from './resource/banner.png'
+// import banner from './resource/banner.png'
 import { Row , Col } from 'react-bootstrap';
 import archButton from './resource/mainPageButton/archButton.png'
 import drtyWaterButton from './resource/mainPageButton/drtyWaterButton.png'
@@ -10,6 +10,7 @@ import fileUseButton from './resource/mainPageButton/fileUseButton.png'
 import formSearchButton from './resource/mainPageButton/formSearchButton.png'
 import waterKeepBackButton from './resource/mainPageButton/waterKeepBack.png'
 import waterKeepButton from './resource/mainPageButton/waterKeepButton.png'
+var banner = '/images/banner.png'
 var Bannerstyle = {width : '32%' ,
         height : '99%' ,
         float: 'left',
@@ -33,9 +34,6 @@ export const BannerView = () => (
 )
 class HomePage extends Component {
     render() {
-        var centerTextStyle = {
-            transform: 'translateY(1000%)'
-        }
         var cellStyle = {
             width: '100%',
             height : '24%',
@@ -57,14 +55,14 @@ class HomePage extends Component {
         return (<>
             <div style={leftWidthStyle}>
                 <Link to={`/arch`}>
-                <div style={{...cellStyle }}>
-                    <img style={imageStyle} src={archButton} alt=""/>
-                </div>
+                    <div style={{...cellStyle }}>
+                        <img style={imageStyle} src={archButton} alt=""/>
+                    </div>
                 </Link>
                 <Link to={`/envEdu`}>
-                <div style={{...cellStyle }}>
-                    <img style={imageStyle} src={envEduButton} alt=""/>
-                </div>
+                    <div style={{...cellStyle }}>
+                        <img style={imageStyle} src={envEduButton} alt=""/>
+                    </div>
                 </Link>
                 <Link to={`/waterKeepView`}>
                     <div style={{...cellStyle }}>

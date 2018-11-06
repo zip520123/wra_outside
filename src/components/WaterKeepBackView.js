@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { BannerView } from './HomePage.js'
 import GoBackView from './GoBackView'
-var style = {width : '30%' ,
-        height : '100%' ,
+var style = {width : '32%' ,
+        height : '99%' ,
         float: 'left',
         backgroundColor:'#2c4e4c' , 
         color:'white',
@@ -31,7 +31,7 @@ class WaterKeepBackView extends Component {
             <div style={style}>
                 <h1 style={centerTextStyle}><a style={{color: 'white'}} href="http://child.wratb.gov.tw/ct_welfare/WRAllowance" target="_blank" rel="noopener noreferrer">水源保育與回饋</a></h1>
             </div>
-            <BannerView style={{...style}} />
+            <BannerView />
             <GoBackView clickHandler={this.clickHandler}></GoBackView>
         </>)
     }
