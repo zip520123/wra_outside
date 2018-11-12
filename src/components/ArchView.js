@@ -930,14 +930,311 @@ class ArchView extends Component {
             </Panel>
         </Col>
     </Row>
-   
+</ div>
+            case '建築線申請':
+            return <div className='marginWrap'>
+    <PageHeader>
+        {id} <small onClick={this.clickHandler}>回上一頁</small>
+    </PageHeader>
+    <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="壹、目的：" body="簡化指定建築線作業步驟、統一流程並使申請作業透明化以達簡政便民及縮短審核時間之目的。" />
+        </Col>
+        <Col xs={12} md={6}>
+        <PanelView title="貳、相關法令及規定：" body='建築法、新北市建築管理規則。' />
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={12}>
+        <PanelView title="參、民眾應附證件、書表、表單、附件：" body='一、申請書（如附件）。
+二、建築線指定委託書。（如附件）。
+三、建築線指定申請書圖（依內政部頒格式繪製）。
+四、自申請日起3個月內之地籍圖謄本正本。
+五、基地現況照片（申請日期近況照片或數位業列印相片，尺寸以3"×5"為準）。
+六、認定現有巷道之資料（如該巷道前經本局認定在案並有資料可供查對者免附）。'  />
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={12}>
+        <PanelView title="肆、名詞解釋：" body="現有巷道：請參考「新北市建築管理規則第二條」規定，內容如下：
+一、公用地役關係之巷道。
+二、私設通路，經土地所有權人出具供公眾通行同意書者。
+三、捐獻土地為道路使用，經依法完成土地移轉登記手續者。
+四、七十三年十一月七日建築法修正公佈前，曾指定建築線之現有巷道，經認定無礙公共安全、公共衛生、公共交通及市容觀瞻者。
+前項第一款所稱公用地役關係之巷道，須於供通行之初，土地所有權人並無阻止情事，繼續和平通行達二十年，且為不特定公眾通行所必要者。"  />
+        </Col>
+    </Row>
+    <Row>
+    <Col xs={12} md={6}>
+        <PanelView title="伍、其他：" body="略。"  />
+        </Col>
+        <Col xs={12} md={6}>
+            <Panel bsStyle="primary">
+                <Panel.Heading>
+                <Panel.Title componentClass="h3">陸、作業內容：流程說明：如後附件。</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                <DownloadLink url="https://www.wratb.gov.tw/media/1879/建築線申請作業流程說明.pdf" name="建築線申請作業流程說明.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1878/土地供公共通行同意書.pdf" name="土地供公共通行同意書.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1877/建築線申請書.pdf" name="建築線申請書.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1876/建築線指定委託書.pdf" name="建築線指定委託書.pdf" />
+                </Panel.Body>
+            </Panel>
+        </Col>
+    </Row>
+</ div>
+            case '無障礙生活環境宣導專頁':
+            return <div className='marginWrap'>
+    <PageHeader>
+        {id} <small onClick={this.clickHandler}>回上一頁</small>
+    </PageHeader>
+    <Row>
+        <Col xs={12} md={12}>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9b7lR4oqy2c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </Col>
+    </Row>
+    </div>
+    case '變更起、承、監造人申請':
+    return <div className='marginWrap'>
+    <PageHeader>
+        {id} <small onClick={this.clickHandler}>回上一頁</small>
+    </PageHeader>
+    <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="壹、相關法令及規定：" body="建築法第五十五條。" />
+        </Col>
+        <Col xs={12} md={12}>
+            <Panel bsStyle="primary">
+                <Panel.Heading>
+                <Panel.Title componentClass="h3">貳、應附證件、書表、表單、附件：</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                    <ul style={{listStyleType:'none'}}>
+                        <li>一、變更起造人：
+                            <ol >
+                                <li>變更起造人申報書（3份）（如附件）。</li>
+                                <li>變更起造人名冊（3份）（如附件）(起造人為2人以上時才填此表)。</li>
+                                <li>相關身分證明文件。</li>
+                                <li>委託書（如附件）。</li>
+                                <li>變更起造人理由書。</li>
+                                <li>建造(雜項)執照正本。</li>
+                                <li>地籍圖謄本(3個月內)。</li>
+                                <li>土地登記謄本(第一類)(3個月內)。</li>
+                                <li>土地使用權同意書。</li>
+                            </ol>
+                        </li>
+                        <li>二、變更承造人：
+                            <ol>
+                                <li>變更承造人申報書（3份）（如附件）。</li>
+                                <li>變更承造人名冊（3份）（如附件）(承造人為2人以上時才填此表)。</li>
+                                <li>起造人同意書（如附件）。</li>
+                                <li>原承造人放棄承攬同意書（如附件）。</li>
+                                <li>新承造人承攬同意書（如附件）。</li>
+                                <li>委託書。</li>
+                                <li>建造(雜項)執照正本。</li>
+                                <li>變更後營造業承攬手冊及專任工程人員當年度公會會員證影本及完稅證明文件。</li>
+                            </ol>
+                        </li>
+                        <li>三、變更監造人：
+                            <ol >
+                                <li>變更監造人申報書（2份）（如附件）。</li>
+                                <li>變更監造人名冊（2份）（如附件）(監造人為2人以上時才填此表)。</li>
+                                <li>起造人同意書（如附件）。</li>
+                                <li>原監造人放棄承攬同意書（如附件）。</li>
+                                <li>新監造人承攬同意書（如附件）。</li>
+                                <li>委託書。</li>
+                                <li>建造(雜項)執照正本。</li>
+                                <li>變更後建築師附開業證書及完稅證明文件。</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </Panel.Body>
+            </Panel>
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={12}>
+            <Panel bsStyle="primary">
+                <Panel.Heading>
+                <Panel.Title componentClass="h3">參、作業內容：流程說明：如後附件。</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                <DownloadLink url="https://www.wratb.gov.tw/media/1914/委託書.pdf" name="委託書.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1913/原承造人放棄承攬同意書.pdf" name="原承造人放棄承攬同意書.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1912/原監造人放棄監造同意書.pdf" name="原監造人放棄監造同意書.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1911/起造人同意書-承造.pdf" name="起造人同意書(承造).pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1910/起造人同意書-監造.pdf" name="起造人同意書(監造).pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1909/新承造人承攬同意書.pdf" name="新承造人承攬同意書.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1908/新監人承攬同意書.pdf" name="新監人承攬同意書.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1907/變更承造人申報書.pdf" name="變更承造人申報書.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1906/變更承造人名冊.pdf" name="變更承造人名冊.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1905/變更起-承-監造人作業流程表.pdf" name="變更起、承、監造人作業流程表.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1904/變更起造人申報書.pdf" name="變更起造人申報書.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1903/變更起造人名冊.pdf" name="變更起造人名冊.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1902/變更監造人申報書.pdf" name="變更監造人申報書.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1901/變更監造人名冊.pdf" name="變更監造人名冊.pdf" />
+                </Panel.Body>
+            </Panel>
+        </Col>
+    </Row>
+</ div>
+case '開工、竣工展期申請':
+return <div className='marginWrap'>
+    <PageHeader>
+        {id} <small onClick={this.clickHandler}>回上一頁</small>
+    </PageHeader>
+    <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="壹、相關法令及規定：" body="建築法第五十四條。" />
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="貳、應附證件、書表、表單、附件：" body="一、建築工程開工展期申請書2份（如附件）。
+二、建築工程竣工展期申請書2份（如附件）。
+三、建造執照正本。
+四、竣工展期應檢附修正預定進度表。
+五、營造業完稅證明（竣工展期檢附）。" />
+        </Col>
+        <Col xs={12} md={6}>
+            <Panel bsStyle="primary">
+                <Panel.Heading>
+                <Panel.Title componentClass="h3">參、作業內容：流程說明：如後附件。</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                <DownloadLink url="https://www.wratb.gov.tw/media/1917/竣工展期申請書.pdf" name="竣工展期申請書.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1916/開工-竣工展期申請作業流程.pdf" name="開工、竣工展期申請作業流程.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1915/開工展期申請書.pdf" name="開工展期申請書.pdf" />
+                </Panel.Body>
+            </Panel>
+        </Col>
+    </Row>
+</ div>
+case '法定空地分割':
+return <div className='marginWrap'>
+<PageHeader>
+    {id} <small onClick={this.clickHandler}>回上一頁</small>
+</PageHeader>
+<Row>
+<Col xs={12} md={6}>
+<Panel bsStyle="primary">
+            <Panel.Heading>
+            <Panel.Title componentClass="h3">線上申請</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>
+            <ABlank url="http://child.wratb.gov.tw/apply/LegalLandApp.aspx" name="線上申請（請點此）" />
+            </Panel.Body>
+        </Panel>
+</Col>
+</Row>
+<Row>
+    <Col xs={12} md={6}>
+        <PanelView title="壹、目的：" body="提昇辦理法定空地證明作業效率，以維護人民應有之權益。" />
+    </Col>
+    <Col xs={12} md={6}>
+    <PanelView title="貳、相關法令規定：" body='依建築法第十一條規定、及建築技術規則設計施工篇第一條、第二條之一、第三條之二、第七條、第一百一十八條及第一百六十三條規定。' />
+    </Col>
+</Row>
+<Row>
+    <Col xs={12} md={12}>
+    <PanelView title="參、民眾應檢附證件、書表、表單附件：" body="一、申請書 (如附件）。 
+二、申請人（所有權人）、受委託人委託書 (如附件）及身分證影本。 
+三、土地所有權狀影本或土地登記謄本。 
+四、地籍圖謄本乙份【請於圖說上標示申請位置並著色】。 
+五、使用執照資料。 
+六、分割圖。(其比例應與地籍圖相同)
+七、一樓平面圖及配置分割示意圖。(應標示建築物最大投影範圍，其比例不得小於1/200) "  />
+    </Col>
+</Row>
+<Row>
+    <Col xs={12} md={6}>
+    <PanelView title="肆、申請人應以土地所有權人名義為之。" body=""  />
+    </Col>
+</Row>
+<Row>
+<Col xs={12} md={6}>
+    <PanelView title="伍、名詞解釋：" body="法定空地：法定空地為組成建築基地的二項要件之一，另一為建築面積，在建築基地中，建築面積以外的土地即為法定空地；法定空地應包括建築物與其前左右之道路或其它建築物間之距離，其規定多屬外部規劃法規，如防火間隔、前後側院、鄰幢間隔、採光、通風、私設通路、類似通路、基地內通路，迴車道、退縮建築退縮部分等。"  />
+    </Col>
+    <Col xs={12} md={6}>
+        <Panel bsStyle="primary">
+            <Panel.Heading>
+            <Panel.Title componentClass="h3">陸、作業內容：流程說明：如後附件。</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>
+            <DownloadLink url="https://www.wratb.gov.tw/media/2014/委託書.pdf" name="委託書.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/2013/法定空地分割申請書.pdf" name="法定空地分割申請書.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/2012/法定空地證明申請作業流程說明.pdf" name="法定空地證明申請作業流程說明.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/2011/法定空地證明申請作業範本.pdf" name="法定空地證明申請作業範本.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/2010/法定空地證明申請書.pdf" name="法定空地證明申請書.pdf" />
+            </Panel.Body>
+        </Panel>
+    </Col>
+</Row>
+</ div>
+case '合法房屋證明':
+return <div className='marginWrap'>
+    <PageHeader>
+        {id} <small onClick={this.clickHandler}>回上一頁</small>
+    </PageHeader>
+    <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="壹、目的：" body="制定標準作業程序，提昇辦理建築法修正前舊有之合法房屋認定時效。" />
+        </Col>
+        <Col xs={12} md={12}>
+            <Panel bsStyle="primary">
+                <Panel.Heading>
+                <Panel.Title componentClass="h3">貳、相關法令及認定規定：</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                    <h3>本特定區因位於新北市境內，縣(市)政府有依建築法第一百零一條規定訂定建築管理規則者，為避免建管業務有一市二制之情形，故均以新北市政府所訂規則為依據。 </h3>
+                    <ul style={{listStyleType:'none'}}>
+                        <li>一、新北市政府核發合法房屋證明處理要點。 
+                        </li>
+                        <li>二、改制前之台北縣政府八十八年八月十二日八八北府工使字第三０一一二０號函示：「建築物既經地政事務所辦理產權登記，並依土地法規定，建物登記具絕對效力，故該建物所有權登記證明可直接作為認定合法房屋之依據。惟若有改建、增建、修建者，依法應領有使用執照始可認定為合法房屋。」
+                        </li>
+                    </ul>
+                </Panel.Body>
+            </Panel>
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={6}>
+        <Panel bsStyle="primary">
+        <PanelView title="參、民眾應附證件: " body="一、申請書。 
+二、土地所有權相關文件：(一)地籍圖謄本。(二)土地登記簿謄本。 
+三、現況照片。
+四、內政部八十九年四月二十四日臺八九內營字八九０四七六三號函規定八種證明文件之一： 
+(一)建築執照。 
+(二)建物登記證明。 
+(三)未實施建築管理地區建築物完完工證明書。 
+(四)載有該建築物資料之土地使用現況調查清冊或卡片之謄本。 
+(五)完納稅捐證明。 
+(六)繳納自來水費或電費證明。 
+(七)戶口遷入證明。 
+(八)地形圖、都市計劃現況圖、都市計劃禁建圖、航照圖或政府機關測繪地圖。前項代理人應檢附委託書。"  />
+            </Panel>
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={12}>
+            <Panel bsStyle="primary">
+                <Panel.Heading>
+                    <Panel.Title componentClass="h3">肆、作業內容：流程說明。</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                    <DownloadLink url="https://www.wratb.gov.tw/media/2015/合法房屋證明申請表.pdf" name="合法房屋證明申請表.pdf" />
+                </Panel.Body>
+            </Panel>
+        </Col>
+    </Row>
 </ div>
             default :
-            break
+            return <div style={this.div33widthStyle}><PageHeader>
+            {id}
+        </PageHeader></div>
+        
         }
-        return <div style={this.div33widthStyle}><PageHeader>
-        {id}
-    </PageHeader></div>
+        
     }
 
 }
