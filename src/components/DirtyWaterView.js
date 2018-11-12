@@ -68,7 +68,7 @@ class DirtyWaterView extends Component {
             case '既有建築物自設污水處理設施（國有土地專用）申請':
             return <div className='marginWrap'>
             <PageHeader>
-                {id}
+                {id} <small onClick={this.clickHandler}>回上一頁</small>
             </PageHeader>
             <Row>
                 <Col xs={12} md={6}>
@@ -102,7 +102,10 @@ class DirtyWaterView extends Component {
         </ div>
             case '污水下水道用戶排水設備接管':
             return <div className='marginWrap'>
-            <PageHeader>{id}</PageHeader>
+            <PageHeader>
+            {id} <small onClick={this.clickHandler}>回上一頁</small>
+            
+            </PageHeader>
             <Row>
                 <Col xs={12} md={6}>
                     <PanelView title="申請方式：" body="臨櫃或郵寄" />
@@ -136,7 +139,8 @@ class DirtyWaterView extends Component {
             </Row></ div>
             case '專用下水道納管申請':
             return <div className='marginWrap'>
-            <PageHeader>{id}</PageHeader>
+            <PageHeader>{id} <small onClick={this.clickHandler}>回上一頁</small>
+            </PageHeader>
             <Row>
                 <Col xs={12} md={6}>
                     <PanelView title="申請方式：" body="臨櫃或郵寄" />

@@ -133,7 +133,7 @@ class ArchView extends Component {
                 
                 <React.Fragment>
                 <PageHeader>
-                    {id}
+                    {id} <small onClick={this.clickHandler}>回上一頁</small>
                 </PageHeader>
             <Row className="show-grid">
             <Col xs={12} md={6}>
@@ -235,7 +235,7 @@ class ArchView extends Component {
           case '拆除執照申請':
           return <div className='marginWrap'>
                     <PageHeader>
-                        {id}
+                        {id} <small onClick={this.clickHandler}>回上一頁</small>
                     </PageHeader>
                     <Row>
                         <Col xs={12} md={6}>
@@ -289,7 +289,7 @@ class ArchView extends Component {
             case '招牌廣告及樹立廣告許可申請':
                 return <div className='marginWrap'>
                 <PageHeader>
-                    {id}
+                    {id} <small onClick={this.clickHandler}>回上一頁</small>
                 </PageHeader>
                 <Row>
                     <Col xs={12} md={6}>
@@ -331,7 +331,7 @@ class ArchView extends Component {
             case '施工勘驗（放樣申報）':
             return <div className='marginWrap'>
             <PageHeader>
-                {id}
+                {id} <small onClick={this.clickHandler}>回上一頁</small>
             </PageHeader>
             <Row>
                 <Col xs={12} md={6}>
@@ -391,7 +391,7 @@ class ArchView extends Component {
         case '施工勘驗（開工申報）':
         return <div className='marginWrap'>
             <PageHeader>
-                {id}
+                {id} <small onClick={this.clickHandler}>回上一頁</small>
             </PageHeader>
             <Row>
                 <Col xs={12} md={6}>
@@ -441,7 +441,7 @@ class ArchView extends Component {
         case '室內裝修許可（竣工查驗）':
         return <div className='marginWrap'>
         <PageHeader>
-            {id}
+            {id} <small onClick={this.clickHandler}>回上一頁</small>
         </PageHeader>
         <Row>
             <Col xs={12} md={6}>
@@ -504,7 +504,7 @@ class ArchView extends Component {
         case '現有巷道認定申請':
         return <div className='marginWrap'>
         <PageHeader>
-            {id}
+            {id} <small onClick={this.clickHandler}>回上一頁</small>
         </PageHeader>
         <Row>
             <Col xs={12} md={6}>
@@ -570,7 +570,7 @@ class ArchView extends Component {
     case '施工勘驗（各層施工勘驗）':
     return <div className='marginWrap'>
     <PageHeader>
-        {id}
+        {id} <small onClick={this.clickHandler}>回上一頁</small>
     </PageHeader>
     <Row>
         <Col xs={12} md={6}>
@@ -634,7 +634,7 @@ class ArchView extends Component {
         case '室內裝修許可（書面審查）':
         return <div className='marginWrap'>
         <PageHeader>
-            {id}
+            {id} <small onClick={this.clickHandler}>回上一頁</small>
         </PageHeader>
         <Row>
             <Col xs={12} md={6}>
@@ -689,7 +689,7 @@ class ArchView extends Component {
         case '變更使用執照申請（竣工查驗）':
         return <div className='marginWrap'>
         <PageHeader>
-            {id}
+            {id} <small onClick={this.clickHandler}>回上一頁</small>
         </PageHeader>
         <Row>
             <Col xs={12} md={6}>
@@ -751,7 +751,7 @@ class ArchView extends Component {
         case '土地使用分區證明':
         return <div className='marginWrap'>
         <PageHeader>
-            {id}
+            {id} <small onClick={this.clickHandler}>回上一頁</small>
         </PageHeader>
         <Row>
         <Col xs={12} md={6}>
@@ -806,7 +806,7 @@ class ArchView extends Component {
     case '執照圖說影印':
     return <div className='marginWrap'>
     <PageHeader>
-        {id}
+        {id} <small onClick={this.clickHandler}>回上一頁</small>
     </PageHeader>
     <Row>
     <Col xs={12} md={6}>
@@ -880,7 +880,7 @@ class ArchView extends Component {
         case '公有畸零地合併使用證明':
         return <div className='marginWrap'>
     <PageHeader>
-        {id}
+        {id} <small onClick={this.clickHandler}>回上一頁</small>
     </PageHeader>
     <Row>
     <Col xs={12} md={6}>

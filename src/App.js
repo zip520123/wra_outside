@@ -44,7 +44,7 @@ class App extends Component {
     } 
   render() {
     return (<>
-        <div style={{width : '100%' , height : '100%', margin:'auto'}}>
+        <div style={{width : '100%' , height : '98%', margin:'auto'}}>
             <Route exact path="/" component={HomePage} />
             <Route path="/fileUse" component={FilePageView}></Route>
             <Route path="/waterKeepView" component={WaterKeepView}></Route>
