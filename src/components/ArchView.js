@@ -99,7 +99,7 @@ class ArchView extends Component {
                     <DivLink name="室內裝修許可（竣工查驗）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="室內裝修許可（書面審查）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="變更使用執照申請（竣工查驗）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
-                    <DivLink name="變更使用執照申請（書面審查） " match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="變更使用執照申請（書面審查）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="建築物使用項目更動報備" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="建築物分（併）戶申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="機械遊樂設施檢查申報" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
@@ -1228,9 +1228,549 @@ return <div className='marginWrap'>
         </Col>
     </Row>
 </ div>
+case '變更使用執照申請（書面審查）':
+return <div className='marginWrap'>
+    <PageHeader>
+        {id} <small onClick={this.clickHandler}>回上一頁</small>
+    </PageHeader>
+    <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="壹、目的：" body="依建築相關法令，查核建築師是否依規定簽證負責，加速變更使用執照之核發。" />
+        </Col>
+        <Col xs={12} md={6}>
+            <PanelView title="貳、相關法令及規定：" body="依建築法第七十三條規定及其執行要點辦理。" />
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={12}>
+        <Panel bsStyle="primary">
+        <PanelView title="參、民眾應附證件、書表、表單、附件：" body="一、變更使用執照申請書。(如附件) 
+二、變更使用執照概要表。(如附件) 
+三、原使用執照或存根聯影本。 
+四、土地使用分區證明。 
+五、變更使用說明書。(如附件) 
+六、變更申請圖說。 
+七、變更使用執照檢討項目簽證表。(如附件) 
+八、委託書（申請人委託建築師）。 (如附件) 
+九、建築師安全鑑定書(如附件) 及結構計算書(未涉及主要構造變更及活載重由高變低或相同者，得免檢附結構計算書)。 
+十、設計圖說。 
+十一、公寓大廈規約(含專有、共用部份標示之詳細圖說及公寓大廈、規約內容)(未涉及共用或約定專有部份者免附)。 
+十二、原使用執照竣工圖(圖套裝定)(申請範圍著色) 
+(一)基地位置、地盤圖、面積計算表 
+(二)當層平面圖 
+十三、地籍圖謄本。 
+十四、土地登記簿謄本。
+十五、土地使用權同意書。 
+十六、消防局審查許可文件。 
+十七、其他必要文件(建物登記簿謄本、建物測量成果圖、建築物使用權同意書(所有權人為同一人者免附))。"  />
+            </Panel>
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={6}>
+        <PanelView title="肆、其他： " body="如涉及分(併)戶或室內裝修均得併案辦理，其審查流程不變。" />
+        </Col>
+        <Col xs={12} md={6}>
+            <Panel bsStyle="primary">
+                <Panel.Heading>
+                    <Panel.Title componentClass="h3">伍、作業內容：變更書面流程圖：如後附件。</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1957/申請建築執照送件審圖手續人員名單.pdf" name="申請建築執照送件審圖手續人員名單.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1956/委託書.pdf" name="委託書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1955/建築物使用權同意書.pdf" name="建築物使用權同意書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1954/建築師安全鑑定書.pdf" name="建築師安全鑑定書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1953/違建項目簽證表.pdf" name="違建項目簽證表.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1952/變更使用執照申請書.pdf" name="變更使用執照申請書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1951/變更使用執照概要表.pdf" name="變更使用執照概要表.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1950/變更使用執照檢討項目簽證表.pdf" name="變更使用執照檢討項目簽證表.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1949/變更使用說明書.pdf" name="變更使用說明書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1948/變更書面流程圖.pdf" name="變更書面流程圖.pdf" />
+                </Panel.Body>
+            </Panel>
+        </Col>
+    </Row>
+</ div>
+case '建築物使用項目更動報備':
+return <div className='marginWrap'>
+    <PageHeader>
+        {id} <small onClick={this.clickHandler}>回上一頁</small>
+    </PageHeader>
+    <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="壹、目的：" body="依建築相關法令，作書圖文件審查及查核建築師是否依規定簽證負責，以落實擴大簽證及強化行政作業效能。" />
+        </Col>
+        <Col xs={12} md={6}>
+            <PanelView title="貳、相關法令及規定：" body="建築法第七十三條及其要點規定辦理。" />
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={12}>
+        <Panel bsStyle="primary">
+        <PanelView title="參、民眾應附證件、書表、表單、附件：" body="一、建築物使用項目更動報備書 (如附件）。 
+二、違建項目簽證表 (如附件）。 
+三、原使用執照或存根聯影本。 
+四、委託書（申請人委託建築師） (如附件）。 
+五、申請建築（建造、雜項、使照、變更使照、工程查驗、變更起造人）執照送件審圖手續人員名單(如附件）。 
+六、歷次退件函正本(第一次掛號者免附)。 
+七、目的事業主管機關核准文件及消防局審查許可文件。 
+八、建物登記簿謄本。 
+九、建物測量成果圖。 
+十、建築物使用權同意書（所有權人為同一人者免附） (如附件）。 
+十一、公寓大廈規約（含專有、共用部份標示之詳細圖說及公寓大廈規約內容）（未涉及共用或約定專有部份者免附。 
+十二、建築師安全鑑定書 (如附件）及結構計算書(未涉及主要構造變更及活載重由高變低或相同者，得免檢附結構計算書)。 
+十三、更動範圍圖說(圖套裝訂)(乙式三份)。 
+十四、原使用執照竣工圖(圖套裝訂)（申請範圍著色） 
+(一)基地位置、地盤圖、面積計算表 
+(二)當層平面圖 
+十五、建築執照各項專業報告書檢討切結書 (如附件）。"  />
+            </Panel>
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={6}>
+        <PanelView title="肆、內部作業使用表單附件： " body="一、變更使用執照（書面審查、竣工查驗）、室內裝修、變更戶數及增併編門牌、建築物使用項目更動預審表(如附件）。 
+二、變更使用執照平行分會各目的事業主管機關事項表 (如附件）。" />
+        </Col>
+        <Col xs={12} md={6}>
+        <PanelView title="伍、名詞解釋：" body="略" />
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={6}>
+        <PanelView title="陸、其他：" body="如涉及分(併)戶或室內裝修須併案辦理。" />
+        </Col>
+        <Col xs={12} md={6}>
+            <Panel bsStyle="primary">
+                <Panel.Heading>
+                    <Panel.Title componentClass="h3">柒、作業內容： </Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                一、流程圖：如後附件。<br />二、流程說明：如後附件。
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1968/申請建築執照送件審圖手續人員名單.pdf" name="申請建築執照送件審圖手續人員名單.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1967/委託書.pdf" name="委託書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1966/建築物使用項目更動報備申請書.pdf" name="建築物使用項目更動報備申請書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1965/建築物使用項目更動報備作業流程圖.pdf" name="建築物使用項目更動報備作業流程圖.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1964/建築物使用項目更動報備作業流程說明.pdf" name="建築物使用項目更動報備作業流程說明.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1963/建築物使用權同意書.pdf" name="建築物使用權同意書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1962/建築師安全鑑定書.pdf" name="建築師安全鑑定書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1961/建築執照各項專業報告書檢討切結書.pdf" name="建築執照各項專業報告書檢討切結書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1960/違建項目簽證表.pdf" name="違建項目簽證表.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1959/變更使用執照平行分會各目的事業主管機關事項表.pdf" name="變更使用執照平行分會各目的事業主管機關事項表.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1958/變更使用執照更動預審表.pdf" name="變更使用執照更動預審表.pdf" />
+                </Panel.Body>
+            </Panel>
+        </Col>
+    </Row>
+</ div>
+case '建築物分（併）戶申請':
+return <div className='marginWrap'>
+    <PageHeader>
+        {id} <small onClick={this.clickHandler}>回上一頁</small>
+    </PageHeader>
+    <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="壹、目的：" body="依建築相關法令，作書圖文件審查及建築師是否依規定簽證負責，以落實擴大簽證及強化行政作業效率。" />
+        </Col>
+        <Col xs={12} md={6}>
+            <PanelView title="貳、民眾應附證件、書表、表單、附件：" body="一、建築物分 (併)戶核備申請書。(如附件) 
+二、分(併)戶同意書。(如附件) 
+三、建築物權利證明文件（建築物登記簿謄本或改良登記物所有權狀）。 
+四、原使用執照或存根聯影本。 
+五、建物測量成果圖。 
+六、變更後建築平面圖(乙式四份，申請人簽章)。 
+七、原使用執照竣工平面圖。 
+八、分戶牆拆除說明書。(如附件) 
+九、其他指定文件。" />
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={6}>
+            <Panel bsStyle="primary">
+                <Panel.Heading>
+                    <Panel.Title componentClass="h3">參、作業內容：</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                一、流程說明：如後附件。
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1972/分-併-戶同意書.pdf" name="分 (併)戶同意書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1971/分戶牆拆除說明書.pdf" name="分戶牆拆除說明書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1970/建築物分-併-戶核備申請書.pdf" name="建築物分 (併)戶核備申請書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1969/建築物變更戶數申請作業流程說明.pdf" name="建築物變更戶數申請作業流程說明.pdf" />
+                </Panel.Body>
+            </Panel>
+        </Col>
+    </Row>
+</ div>
+case '機械遊樂設施檢查申報':
+return <div className='marginWrap'>
+    <PageHeader>
+        {id} <small onClick={this.clickHandler}>回上一頁</small>
+    </PageHeader>
+    <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="壹、相關法令及規定： " body="依據「建築法第七十七條之三相關規定辦理。" />
+        </Col>
+        <Col xs={12} md={6}>
+            <PanelView title="貳、民眾應附證件、書表、表單、附件：" body="一、申報書。 
+二、機械遊樂設施安全檢查報告書(1式3份)。 
+三、專業技師或內政部指定之檢查單位開業證明文件影本。 
+四、其他文件。" />
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={6}>
+            <Panel bsStyle="primary">
+                <Panel.Heading>
+                    <Panel.Title componentClass="h3">參、作業內容：</Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                流程說明：如後附件。
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1973/機械遊樂設施檢查申報作業流程表.pdf" name="機械遊樂設施檢查申報作業流程表.pdf" />
+                    
+                </Panel.Body>
+            </Panel>
+        </Col>
+    </Row>
+</ div>
+case '建築物公共安全檢查申報':
+return <div className='marginWrap'>
+    <PageHeader>
+        {id} <small onClick={this.clickHandler}>回上一頁</small>
+    </PageHeader>
+    <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="壹、目的：" body="建築物安全檢查之目的在使建築物之健康處於正常、合法、無礙公共安全的狀態，一經檢查發現即應提出改善計畫限期改正，以維持正當健康之使用，確保建築物構造與設備的安全。" />
+        </Col>
+        <Col xs={12} md={6}>
+            <PanelView title="貳、相關法令及規定：" body="依據「建築法第七十七條、第九十一條」及「建築物公共安全檢查簽證及申報辦法」等相關規定辦理。" />
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="參、民眾應附證件、書表、表單、附件，並以二維條碼及網路方式申報：" body="一、建築物防火避難設施與設備安全檢查申報書【表一】(如附件)。 
+二、建築物防火避難設施與設備安全檢查申報結果通知書【表二】(如附件)(正本乙份，副本四份)。 
+三、專業檢查人名冊【表三】(如附件)。 
+四、建築物防火避難設施與設備安全檢(複)查報告書【表四】(如附件)。
+五、建築物防火避難設施檢查記錄簡圖【表五】(如附件)。
+六、建築物設備安全檢查記錄簡圖【表六】(如附件)。 
+七、建築物防火避難設施與設備安全檢查改善計畫書【表七】(如附件)。 
+八、建築物安全檢查專業檢查人員或專業機構認可證。 
+九、使用執照影本。 
+十、房屋權利證明影本。 
+十一、現況照片。 
+十二、營業登記證影本。 
+十三、保險證明文件。 
+十四、室內裝修合格證明。" />
+        </Col>
+        <Col xs={12} md={6}>
+            <PanelView title="肆、內部作業使用表單附件： " body="內政部85.12.30台（85）內營字第8589024號函訂定之建築物公共安全檢查簽證及申報相關書表。" />
+        </Col>
+    </Row>
+    <Row>
+        <Col xs={12} md={6}>
+            <PanelView title="伍、名詞解釋： " body="一、專業檢查人：係指參加中央主管建築機關舉辦之建築物安全專業檢查人講習結業，並頒有「專業檢查人認可證」者。 
+二、專業機構：係指依據「建築物公共安全檢查專業機構與人員認可基準」第四項規定，置有七人以上之防火避難設施類專業檢查人及三人以上之設備安全類專業檢查人，並成立法人組織，經中央主管建築機關核發專業機構認可證者。 
+三、專業檢查人員：係指參加中央主管建築機關舉辦之建築物安全專業檢查人講習結業，並領有「專業檢查人認可證」之開業建築師或執業技師。" />
+        </Col>
+        <Col xs={12} md={6}>
+            <Panel bsStyle="primary">
+                <Panel.Heading>
+                    <Panel.Title componentClass="h3">陸、作業內容： </Panel.Title>
+                </Panel.Heading>
+                <Panel.Body>
+                流程說明：如後附件。
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1981/公共安全檢查標準作業程序流程說明.pdf" name="公共安全檢查標準作業程序流程說明.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1980/表一-建築物防火避難設施與設備安全檢查申報書.pdf" name="表一：建築物防火避難設施與設備安全檢查申報書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1979/表二-建築物防火避難設施與設備安全檢查申報結果通知書.pdf" name="表二：建築物防火避難設施與設備安全檢查申報結果通知書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1978/表三-專業檢查人名冊.pdf" name="表三：專業檢查人名冊.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1977/表四-建築物防火避難設施與設備安全檢-複-查報告書.pdf" name="表四：建築物防火避難設施與設備安全檢(複)查報告書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1976/表五-建築物防火避難設施檢查記錄簡圖.pdf" name="表五：建築物防火避難設施檢查記錄簡圖.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1975/表六-建築物設備安全檢查記錄簡圖.pdf" name="表六：建築物設備安全檢查記錄簡圖.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1974/表七-建築物防火避難設施與設備安全檢查改善計畫書.pdf" name="表七：建築物防火避難設施與設備安全檢查改善計畫書.pdf" />
+                    
+                </Panel.Body>
+            </Panel>
+        </Col>
+    </Row>
+</ div>
+case '使用執照遺失、補發':
+return <div className='marginWrap'>
+<PageHeader>
+    {id} <small onClick={this.clickHandler}>回上一頁</small>
+</PageHeader>
+<Row>
+<Col xs={12} md={6}>
+<Panel bsStyle="primary">
+            <Panel.Heading>
+            <Panel.Title componentClass="h3">線上申請</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>
+            <ABlank url="http://child.wratb.gov.tw/apply/LicLoseApp.aspx" name="線上申請（請點此）" />
+            </Panel.Body>
+        </Panel>
+</Col>
+</Row>
+<Row>
+    <Col xs={12} md={6}>
+        <PanelView title="壹、目的：" body="制訂標準化流程，提昇辦理建築物使用執照遺失補發作業之行政時效。" />
+    </Col>
+    <Col xs={12} md={6}>
+    <PanelView title="貳、相關法令及規定：" body='建築法第四十條。' />
+    </Col>
+</Row>
+<Row>
+    <Col xs={12} md={6}>
+    <PanelView title="參、民眾應附證件、書表、表單、附件：" body="一、申請書。 
+二、執照遺失切結書。 (如附件) 
+三、登報作廢證明。 
+四、產權證明文件。 
+五、門牌整編証明(若產權證明文件上之地址與使用執照所登記不符時需檢附)。"  />
+    </Col>
+    <Col xs={12} md={6}>
+    <PanelView title="肆、內部作業使用表單附件：" body="(略)"  />
+    </Col>
+</Row>
+<Row>
+<Col xs={12} md={6}>
+    <PanelView title="伍、名詞解釋：" body="(略)"  />
+    </Col>
+    <Col xs={12} md={6}>
+        <Panel bsStyle="primary">
+            <Panel.Heading>
+            <Panel.Title componentClass="h3">陸、作業內容： </Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>
+            一、流程圖：如後附件。<br />二、流程說明：如後附件。
+            <DownloadLink url="https://www.wratb.gov.tw/media/1984/使照遺失程序流程圖.pdf" name="使照遺失程序流程圖.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1983/使照遺失程序流程說明.pdf" name="使照遺失程序流程說明.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1982/執照遺失切結書.pdf" name="執照遺失切結書.pdf" />
+            </Panel.Body>
+        </Panel>
+    </Col>
+</Row>
+</ div>
+case '使用執照存根申請':
+return <div className='marginWrap'>
+<PageHeader>
+    {id} <small onClick={this.clickHandler}>回上一頁</small>
+</PageHeader>
+<Row>
+<Col xs={12} md={6}>
+<Panel bsStyle="primary">
+            <Panel.Heading>
+            <Panel.Title componentClass="h3">線上申請</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>
+            <ABlank url="http://child.wratb.gov.tw/apply/UseLicense.aspx" name="線上申請（請點此）" />
+            </Panel.Body>
+        </Panel>
+</Col>
+</Row>
+<Row>
+    <Col xs={12} md={6}>
+        <PanelView title="壹、目的：" body="提供民眾申請使照謄本。" />
+    </Col>
+    <Col xs={12} md={6}>
+    <PanelView title="貳、相關法令及規定：" body='依據建法第七十條及內政部七五、四十台內營字第三六八九七０號及七十四年四月十七日台內營字 第三０二０一九號函辦理。' />
+    </Col>
+</Row>
+<Row>
+    <Col xs={12} md={6}>
+    <Panel bsStyle="primary">
+            <Panel.Heading>
+            <Panel.Title componentClass="h3">參、民眾應附證件、書表、表單、附件：</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>
+                <h4>
+                <ul style={{listStyleType:'none'}}>一.申請書 (如附件)。 (一)註明使建照年度字號（查詢方式如下）： 
+                    <li>1.建物謄本記載</li>
+                    <li>2.使照謄本記載　</li>
+                    <li>3.依建物測量成果圖上記載</li>
+                    <li>4.以土地地號向建管課套繪室查套繪圖</li>
+                    <li>5.其他相關單位紀錄</li>
+                </ul>
+                <ul style={{listStyleType:'none'}}>二.房屋權利證明文件（請檢附如下之一，影本須核章證明無誤）： 
+                    <li>（一）建物登記謄本正本 </li>
+                    <li>（二）建物所有權狀 </li>
+                    <li>（三）建物測量成果圖</li>
+                    <li>（四）買賣、租賃契約</li>
+                    <li>（五）公寓大廈管理組織報備證明</li>
+                    <li>（六）房屋稅單 </li>
+                    <li>（七）法院告訴證明文件 </li>
+                    <li>（八）其他可佐證之文件</li>
+                </ul>
+                <ul style={{listStyleType:'none'}}>三.如委託他人代辦者上述相關文件皆請備妥正本供查驗，所繳文件一經入案概不退還。
+                </ul>
+                </h4>
+            </Panel.Body>
+        </Panel>
+    </Col>
+    <Col xs={12} md={6}>
+    <PanelView title="肆、內部作業使用表單附件：" body="略"  />
+    </Col>
+</Row>
+<Row>
+<Col xs={12} md={6}>
+    <PanelView title="伍、名詞解釋：" body="略"  />
+    </Col>
+    </Row>
+    <Row>
+    <Col xs={12} md={6}>
+    <PanelView title="陸、其他：" body="略"  />
+    </Col>
+    <Col xs={12} md={6}>
+        <Panel bsStyle="primary">
+            <Panel.Heading>
+            <Panel.Title componentClass="h3">柒、作業內容：</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>
+            <h4>一、流程圖。<br />二、流程說明。</h4>
+            <DownloadLink url="https://www.wratb.gov.tw/media/1987/使用執照謄本申請書.pdf" name="使用執照謄本申請書.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1986/使照謄本核發流程圖.pdf" name="使照謄本核發流程圖.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1985/使照謄本核發流程說明.pdf" name="使照謄本核發流程說明.pdf" />
+            </Panel.Body>
+        </Panel>
+    </Col>
+</Row>
+</ div>
+case '使用執照申請':
+return <div className='marginWrap'>
+<PageHeader>
+    {id} <small onClick={this.clickHandler}>回上一頁</small>
+</PageHeader>
+<Row>
+    <Col xs={12} md={6}>
+        <PanelView title="壹、目的：" body="民眾申請使用執照時，常有文件不全或漏蓋印章之情形發生，導致案件遭退件，因此建立申請使照預審制度，事先過濾文件不符之申請案件，以加速使照核發速度。" />
+    </Col>
+    <Col xs={12} md={6}>
+    <PanelView title="貳、相關法令及規定：" body='建築法第七十條及新北市建築管理規則第二十七條' />
+    </Col>
+</Row>
+<Row>
+    <Col xs={12} md={6}>
+    <Panel bsStyle="primary">
+            <Panel.Heading>
+            <Panel.Title componentClass="h3">參、民眾應檢附證件、書表、表單、附件： </Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>
+                <h4>
+                <ol >
+                   <li>使用執照申請書(如附件)。</li>
+                    <li>修改竣工圖併案變更設計申請書（起造人、監造人、承造人及主任技師簽章）(如附件)。</li>
+                    <li>建築物概要表(如附件)。</li>
+                    <li>起造人名冊〔名冊若更改，附身分證正反面影本或戶口名簿影本或戶籍謄本〕 (如附件)。</li>
+                    <li>委託書 (如附件)。</li>
+                    <li>地籍圖謄本、土地登記謄本正本及土地使用權同意書蓋章(未涉及建築基地變更免附)。 </li>
+                    <li>建造執照正本。</li>
+                    <li>營建工程空氣污染防制費繳納結清證明正本。</li>
+                    <li>營造廠近期稅卡（申報書）。</li>
+                    <li>完工證明書 (未於竣工期限內掛件申請使照者應檢附) 。</li>
+                    <li>按圖施工證明書（承造人及主任技師簽章）(如附件)。 </li>
+                    <li>監造證明書（監造人大小章及簽名）(如附件)。</li>
+                    <li>門牌號碼證明正本。</li>
+                    <li>營造業承攬工程竣工查報表（承造人及技師簽章）(如附件)。</li>
+                    <li>營建廢棄物處理完成證明文件。</li>
+                    <li>建築物施工階段最後申報樓層之預拌混凝土氯離子含量檢測報告書及混凝土強度試驗報告書。</li>
+                    <li>剩餘土石方處理完成證明文件 （棄土者：檢附棄土方處理完成證明文件、填土者：檢附1.確實依規定施工證明書。2.土方來源證明文件。3.填土方施工前、中、後照片）(倘挖填方平衡者免附)。 
+                    </li>
+                    <li>領得建造(雜項)執照建築基地入侵紅火蟻現場清查紀錄表。</li>
+                    <li>未損壞公共設施示意圖及照片。</li>
+                    <li>昇降設備檢查合格證明文件及建築物附設停車空間機械停車設備竣工檢查表。</li>
+                    <li>損鄰陳情住戶名冊（需打字）（依陳情人對戶編號）(如附件)。</li>
+                    <li>建物竣工照片及示意圖（以平面圖表示，著色標明）（包 括建物各向立面、屋頂、法定空地、防火間隔、停車空 間、天井、挑空、擋土墻、污水處理設施、防火門標識、無障礙設施等）。</li>
+                    <li>挑空清冊及結構安全報告書(如附件)。</li>
+                    <li>建物竣工圖（配置圖、立面圖及全部平面圖）（監造人、承造人及主任技師簽章）。</li>
+                    <li>公寓大廈管理公共基金、計算表(如附件)。 </li>
+                    <li>公寓大廈管理公共基金繳交公庫代收證明。</li>
+                    <li>水土保持計畫竣工審查文件。 </li>
+                    <li>下水道竣工審查文件。</li>
+                    <li>消防設備竣工審查核准文件（含圖說）。</li>
+                    <li>室內裝修竣工審查核准證明文件（含圖說）。</li>
+                    <li>無障礙環境竣工審查核准證明文件（含圖說）。</li>
+                    <li>雨水貯留滯洪及涵養水分再利用相關設施竣工文件。 </li>
+                    <li>屋頂層施工勘驗後至竣工期間之「建築物施工日誌」(96年7月1日以後開工者應檢附)。 </li>
+                </ol>
+                </h4>
+            </Panel.Body>
+        </Panel>
+    </Col>
+    <Col xs={12} md={6}>
+    <PanelView title="肆、內部作業使用表單、附件： " body="使用執照申請案預審表、損鄰陳情對照本局處理程序表。"  />
+    </Col>
+</Row>
+<Row>
+<Col xs={12} md={6}>
+    <PanelView title="伍、名詞解釋：" body="（略）"  />
+    </Col>
+    </Row>
+    <Row>
+    <Col xs={12} md={6}>
+    <PanelView title="陸、其他：" body="所附證明文件如為影本，需蓋與正本相符章。"  />
+    </Col>
+    <Col xs={12} md={6}>
+        <Panel bsStyle="primary">
+            <Panel.Heading>
+            <Panel.Title componentClass="h3">柒、作業內容：</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>
+            <h4>流程圖：如後附件。</h4>
+            <DownloadLink url="https://www.wratb.gov.tw/media/2000/公寓大廈管理公共基金-計算表.pdf" name="公寓大廈管理公共基金、計算表.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1999/使用執照核發審查作業流程圖.pdf" name="使用執照核發審查作業流程圖.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1998/使照申請書.pdf" name="使照申請書.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1997/委託書.pdf" name="委託書.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1996/建築物概要表.pdf" name="建築物概要表.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1995/按圖施工證明書.pdf" name="按圖施工證明書.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1994/挑空清冊及結構安全報告書.pdf" name="挑空清冊及結構安全報告書.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1993/修改竣工圖併案變更設計申請書.pdf" name="修改竣工圖併案變更設計申請書.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1992/起造人名冊.pdf" name="起造人名冊.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1991/損鄰陳情住戶名冊.pdf" name="損鄰陳情住戶名冊.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1990/監造證明書.pdf" name="監造證明書.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1989/營造業承攬工程竣工查報表.pdf" name="營造業承攬工程竣工查報表.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1988/領得建造-雜項-執照建築基地入侵紅火蟻現場清查紀錄表.pdf" name="領得建造(雜項)執照建築基地入侵紅火蟻現場清查紀錄表.pdf" />
+            </Panel.Body>
+        </Panel>
+    </Col>
+</Row>
+</ div>
+case '使用執照更正':
+return <div className='marginWrap'>
+<PageHeader>
+    {id} <small onClick={this.clickHandler}>回上一頁</small>
+</PageHeader>
+<Row>
+    <Col xs={12} md={6}>
+        <PanelView title="壹、目的：" body="使用執照圖說有所筆誤時應予更正，以確保使用執照內容之真實。" />
+    </Col>
+    <Col xs={12} md={6}>
+    <PanelView title="貳、相關法令及規定：" body='略。' />
+    </Col>
+</Row>
+<Row>
+    <Col xs={12} md={6}>
+    <PanelView title="參、民眾應附證件、書表、表單、附件：" body="1.申請書（更正理由、使用執照年度字號及申請人姓名、住址、電話應詳實填載）。 
+2.更正後使用執照申請書（填寫更正後所有原申請書內容並由申請人簽章，如涉圖說更正並需會同建築師簽章）。 
+3.更正內容說明書（僅容許筆誤或漏列更正可併於申請書內敘明，說明更正前後內容）。 
+4.如係為圖說筆誤或漏列，檢具更正後之圖說三份（建築師需核章且更正處明顯標示）。 
+5.產權證明文件（為辦理產權登記前不必檢附）。 
+6.門牌整編證明（若產權證明文件上之地址與使用執照所登記不符時需檢附）。"  />
+    </Col>
+    <Col xs={12} md={6}>
+    <PanelView title="肆、內部作業使用表單附件：" body="(略)"  />
+    </Col>
+</Row>
+<Row>
+<Col xs={12} md={6}>
+    <PanelView title="伍、名詞解釋：" body="1.產權證明文件：建物登記簿謄本，建物所有權狀或土地登記簿謄本（向當地地政事務所申請）。
+2.使門牌整編證明：向當地戶政事務所申請。"  />
+    </Col>
+    <Col xs={12} md={6}>
+    <PanelView title="陸、其他：" body="本項業務不適合辦理非筆誤或漏列之使用執照內容更改。"  />
+    </Col>
+</Row>
+</ div>
             default :
             return <div style={this.div33widthStyle}><PageHeader>
-            {id}
+            {id} <small onClick={this.clickHandler}>回上一頁</small>
         </PageHeader></div>
         
         }
