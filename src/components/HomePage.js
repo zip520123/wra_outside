@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 // import banner from './resource/banner.png'
-import { Row , Col } from 'react-bootstrap';
+// import { Row , Col } from 'react-bootstrap';
 import archButton from './resource/mainPageButton/archButton.png'
 import drtyWaterButton from './resource/mainPageButton/drtyWaterButton.png'
 import envEduButton from './resource/mainPageButton/envEduButton.png'

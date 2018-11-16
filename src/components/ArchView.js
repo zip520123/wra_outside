@@ -17,12 +17,6 @@ class ArchView extends Component {
                 path={this.props.match.path}
                 render={this.defaultLayer}
             />
-            {/* <Route path={`${this.props.match.path}/:topicId`} component={()=>(<BannerView />)} />
-            <Route
-                exact
-                path={this.props.match.path}
-                render={()=>(<BannerView />)}
-            /> */}
         </>)
     }
     div33widthStyle = {width : '33%',float: 'left',height: '100%'}
@@ -85,7 +79,7 @@ class ArchView extends Component {
                     <DivLink name="施工勘驗（放樣申報）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="施工勘驗（開工申報）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="施工勘驗（各層施工勘驗）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
-                    <DivLink name="變更起、承、監造人申請 " match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    <DivLink name="變更起、承、監造人申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="開工、竣工展期申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                 </div>
                 <BannerView />
