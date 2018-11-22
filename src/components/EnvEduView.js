@@ -79,7 +79,7 @@ class EnvEduView extends Component {
             case '污水場參訪申請（線上申請）':
             cellStyle = {...this.cellStyle , height : '15.5%'} 
             return (
-                <SewageApplication id={id}/>
+                <SewageApplication id={id} {...this.props}/>
               );
             default:
             return (

@@ -31,7 +31,6 @@ class DirtyWaterView extends Component {
         marginBottom: '10px',
     }
     render() {
-        
         return (<>
             <Route path={`${this.props.match.path}/:topicId`} component={this.topicIdLayer} />
             <Route

@@ -1,19 +1,13 @@
 import React, { Component } from 'react';
 import {
   Route,
-  Link,
-  Switch,
-  Redirect
+  Link
 } from 'react-router-dom';
 // import { BrowerRouter as Router , Route , Link } from 'react-router-dom'
 import './css/App.css';
-import TopNav from "./components/TopNav";
-import BottomView from "./components/BottomView"
-import RightView from "./components/RightView"
 import FilePageView from "./components/FilePageView"
 import HomePage from "./components/HomePage"
 import { ArchBlock ,EnvBlock ,DirtyWater,WaterSource , WaterKeepBlock , FileBlock} from "./components/ListBlock"
-import icon from './css/logo.png';
 import archMengerImage from './css/archMenger.png'
 import drtyWater from './css/drtyWater.png'
 import envEdu from './css/envEdu.png'

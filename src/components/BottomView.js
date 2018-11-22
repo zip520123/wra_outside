@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import {
-    Route,
-    Link,
-    // Switch,
-    Redirect
+    Route
   } from 'react-router-dom';
 import ListBlock from "./ListBlock.js"
 import RightView from './RightView'
