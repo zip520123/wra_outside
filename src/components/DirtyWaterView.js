@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 import { BannerView } from './HomePage.js'
 import GoBackView from './GoBackView'
-import { AWhite , DivLink } from './ListBlock'
+import { DivLink } from './ListBlock'
 import {PageHeader, Panel , Row , Col } from 'react-bootstrap'
 import {PanelView , DownloadLink} from './RightView'
+import ProcessWaterApplication from './ProcessWaterApplication'
 class DirtyWaterView extends Component {
     clickHandler = (e) => {
         this.props.history.goBack()
@@ -44,18 +45,15 @@ class DirtyWaterView extends Component {
     defaultLayer = () => {
         return <>
              <div style={{width : '33%',float: 'left',height: '100%'}}>
-                <div style={this.cellStyle}>
+                {/* <div style={this.cellStyle}>
                     <h1 style={this.centerTextStyle} >
                     <AWhite url="https://www.wratb.gov.tw/media/18063/放流水申請表.odt" name="處理水申請" />
                     </h1>
-                </div>
-                <DivLink name="既有建築物自設污水處理設施（國有土地專用）申請" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}>
-                </DivLink>
-                <DivLink name="污水下水道用戶排水設備接管" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}>
-                </DivLink>
-                <DivLink name="專用下水道納管申請" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}>
-                </DivLink>
-                
+                </div> */}
+                <DivLink name="處理水申請" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle} />
+                <DivLink name="既有建築物自設污水處理設施（國有土地專用）申請" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle} />
+                <DivLink name="污水下水道用戶排水設備接管" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle} />
+                <DivLink name="專用下水道納管申請" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle} />
             </div>
             <BannerView />
             <GoBackView clickHandler={this.clickHandler}></GoBackView>
@@ -64,6 +62,8 @@ class DirtyWaterView extends Component {
     topicIdLayer = ({match})=>{
         const id = match.params.topicId
         switch (id){
+            case '處理水申請':
+            return (<ProcessWaterApplication id={id} {...this.props}/>)
             case '既有建築物自設污水處理設施（國有土地專用）申請':
             return <div className='marginWrap'>
             <PageHeader>

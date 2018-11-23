@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
+import { Route , Link } from 'react-router-dom'
 import { BannerView } from './HomePage.js'
 import GoBackView from './GoBackView'
 import { DivLink ,ABlank} from './ListBlock'
@@ -754,7 +754,8 @@ class ArchView extends Component {
                     <Panel.Title componentClass="h3">線上申請</Panel.Title>
                     </Panel.Heading>
                     <Panel.Body>
-                    <ABlank url="http://child.wratb.gov.tw/apply/PublicApply.aspx" name="線上申請（請點此）" />
+                    <Link to={`/arch/分區證明線上申辦`} ><h4>線上申請（請點此）</h4></Link>
+                    {/* <ABlank url="http://child.wratb.gov.tw/apply/PublicApply.aspx" name="線上申請（請點此）" /> */}
                     </Panel.Body>
                 </Panel>
         </Col>
@@ -809,7 +810,8 @@ class ArchView extends Component {
                 <Panel.Title componentClass="h3">線上申請</Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>
-                <ABlank url="http://child.wratb.gov.tw/apply/PhoCopyDraw.aspx" name="線上申請（請點此）" />
+                <Link to={`/arch/影印圖說申請書`} ><h4>線上申請（請點此）</h4></Link>
+                {/* <ABlank url="http://child.wratb.gov.tw/apply/PhoCopyDraw.aspx" name="線上申請（請點此）" /> */}
                 </Panel.Body>
             </Panel>
     </Col>
@@ -871,6 +873,8 @@ class ArchView extends Component {
         </Col>
     </Row>
 </ div>
+        case '影印圖說申請書':
+        return <></>
         case '公有畸零地合併使用證明':
         return <div className='marginWrap'>
     <PageHeader>
@@ -883,7 +887,8 @@ class ArchView extends Component {
                 <Panel.Title componentClass="h3">線上申請</Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>
-                <ABlank url="http://child.wratb.gov.tw/apply/PublicLandApp.aspx" name="線上申請（請點此）" />
+                <Link to={`/arch/公有畸零地合併使用申請書`} ><h4>線上申請（請點此）</h4></Link>
+                {/* <ABlank url="http://child.wratb.gov.tw/apply/PublicLandApp.aspx" name="線上申請（請點此）" /> */}
                 </Panel.Body>
             </Panel>
     </Col>
@@ -1116,7 +1121,8 @@ return <div className='marginWrap'>
             <Panel.Title componentClass="h3">線上申請</Panel.Title>
             </Panel.Heading>
             <Panel.Body>
-            <ABlank url="http://child.wratb.gov.tw/apply/LegalLandApp.aspx" name="線上申請（請點此）" />
+            <Link to={`/arch/法定空地分割證明申請書`} ><h4>線上申請（請點此）</h4></Link>
+            {/* <ABlank url="http://child.wratb.gov.tw/apply/LegalLandApp.aspx" name="線上申請（請點此）" /> */}
             </Panel.Body>
         </Panel>
 </Col>
@@ -1499,7 +1505,8 @@ return <div className='marginWrap'>
             <Panel.Title componentClass="h3">線上申請</Panel.Title>
             </Panel.Heading>
             <Panel.Body>
-            <ABlank url="http://child.wratb.gov.tw/apply/LicLoseApp.aspx" name="線上申請（請點此）" />
+            <Link to={`/arch/執照遺失切結書`} ><h4>線上申請（請點此）</h4></Link>
+            {/* <ABlank url="http://child.wratb.gov.tw/apply/LicLoseApp.aspx" name="線上申請（請點此）" /> */}
             </Panel.Body>
         </Panel>
 </Col>
@@ -1555,7 +1562,7 @@ return <div className='marginWrap'>
             <Panel.Title componentClass="h3">線上申請</Panel.Title>
             </Panel.Heading>
             <Panel.Body>
-            <ABlank url="http://child.wratb.gov.tw/apply/UseLicense.aspx" name="線上申請（請點此）" />
+            <Link to={`/arch/使用執照存根聯申請書`} ><h4>線上申請（請點此）</h4></Link>
             </Panel.Body>
         </Panel>
 </Col>
@@ -1627,6 +1634,10 @@ return <div className='marginWrap'>
     </Col>
 </Row>
 </ div>
+case '使用執照存根聯申請書':
+return <>
+
+</>
 case '使用執照申請':
 return <div className='marginWrap'>
 <PageHeader>
