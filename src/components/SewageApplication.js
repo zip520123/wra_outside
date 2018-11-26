@@ -21,29 +21,33 @@ class SewageApplication extends Component {
         this.state = {
           value: '',
           isFormShow : false ,
-          startDate: new Date()
+          startDate: new Date(),
+          startDateAMPM: '上午'
         };
       }
-    getValidationState = () => {
-        // const length = this.state.value.length;
-        // if (length > 10) return 'success';
-        // else if (length > 5) return 'warning';
-        // else if (length > 0) return 'error';
-        return null;
-      }
-      handleChangeDate = (date) => {
-        this.setState({
-          startDate: date
-        });
-      }
-      handleChange = (e) => {
-        this.setState({ value: e.target.value });
-      }
+    handleChangeDate = (date) => {
+      this.setState({
+        startDate: date
+      });
+    }
+    handleChange = (e) => {
+      this.setState({ value: e.target.value });
+    }
+    handleChangeAMPM = (a) => {
+      this.setState({startDateAMPM : a})
+      const selectDate = this.state.startDate
+      console.log(selectDate.getFullYear() + "/" + selectDate.getMonth() + "/" + selectDate.getDate() + this.state.startDateAMPM)
+    }
+    checkButton = () => {
+      return !(this.state.department && this.state.contact_person && this.state.phone && this.state.email && this.state.address && this.state.people && this.state.purpose && this.state.place)
+    }
+
     submitForm = (e) => {
       // e.preventDefault();
       console.log('送出！')
     }
     render() {
+        const selectDate = this.state.startDate
         return <><div className='marginWrap'> 
         <Row>
             <Col xs={12} xsOffset={0} md={10} mdOffset={1}>
@@ -64,18 +68,28 @@ class SewageApplication extends Component {
         基本資料填寫 <small style={{color: 'red'}}>*為必填欄位</small>
       </PageHeader>
       <Form onSubmit={this.submitForm} action="http://10.65.164.216/api/SewageForm/Sewage" method="post" accept-charset="UTF-8" horizontal>
-       <FieldGroup id="department" 
+       <FieldGroup onChange={e =>{
+          this.setState({department : e.target.value})
+        }} id="department" 
         type="text"
         label="申請人員或機關(單位)"
         required={true}
        />
       <FieldGroup id="applicant" type="text" label="申請人" />
-      <FieldGroup id="contact_person" type="text" label="聯絡人" required={true} />
+      <FieldGroup id="contact_person" type="text" label="聯絡人" required={true} onChange={e =>{
+        this.setState({contact_person : e.target.value})}}
+      />
       <FieldGroup id="team_leader" type="text" label="帶隊人" />
-      <FieldGroup id="phone" type="text" label="聯絡電話" required={true} />
+      <FieldGroup id="phone" type="text" label="聯絡電話" required={true} onChange={e =>{
+          this.setState({phone : e.target.value})
+        }} />
       <FieldGroup id="fax" type="text" label="傳真" />
-      <FieldGroup id="email" type="text" label="Email" required={true} />
-      <FieldGroup id="address" type="text" label="聯絡地址" required={true} />
+      <FieldGroup id="email" type="text" label="Email" required={true} onChange={e =>{
+          this.setState({email : e.target.value})
+        }}/>
+      <FieldGroup id="address" type="text" label="聯絡地址" required={true} onChange={e =>{
+          this.setState({address : e.target.value})
+        }}/>
       <PageHeader>
        參觀資料填寫 <small style={{color: 'red'}}>*為必填欄位</small>
       </PageHeader>
@@ -86,27 +100,34 @@ class SewageApplication extends Component {
       預定參觀日期與時間<small style={{color :'red'}} >*</small>
       </Col>
       <Col sm={10}>
-        <DatePicker className='form-control' name="date"
+        <DatePicker className='form-control'
         dateFormat="yyyy/MM/dd"
         selected={this.state.startDate}
         onChange={this.handleChangeDate}
         />{' '}
-        <Radio name="date" value="上午(9時-12時，共3小時)" inline>
+        <Radio value="上午(9時-12時，共3小時)" name="ampmRadio" inline 
+        onChange={(e) => this.handleChangeAMPM("上午")}
+        >
         上午(9時-12時，共3小時)
         </Radio>{' '}
-        <Radio name="date" value="下午(14時-16時，共2小時)" inline>
+        <Radio value="下午(14時-16時，共2小時)" name="ampmRadio" inline
+        onChange={(e) => this.handleChangeAMPM("下午")}
+        >
         下午(14時-16時，共2小時)
         </Radio>{' '}
       </Col>
+      <input type="hidden" id="date" name="date" value={selectDate.getFullYear() + "/" + (selectDate.getMonth() + 1) + "/" + selectDate.getDate() + this.state.startDateAMPM}></input>
       </FormGroup>
 
-      <FieldGroup id="people" type="text" label="參觀人數" required={true} />
+      
       <FormGroup style={{fontSize: '18px'}} bsSize="lg" controlId="people" >
       <Col componentClass={ControlLabel} sm={2}>
        參觀人數<small style={{color :'red'}} >*</small>
       </Col>
       <Col sm={10}>
-        <FormControl name="people" />
+        <FormControl name="people" onChange={e =>{
+          this.setState({people : e.target.value})
+        }}/>
         <HelpBlock><p style={{color:'red'}}>至少5人，最多只能填寫30人</p></HelpBlock>
         <FormControl.Feedback />
       </Col>
@@ -130,16 +151,22 @@ class SewageApplication extends Component {
 
       <FormGroup style={{fontSize: '18px'}} bsSize="lg" controlId="place">
         <Col componentClass={ControlLabel} sm={2}>
-        參觀廠別
+        參觀廠別<small style={{color :'red'}} >*</small>
         </Col>
         <Col sm={10}>
-            <Radio name="Place" value="直潭污水廠" inline>
+            <Radio name="place" value="直潭污水廠" inline onChange={e=>{
+              this.setState({place : e.target.value})
+            }}>
             直潭污水廠
             </Radio>{' '}
-            <Radio name="Place" value="烏來污水廠" inline>
+            <Radio name="place" value="烏來污水廠" inline onChange={e=>{
+              this.setState({place : e.target.value})
+            }} >
             烏來污水廠
             </Radio>{' '}
-            <Radio name="Place" value="坪林污水廠" inline>
+            <Radio name="place" value="坪林污水廠" inline onChange={e=>{
+              this.setState({place : e.target.value})
+            }} >
             坪林污水廠
             </Radio>
         </Col>
@@ -150,7 +177,9 @@ class SewageApplication extends Component {
       參觀宗旨(目的)<small style={{color :'red'}} >*</small>
       </Col>
       <Col sm={10}>
-      <FormControl name="purpose" componentClass="textarea" maxlength="100"/>
+      <FormControl name="purpose" componentClass="textarea" maxlength="100" onChange={e =>{
+          this.setState({purpose : e.target.value})
+        }}/>
       <HelpBlock><p style={{color:'red'}}>最多只能輸入100字元</p></HelpBlock>
       </Col>
       </FormGroup>
@@ -171,7 +200,7 @@ class SewageApplication extends Component {
         <li>受限於本局及委外廠商人手不足，參訪單位應注意自身與隨行孩童相關安全事宜並服從現場人員指導，如發生意外事故本局概不負責。</li>
       </ol>
       <div style={{ maxWidth: 400 , margin: '0 auto 10px' }}>
-        <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block type="submit">送出</Button>
+        <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block type="submit" disabled={this.checkButton()}>送出</Button>
       </div>
       </Form>
       

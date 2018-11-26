@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Table ,Form,FormControl, Button,PageHeader ,Checkbox, Row , Col } from 'react-bootstrap'
+import {Radio,Table ,Form,FormGroup,ControlLabel,FormControl, Button,PageHeader ,Checkbox, Row , Col } from 'react-bootstrap'
 import { FieldGroup } from './SewageApplication'
 class EnvEduApplication extends Component {
     constructor(props, context) {
@@ -9,6 +9,9 @@ class EnvEduApplication extends Component {
           isAgreeRole : false
         };
     }
+    checkButton = () => {
+      return !(this.state.Department && this.state.Name && this.state.CellPhone && this.state.Email && this.state.TimeRegister && this.state.isAgreeRole)
+    }
     render() {
         return <><div className='marginWrap'>
         <Row>
@@ -17,20 +20,111 @@ class EnvEduApplication extends Component {
 環境教育課程活動申請表 <small onClick={ this.props.history.goBack }>回上一頁</small></PageHeader>
 <h2 style={{textAlign: 'center'}}>（以下欄位請詳細填寫，謝謝）</h2>
 <Form action="http://10.65.164.216/api/SewageForm/Environment" method="post" accept-charset="UTF-8" horizontal>
-<FieldGroup id="Department" type="text" label="申請單位名稱" required={true}/>
-<FieldGroup id="Name" type="text" label="聯絡人姓名" required={true}/>
+<FieldGroup id="Department" type="text" label="申請單位名稱" required={true} onChange={e=>{
+              this.setState({Department : e.target.value})
+            }}/>
+<FieldGroup id="Name" type="text" label="聯絡人姓名" required={true} onChange={e=>{
+              this.setState({Name : e.target.value})
+            }}/>
 <FieldGroup id="JobTitle" type="text" label="職稱" />
 <FieldGroup id="Phone" type="text" label="聯絡電話" />
-<FieldGroup id="CellPhone" type="text" label="行動電話" required={true}/>
-<FieldGroup id="Email" type="text" label="Email" required={true}/>
+<FieldGroup id="CellPhone" type="text" label="行動電話" required={true} onChange={e=>{
+              this.setState({CellPhone : e.target.value})
+            }}/>
+<FieldGroup id="Email" type="text" label="Email" required={true} onChange={e=>{
+              this.setState({Email : e.target.value})
+            }}/>
 <FieldGroup id="Fax" type="text" label="傳真" />
 <FieldGroup id="Address" type="text" label="聯絡地址" />
-<FieldGroup id="VisitTime" type="text" label="參訪時間" required={true}/>
-<FieldGroup id="GroupType" type="text" label="團體性質" required={true}/>
-<FieldGroup id="Course" type="text" label="報名課程活動" required={true}/>
+{/* <FieldGroup id="VisitTime" type="text" label="參訪時間" required={true}/> */}
+<FormGroup style={{fontSize: '18px'}} bsSize="lg" controlId="date">
+<Col componentClass={ControlLabel} sm={2}>
+參訪時間<small style={{color :'red'}} >*</small>
+      </Col>
+      <Col sm={10}>
+        <FormControl name="people" onChange={e =>{
+          this.setState({people : e.target.value})
+        }}/>
+        <FormControl.Feedback />
+      </Col>
+</FormGroup>
+{/* <FieldGroup id="GroupType" type="text" label="團體性質" required={true}/> */}
+<FormGroup style={{fontSize: '18px'}} bsSize="lg" controlId="GroupType">
+<Col componentClass={ControlLabel} sm={2}>
+團體性質<small style={{color :'red'}} >*</small>
+      </Col>
+      <Col sm={10}>
+      <Radio name="GroupType" value="一般民眾" inline onChange={e=>{
+              this.setState({GroupType : e.target.value})
+            }} >
+            一般民眾
+            </Radio>{' '}
+            <Radio name="GroupType" value="機關" inline onChange={e=>{
+              this.setState({GroupType : e.target.value})
+            }} >
+            機關
+            </Radio>{' '}
+            <Radio name="GroupType" value="學校" inline onChange={e=>{
+              this.setState({GroupType : e.target.value})
+            }} >
+            學校
+            </Radio>
+            <Radio name="GroupType" value="團體" inline onChange={e=>{
+              this.setState({GroupType : e.target.value})
+            }} >
+            團體
+            </Radio>
+      </Col>
+
+</FormGroup>
+
+{/* <FieldGroup id="Course" type="text" label="報名課程活動" required={true}/> */}
+<FormGroup style={{fontSize: '18px'}} bsSize="lg" controlId="Course">
+<Col componentClass={ControlLabel} sm={2}>
+報名課程活動<small style={{color :'red'}} >*</small>
+      </Col>
+      <Col sm={10}>
+      <Radio name="Course" value="課程方案一：4小時水源地守護者完整課程 "  onChange={e=>{
+              this.setState({Course : e.target.value})
+            }} >
+            課程方案一：4小時水源地守護者完整課程 
+            </Radio>{' '}
+            <Radio name="Course" value="課程方案二：2小時坪林污水處理廠 "  onChange={e=>{
+              this.setState({Course : e.target.value})
+            }} >
+            課程方案二：2小時坪林污水處理廠 
+            </Radio>{' '}
+            <Radio name="Course" value="課程方案三：2小時仁里坂13、14號水質淨化示範區"  onChange={e=>{
+              this.setState({Course : e.target.value})
+            }} >
+            課程方案三：2小時仁里坂13、14號水質淨化示範區
+            </Radio>
+      </Col>
+
+</FormGroup>
 <FieldGroup id="GroupName" type="text" label="參訪團體名稱" />
 <FieldGroup id="People" type="text" label="人數" />
-<FieldGroup id="TimeRegister" type="text" label="時數登記" />
+{/* <FieldGroup id="TimeRegister" type="text" label="時數登記" /> */}
+<FormGroup style={{fontSize: '18px'}} bsSize="lg" controlId="TimeRegister">
+      <Col componentClass={ControlLabel} sm={2}>
+      時數登記
+      </Col>
+      <Col sm={10}>
+      <Radio name="TimeRegister" value="課程方案一：4小時水源地守護者完整課程 " inline onChange={e=>{
+              this.setState({TimeRegister : e.target.value})
+            }} >
+            需要 
+      </Radio>{' '}
+      <Radio name="TimeRegister" value="課程方案二：2小時坪林污水處理廠 " inline onChange={e=>{
+        this.setState({TimeRegister : e.target.value})
+      }} >
+      不需要
+      </Radio>{' '}
+            
+      </Col>
+
+</FormGroup>
+
 
 <h2>附註</h2>
 <ol style={{fontSize: '18px'}}>
@@ -98,7 +192,7 @@ class EnvEduApplication extends Component {
   </tbody>
 </Table>
 <div style={{ maxWidth: 400 , margin: '0 auto 10px' }}>
-        <Button bsStyle="primary"  style={{height: '50px' ,fontSize: '18px'}} block type="submit">送出</Button>
+        <Button bsStyle="primary"  style={{height: '50px' ,fontSize: '18px'}} block type="submit" disabled={this.checkButton()} >送出</Button>
       </div>
         </Form></Col>
         </Row>
