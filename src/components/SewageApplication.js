@@ -67,7 +67,7 @@ class SewageApplication extends Component {
       <PageHeader>
         基本資料填寫 <small style={{color: 'red'}}>*為必填欄位</small>
       </PageHeader>
-      <Form onSubmit={this.submitForm} action="http://10.65.164.216/api/SewageForm/Sewage" method="post" accept-charset="UTF-8" horizontal>
+      <Form onSubmit={this.submitForm} action={`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/Sewage`}method="post" accept-charset="UTF-8" horizontal>
        <FieldGroup onChange={e =>{
           this.setState({department : e.target.value})
         }} id="department" 

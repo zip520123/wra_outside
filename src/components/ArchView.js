@@ -5,6 +5,7 @@ import GoBackView from './GoBackView'
 import { DivLink ,ABlank} from './ListBlock'
 import {PageHeader, Panel , Row , Col } from 'react-bootstrap'
 import {PanelView , DownloadLink} from './RightView'
+import UseLinceseApplication from './application/UseLinceseApplication'
 class ArchView extends Component {
     clickHandler = (e) => {
         this.props.history.goBack()
@@ -1636,7 +1637,7 @@ return <div className='marginWrap'>
 </ div>
 case '使用執照存根聯申請書':
 return <>
-
+    <UseLinceseApplication {...this.props} />
 </>
 case '使用執照申請':
 return <div className='marginWrap'>

@@ -18,7 +18,7 @@ class ProcessWaterApplication extends Component {
         <Col xs={12} xsOffset={0} md={10} mdOffset={1}>
         <PageHeader style={{textAlign: 'center'}}> 經濟部水利署臺北水源特定區管理局 <br />
         處理水申請表 <small onClick={ this.props.history.goBack }>回上一頁</small></PageHeader>
-        <Form action="http://10.65.164.216/api/SewageForm/DealWater" method="post" accept-charset="UTF-8" horizontal>
+        <Form action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/DealWater`} method="post" accept-charset="UTF-8" horizontal>
         <FieldGroup id="Applicant" type="text" label="申請人姓名" />
         <FieldGroup id="Phone" type="text" label="聯絡電話" />
         <FieldGroup id="Address" type="text" label="申請人地址" />

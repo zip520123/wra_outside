@@ -19,7 +19,7 @@ class EnvEduApplication extends Component {
         <PageHeader style={{textAlign: 'center'}}> 臺北水源特定區環境教育學習中心 <br />
 環境教育課程活動申請表 <small onClick={ this.props.history.goBack }>回上一頁</small></PageHeader>
 <h2 style={{textAlign: 'center'}}>（以下欄位請詳細填寫，謝謝）</h2>
-<Form action="http://10.65.164.216/api/SewageForm/Environment" method="post" accept-charset="UTF-8" horizontal>
+<Form action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/Environment`} method="post" accept-charset="UTF-8" horizontal>
 <FieldGroup id="Department" type="text" label="申請單位名稱" required={true} onChange={e=>{
               this.setState({Department : e.target.value})
             }}/>
