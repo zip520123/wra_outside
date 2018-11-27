@@ -7,6 +7,7 @@ class UseLinceseApplication extends Component {
         return false
       }
     render() {
+        const tableBorder = {border:'solid windowtext 1.0pt'}
         return <><div className='marginWrap'>
         <Row>
             <Col xs={12} xsOffset={0} md={12} mdOffset={0}>
@@ -176,60 +177,57 @@ class UseLinceseApplication extends Component {
     <h4>申請人(所有權人)(*為必填欄位)</h4>
     <FormGroup bsSize="lg" controlId="">
         <ControlLabel>*姓名:</ControlLabel>{' '}
-        <FormControl name="UseLicense" onChange={(e) =>{
-          this.setState({UseLicense : e.target.value})
+        <FormControl name="Name" onChange={(e) =>{
+          this.setState({Name : e.target.value})
         }}/>{"  "}
         <ControlLabel>*住址:</ControlLabel>{' '}
-        <FormControl name="UseNum" onChange={(e) =>{
-          this.setState({UseNum : e.target.value})
+        <FormControl name="Address" onChange={(e) =>{
+          this.setState({Address : e.target.value})
         }}/>
         <ControlLabel>*身分證字號:</ControlLabel>{' '}
-        <FormControl name="UseNum" onChange={(e) =>{
-          this.setState({UseNum : e.target.value})
+        <FormControl name="Identity" onChange={(e) =>{
+          this.setState({Identity : e.target.value})
         }}/>
         <ControlLabel>*電話:</ControlLabel>{' '}
-        <FormControl name="UseNum" onChange={(e) =>{
-          this.setState({UseNum : e.target.value})
+        <FormControl name="Phone " onChange={(e) =>{
+          this.setState({Phone  : e.target.value})
         }}/>
         <ControlLabel>傳真:</ControlLabel>{' '}
-        <FormControl name="UseNum" onChange={(e) =>{
-          this.setState({UseNum : e.target.value})
+        <FormControl name="Fax " onChange={(e) =>{
+          this.setState({Fax  : e.target.value})
         }}/>
     </FormGroup>
 
     <h4>代理人(受委託人)</h4>
     <FormGroup bsSize="lg" controlId="">
         <ControlLabel>姓名:</ControlLabel>{' '}
-        <FormControl name="UseLicense" onChange={(e) =>{
-          this.setState({UseLicense : e.target.value})
+        <FormControl name="ViceName" onChange={(e) =>{
+          this.setState({ViceName : e.target.value})
         }}/>{"  "}
         <ControlLabel>住址:</ControlLabel>{' '}
-        <FormControl name="UseNum" onChange={(e) =>{
-          this.setState({UseNum : e.target.value})
+        <FormControl name="ViceAddress" onChange={(e) =>{
+          this.setState({ViceAddress : e.target.value})
         }}/>
         <ControlLabel>身分證字號:</ControlLabel>{' '}
-        <FormControl name="UseNum" onChange={(e) =>{
-          this.setState({UseNum : e.target.value})
+        <FormControl name="ViceIdentity" onChange={(e) =>{
+          this.setState({ViceIdentity : e.target.value})
         }}/>如為外籍人士 請填寫居留證號。
         <ControlLabel>電話:</ControlLabel>{' '}
-        <FormControl name="UseNum" onChange={(e) =>{
-          this.setState({UseNum : e.target.value})
+        <FormControl name="VicePhone" onChange={(e) =>{
+          this.setState({VicePhone  : e.target.value})
         }}/>
         <ControlLabel>傳真:</ControlLabel>{' '}
-        <FormControl name="UseNum" onChange={(e) =>{
-          this.setState({UseNum : e.target.value})
+        <FormControl name="ViceFax" onChange={(e) =>{
+          this.setState({ViceFax  : e.target.value})
         }}/>
     </FormGroup>
     
-    <table style={{width:'100%'}}>
+    <table style={{width:'100%' }}>
         <tr>
-          <td>1</td>
-          <td>2</td>
+          <td style={{rowspan:"2", width: '19%', padding : '0cm 1.4pt 0cm 1.4pt',...tableBorder}}>建物座落地址</td>
+          <td>整編前</td>
           <td>3</td>
-          <td>4</td>
-          <td>5</td>
-          <td>6</td>
-          <td>7</td>
+          
         </tr>
         <tr>
           <td>1</td>

@@ -1,0 +1,35 @@
+/*body {
+    padding: 0px;
+    margin: 0px;
+}
+
+div{
+    padding: 10px 20px;
+}*/
+
+#table_copy{
+    margin-left:auto; 
+    margin-right:auto;
+    margin-top: 50px;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+#table_building_address_before, #table_building_address_after, #table_land_address_before, 
+#table_land_address_after{
+    border-collapse: collapse;
+    width: 100%;
+    /* text-align: right; */
+}
+
+#copy_things_before, #copy_things_after{
+    border-collapse: collapse;
+}
+
+#attachment_data_td2 {
+    width: 20%;
+}
+
+#building_address, #land_address, #copy_things, #attachment_data, #apply_person, #agent_person{
+    width: 10%;
+}

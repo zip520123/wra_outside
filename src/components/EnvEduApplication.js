@@ -42,8 +42,8 @@ class EnvEduApplication extends Component {
 參訪時間<small style={{color :'red'}} >*</small>
       </Col>
       <Col sm={10}>
-        <FormControl name="people" onChange={e =>{
-          this.setState({people : e.target.value})
+        <FormControl name="VisitTime" onChange={e =>{
+          this.setState({VisitTime : e.target.value})
         }}/>
         <FormControl.Feedback />
       </Col>
@@ -134,7 +134,7 @@ class EnvEduApplication extends Component {
     <li>本學習中心免費參訪，參訪人員之平安保險等請申請單位自行辦理。</li>
     <li>行程前請詳閱「臺北水源特定區環境教育學習中心注意事項」（如附件）。</li>
     <li>經本局同意申請之團體，當日課程所攝之照片，皆同意授權本局非商業使用。</li>
-    <li><Checkbox onClick={e => { this.setState({isAgreeRole : e.target.checked}) }} validationState={ 
+    <li><Checkbox style={{fontSize:'32px'}} onClick={e => { this.setState({isAgreeRole : e.target.checked}) }} validationState={ 
       this.state.isAgreeRole ? 'success' : 'error'
     }>
     以上內容已詳閱 並同意以上服務條款

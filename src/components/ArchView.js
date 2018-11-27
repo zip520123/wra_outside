@@ -6,6 +6,7 @@ import { DivLink ,ABlank} from './ListBlock'
 import {PageHeader, Panel , Row , Col } from 'react-bootstrap'
 import {PanelView , DownloadLink} from './RightView'
 import UseLinceseApplication from './application/UseLinceseApplication'
+import PhoCopyDraw from './application/PhoCopyDraw'
 class ArchView extends Component {
     clickHandler = (e) => {
         this.props.history.goBack()
@@ -875,7 +876,7 @@ class ArchView extends Component {
     </Row>
 </ div>
         case '影印圖說申請書':
-        return <></>
+        return <PhoCopyDraw { ...this.props}></PhoCopyDraw>
         case '公有畸零地合併使用證明':
         return <div className='marginWrap'>
     <PageHeader>

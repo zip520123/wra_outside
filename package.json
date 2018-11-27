@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "html2canvas": "^1.0.0-alpha.12",
     "jquery": "^3.3.1",
+    "jspdf": "^1.4.1",
     "react": "^16.5.2",
     "react-bootstrap": "^0.32.4",
     "react-datepicker": "^2.0.0",
