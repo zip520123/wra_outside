@@ -7,7 +7,6 @@ class PhoCopyDraw extends Component {
     constructor(props , context){
         super(props, context)
         this.state = {
-            
         }
     }
     readOnlyCheckBox = (state) =>{
@@ -33,7 +32,7 @@ class PhoCopyDraw extends Component {
             <PageHeader style={{textAlign: 'center'}}> 影印圖說申請書
             <small onClick={ this.props.history.goBack }> 回上一頁</small></PageHeader>
             <h4 >建物座落地址</h4>
-            <Form style={{fontSize : '18px'}} action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/OwnerLicense`} method="post" accept-charset="UTF-8" inline>
+            <Form style={{fontSize : '18px'}} action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/PrintPicForm`} method="post" accept-charset="UTF-8" inline>
                 <FormGroup bsSize="lg" controlId="">
                     <ControlLabel>整編前:</ControlLabel>{' '}
                     <FormControl componentClass="select" placeholder="" name="BCDistrict" onChange={(e)=>{
@@ -132,40 +131,48 @@ class PhoCopyDraw extends Component {
                     }}/>
                 </FormGroup>
                 <FormGroup bsSize="lg" controlId="">
-                    <Checkbox onClick={e => { this.setState({BuildFloorPlan:e.target.checked}) }} inline>
+                    <Checkbox onClick={e => { this.setState({BuildFloorPlan: e.target.checked}) }} inline>
+                    <input type="hidden" name="BuildFloorPlan" value={this.state.BuildFloorPlan ? 1 : 0}/>
                     建築平面圖
                     <FormControl name="BuildFloor" onChange={(e) =>{
                         this.setState({BuildFloor  : e.target.value})
                         }} />樓
                     </Checkbox>
                     <Checkbox onClick={e => { this.setState({BuildStrucPlan :e.target.checked}) }} inline>
+                    <input type="hidden" name="BuildStrucPlan" value={this.state.BuildStrucPlan ? 1 : 0}/>
                     結構平面圖
                     <FormControl name="BuildStructFloor" onChange={(e) =>{
                         this.setState({BuildStructFloor  : e.target.value})
                         }} />樓
                     </Checkbox>
                     <Checkbox onClick={e => { this.setState({BuildFirePlan:e.target.checked}) }} inline>
+                    <input type="hidden" name="BuildFirePlan" value={this.state.BuildFirePlan ? 1 : 0}/>
                     消防平面圖
                     <FormControl name="BuildFireFloor" onChange={(e) =>{
                         this.setState({BuildFireFloor  : e.target.value})
                         }} />樓
                     </Checkbox>
                     <Checkbox onClick={e => { this.setState({SewagePlan:e.target.checked}) }} inline>
+                    <input type="hidden" name="SewagePlan" value={this.state.SewagePlan ? 1 : 0}/>
                     廢污水圖
                     </Checkbox>
                     <Checkbox onClick={e => { this.setState({BuildOther :e.target.checked}) }} inline>
+                    <input type="hidden" name="BuildOther" value={this.state.BuildOther ? 1 : 0}/>
                     其他
                     <FormControl name="BuildOtherCom" onChange={(e) =>{
                         this.setState({BuildOtherCom  : e.target.value})
                         }} />
                     </Checkbox>
                     <Checkbox onClick={e => { this.setState({BuildAreaCal :e.target.checked}) }} inline>
+                    <input type="hidden" name="BuildAreaCal" value={this.state.BuildAreaCal ? 1 : 0}/>
                     面積計算表
                     </Checkbox>
                     <Checkbox onClick={e => { this.setState({BuildLocation :e.target.checked}) }} inline>
+                    <input type="hidden" name="BuildLocation" value={this.state.BuildLocation ? 1 : 0}/>
                     位置配置圖
                     </Checkbox>
                     <Checkbox onClick={e => { this.setState({BuildNamebook :e.target.checked}) }} inline>
+                    <input type="hidden" name="BuildNamebook" value={this.state.BuildNamebook ? 1 : 0}/>
                     起造人名冊
                     </Checkbox>
                 </FormGroup>
@@ -181,12 +188,14 @@ class PhoCopyDraw extends Component {
                 </FormGroup>
                 <FormGroup bsSize="lg" controlId="">
                     <Checkbox onClick={e => { this.setState({UseFloorPlan:e.target.checked}) }} inline>
+                    <input type="hidden" name="UseFloorPlan" value={this.state.UseFloorPlan ? 1 : 0}/>
                     建築平面圖
                     <FormControl name="UseFloor" onChange={(e) =>{
                         this.setState({UseFloor  : e.target.value})
                         }} />樓
                     </Checkbox>
                     <Checkbox onClick={e => { this.setState({UseCoastDefence :e.target.checked}) }} inline>
+                    <input type="hidden" name="UseCoastDefence" value={this.state.UseCoastDefence ? 1 : 0}/>
                     海防平面圖
                     <FormControl name="UseCoastFloor" onChange={(e) =>{
                         this.setState({UseCoastFloor : e.target.value})
@@ -194,36 +203,45 @@ class PhoCopyDraw extends Component {
                     </Checkbox>
                     
                     <Checkbox onClick={e => { this.setState({UseSewagePlan:e.target.checked}) }} inline>
+                    <input type="hidden" name="UseSewagePlan" value={this.state.UseSewagePlan ? 1 : 0}/>
                     廢污水圖
                     </Checkbox>
                     <Checkbox onClick={e => { this.setState({UseOther  :e.target.checked}) }} inline>
+                    <input type="hidden" name="UseOther" value={this.state.UseOther ? 1 : 0}/>
                     其他
                     <FormControl name="UseOtherCom" onChange={(e) =>{
                         this.setState({UseOtherCom  : e.target.value})
                         }} />
                     </Checkbox>
                     <Checkbox onClick={e => { this.setState({UseAreaCal :e.target.checked}) }} inline>
+                    <input type="hidden" name="UseAreaCal" value={this.state.UseAreaCal ? 1 : 0}/>
                     面積計算表
                     </Checkbox>
                     <Checkbox onClick={e => { this.setState({UseLocation :e.target.checked}) }} inline>
+                    <input type="hidden" name="UseLocation" value={this.state.UseLocation ? 1 : 0}/>
                     位置配置圖
                     </Checkbox>
                     <Checkbox onClick={e => { this.setState({UseNamebook :e.target.checked}) }} inline>
+                    <input type="hidden" name="UseNamebook" value={this.state.UseNamebook ? 1 : 0}/>
                     起造人名冊
                     </Checkbox>
                 </FormGroup>
                 <h4>檢附資料(至少需選擇一項)可複選</h4>
                 <FormGroup bsSize="lg" controlId="">
                     <Checkbox onClick={e => { this.setState({ProfitReg :e.target.checked}) }} inline>
+                    <input type="hidden" name="ProfitReg" value={this.state.ProfitReg ? 1 : 0}/>
                     營利事業登記簿
                     </Checkbox>
                     <Checkbox onClick={e => { this.setState({BuildOwnPrint :e.target.checked}) }} inline>
+                    <input type="hidden" name="BuildOwnPrint" value={this.state.BuildOwnPrint ? 1 : 0}/>
                     建物所有權狀影本
                     </Checkbox>
                     <Checkbox onClick={e => { this.setState({BuildRegDoc :e.target.checked}) }} inline>
+                    <input type="hidden" name="BuildRegDoc" value={this.state.BuildRegDoc ? 1 : 0}/>
                     建物登記簿謄本正本
                     </Checkbox>
                     <Checkbox onClick={e => { this.setState({BuildMeaRes :e.target.checked}) }} inline>
+                    <input type="hidden" name="BuildMeaRes" value={this.state.BuildMeaRes ? 1 : 0}/>
                     建物測量成果圖
                     </Checkbox>
                 </FormGroup>
@@ -243,11 +261,11 @@ class PhoCopyDraw extends Component {
                     this.setState({Identity : e.target.value})
                     }}/>
                     <ControlLabel>*電話:</ControlLabel>{' '}
-                    <FormControl name="Phone " onChange={(e) =>{
+                    <FormControl name="Phone" onChange={(e) =>{
                     this.setState({Phone  : e.target.value})
                     }}/>
                     <ControlLabel>傳真:</ControlLabel>{' '}
-                    <FormControl name="Fax " onChange={(e) =>{
+                    <FormControl name="Fax" onChange={(e) =>{
                     this.setState({Fax  : e.target.value})
                     }}/>
                 </FormGroup>
@@ -448,7 +466,7 @@ class PhoCopyDraw extends Component {
             <tr>
                 <td rowSpan="3" id="apply_person">申請人<br />(所有權人)</td>
                 <td >姓名及簽章</td>
-                <td colSpan="3">{this.state.Name}</td>
+                <td colSpan="3">{this.state.Name}&nbsp;</td>
                 <td colSpan="2">身分證字號</td>
                 <td colSpan="4">{this.state.Identity}</td>
             </tr>
@@ -465,7 +483,7 @@ class PhoCopyDraw extends Component {
             <tr>
                 <td rowSpan="3" id="agent_person">代理人<br />(受委託人)</td>
                 <td>姓名及簽章</td>
-                <td colSpan="3">{this.state.ViceName}</td>
+                <td colSpan="3">{this.state.ViceName}&nbsp;</td>
                 <td colSpan="2">身分證字號</td>
                 <td colSpan="4">{this.state.ViceIdentity}</td>
             </tr>

@@ -7,6 +7,9 @@ import {PageHeader, Panel , Row , Col } from 'react-bootstrap'
 import {PanelView , DownloadLink} from './RightView'
 import UseLinceseApplication from './application/UseLinceseApplication'
 import PhoCopyDraw from './application/PhoCopyDraw'
+import PublicLandApp from './application/PublicLandApp'
+import LegalLandApp from './application/LegalLandApp'
+import LicLoseApp from './application/LicLoseApp'
 class ArchView extends Component {
     clickHandler = (e) => {
         this.props.history.goBack()
@@ -932,8 +935,10 @@ class ArchView extends Component {
         </Col>
     </Row>
 </ div>
-            case '建築線申請':
-            return <div className='marginWrap'>
+    case '公有畸零地合併使用申請書':
+    return <PublicLandApp {...this.props}></PublicLandApp>
+    case '建築線申請':
+    return <div className='marginWrap'>
     <PageHeader>
         {id} <small onClick={this.clickHandler}>回上一頁</small>
     </PageHeader>
@@ -1173,6 +1178,8 @@ return <div className='marginWrap'>
     </Col>
 </Row>
 </ div>
+case '法定空地分割證明申請書':
+return <LegalLandApp {...this.props} />
 case '合法房屋證明':
 return <div className='marginWrap'>
     <PageHeader>
@@ -1552,6 +1559,8 @@ return <div className='marginWrap'>
     </Col>
 </Row>
 </ div>
+case '執照遺失切結書':
+return <LicLoseApp {...this.props}></LicLoseApp>
 case '使用執照存根申請':
 return <div className='marginWrap'>
 <PageHeader>

@@ -1,0 +1,232 @@
+/*style="page-break-inside:avoid"
+
+*/
+
+#WordSection1{
+    /* margin-left:30%; 
+    margin-right:30%; */
+}
+
+#MsoNormal_title{
+    text-align: center; 
+    line-height: 28.0pt;
+    font-size:26.0pt;
+    font-family:標楷體;
+}
+
+#MsoNormal_date{
+    text-align: right;
+    font-size:14.0pt;
+    font-family:標楷體;
+}
+
+#MsoNormalTable{
+    width:100%;
+    border-collapse:collapse;
+    border:none;
+    border-spacing:10px;
+    padding:10px;
+}
+
+#building_addreee_btd1{
+    width:19%;
+    border:solid
+    windowtext 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    text-align:center;
+    line-height:28.0pt;
+    font-size:14.0pt;
+    font-family:標楷體;
+}
+
+#building_addreee_btd2, #building_addreee_atd1, #land_address_btd2, #land_address_atd1
+{
+    width:9%;
+    border:solid windowtext 1.0pt;
+    border-left: none;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    text-align:center;
+    line-height:28.0pt;
+    font-size:14.0pt;
+    font-family:標楷體;
+}
+
+#building_addreee_btd3{
+    width:70%;
+    border:solid windowtext 1.0pt;
+    border-left:none;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    line-height:28.0pt;
+    font-size:14.0pt;
+    font-family:標楷體;
+    vertical-align:top;
+}
+
+#building_addreee_atd2, #land_address_btd3, #land_address_atd2{
+    width:70%;
+    border-top:none;
+    border-left:none;
+    border-bottom:solid windowtext 1.0pt;
+    border-right:solid windowtext 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    line-height:28.0pt;
+    font-size:14.0pt;
+    font-family:標楷體;
+    vertical-align:top;
+}
+
+#land_address_btd1, #license_number_td1, #copy_things_td1, #attachment_data_td1,
+#apply_person_td1, #agent_person_td1{
+    width:19%;
+    border:solid windowtext 1.0pt;
+    border-top:none;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    text-align:center;
+    line-height:28.0pt;
+    font-size:14.0pt;
+    font-family:標楷體;
+}
+
+#apply_usage_td1{
+    width:19%;
+    border:solid windowtext 1.0pt;
+    border-top:none;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    text-align:center;
+    line-height:28.0pt;
+    font-size:14.0pt;
+    font-family:標楷體;
+    height:36.5pt
+}
+
+#apply_usage_td2{
+    width:80%;
+    border-top:none;
+    border-left:none;
+    border-bottom:solid windowtext 1.0pt;
+    border-right:solid windowtext 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    line-height:28.0pt;
+    font-size:18.0pt;
+    font-family:Wingdings;
+    vertical-align:top;
+    height:36.5pt;
+}
+
+#check_box_1, #check_box_2, #check_box_3, #check_box_4,
+#check_box_5, #check_box_6, #check_box_7, #check_box_8,
+#check_box_9, #check_box_10, #check_box_11, #check_box_12,
+#check_box_13, #check_box_14{
+    margin-left:18.0pt;
+    text-indent:-18.0pt;
+    line-height:28.0pt;
+    font-size: 18.0pt;
+    font-family: Wingdings;
+}
+
+#text_1, #text_2, #text_3, #text_4, #text_5, #text_6,
+#text_7, #text_8, #text_9, #text_10, #text_11, #text_12,
+#text_13, #text_14, #text_15, #text_16, #text_17, #text_18,
+#text_20, #text_21, #text_22, #text_23, #text_24,#text_25,
+#text_26,#text_27{
+    font-size:16.0pt;
+    font-family:標楷體;
+}
+#text_19{
+    text-decoration:underline;
+    font-family:標楷體;
+    font-size:16.0pt;
+}
+
+#license_number_td2, #license_number_td3, #copy_things_td2, #attachment_data_td2{
+    width:80%;
+    border-top:none;
+    border-left:none;
+    border-bottom:solid windowtext 1.0pt;
+    border-right:solid windowtext 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    line-height:28.0pt;
+    font-size:14.0pt;
+    vertical-align:top;
+    font-family:標楷體;
+}
+
+#apply_person_name1, #apply_person_id1, #agent_person_name1, #agent_person_id1{
+    width:15%;
+    border-top:none;
+    border-left:none;
+    border-bottom:solid windowtext 1.0pt;
+    border-right:solid windowtext 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:49.4pt;
+    text-align:center;
+    line-height:28.0pt;
+    font-size:14.0pt;
+    font-family:標楷體;
+}
+
+#apply_person_name2, #apply_person_id2, #agent_person_name2, #agent_person_id2{
+    width:14%;
+    border-top:none;
+    border-left:none;
+    border-bottom:solid windowtext 1.0pt;
+    border-right:solid windowtext 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:49.4pt;
+    text-align:justify;
+    text-justify:distribute-all-lines;
+    font-size:14.0pt;
+}
+
+#apply_person_address1, #apply_person_phone1, #apply_person_fax1, #agent_person_address1,
+#agent_person_phone1, #agent_person_fax1{
+    width:7%;
+    border-top:none;
+    border-left:none;
+    border-bottom:solid windowtext 1.0pt;
+    border-right:solid windowtext 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:49.4pt;
+    text-align:center;
+    line-height:28.0pt;
+    font-size:14.0pt;
+    font-family:標楷體;
+}
+
+#apply_person_address2, #agent_person_address2{
+    width:43%;
+    border-top:none;
+    border-left:none;
+    border-bottom:solid windowtext 1.0pt;
+    border-right:solid windowtext 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:49.4pt;
+    vertical-align:middle;
+    line-height:28.0pt;
+    font-size:14.0pt;
+}
+
+#apply_person_phone2, #agent_person_phone2{
+    width:18%;
+    border-top:none;
+    border-left:none;
+    border-bottom:solid windowtext 1.0pt;
+    border-right:solid windowtext 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:40.0pt;
+    text-align:justify;
+    text-justify:distribute-all-lines;
+    font-size:14.0pt;
+}
+
+#apply_person_fax2, #agent_person_fax2{
+    border-top:none;
+    border-left:none;
+    border-bottom:solid windowtext 1.0pt;
+    border-right:solid windowtext 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:40pt;
+    vertical-align:middle;
+    line-height:28.0pt;
+    font-size:14.0pt;
+}

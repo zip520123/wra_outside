@@ -1,0 +1,520 @@
+#Space_division_table{
+    border-spacing: 0;
+    padding: 0;
+    border-collapse:collapse;
+    border-top:red 2.25pt solid;
+    border-right:red 2.25pt solid;
+    border-left:red 2.25pt solid;
+    border-bottom:red 2.25pt solid;
+    width: 920;
+    height: 1125px;
+    color:red;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#Space_division_title{
+    width:458;
+    height:1125; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    margin-top:9.0pt;
+    line-height:20.0pt;
+    font-size:20.0pt;
+    font-family:標楷體;
+    
+}
+
+#date{
+    text-align: right;
+    line-height:0pt;
+    font-size:12.0pt;
+}
+
+#receive_number1, #certificate_number1 {
+    width:72;
+    height:39px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:justify;
+    text-justify:distribute-all-lines;
+    line-height:12.0pt;
+    font-size:10.0pt;
+    font-family:標楷體;
+}
+
+#receive_number2, #certificate_number2{
+    width:359;
+    height:39px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:justify;text-justify:inter-ideograph;
+    line-height:12.0pt;
+    font-size:10.0pt;
+    font-family:標楷體;
+}
+
+#audit_signature{
+    width:29;
+    /*layout-flow:vertical-ideographic;*/
+    height:182px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    margin-top:0cm;
+    margin-right:5.65pt;
+    margin-bottom:0cm;
+    margin-left:5.65pt;
+    margin-bottom:.0001pt;
+    text-justify:distribute-all-lines;line-height:12.0pt;
+    font-family:標楷體;
+    text-align: center;
+    font-size:12.0pt;
+}
+
+#instruction1, #review_allow1, #undertaker1{
+    width:78;
+    height:83px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:left;
+    text-justify:inter-ideograph;
+    line-height:12.0pt;
+    font-family:標楷體;
+    font-size:11.0pt;
+}
+
+#instruction2, #review_allow2, #undertaker2{
+    width:166;
+    height:83px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:left;
+    text-justify:inter-ideograph;
+    line-height:12.0pt;
+    font-family:標楷體;
+    font-size:11.0pt;
+}
+
+
+#review_project {
+    width:438;
+    height:18px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:justify;
+    text-justify:inter-ideograph;
+    line-height:13.0pt;
+    font-family:標楷體;
+    font-size:10.0pt;
+}
+
+#review_result{
+    width: 178;
+    height:18px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:justify;
+    text-justify:inter-ideograph;
+    line-height:13.0pt;
+    font-family:標楷體;
+    font-size:10.0pt;
+}
+
+#instruction3, #instruction5, #review_allow3, #review_allow5, #undertaker3{
+    width:438;
+    height:30px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:justify;text-justify:inter-ideograph;
+    line-height:23.0pt;
+    font-size:11.0pt;
+    font-family:標楷體;
+}
+
+#instruction4, #instruction6, #review_allow4, #review_allow6, #undertaker4{
+    width:178;
+    height:30px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:justify;text-justify:inter-ideograph;
+    line-height:23.0pt;
+    font-size:11.0pt;
+    font-family:標楷體;
+}
+
+#text{
+    width:920;
+    height:58px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm;
+    padding-bottom:0cm;
+    text-align:justify;text-justify:inter-ideograph;
+    line-height:12.0pt;
+    font-family:標楷體;
+}
+
+#attached_data1{
+    width:75;
+    height:83px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    margin-top:4.5pt;
+    text-align:justify;text-justify:distribute-all-lines;line-height:12.0pt;
+    /*position:absolute;*/
+    z-index:251659264;
+    left:0px;
+    margin-left:-36px;
+    margin-top:10px;
+    width:33px;
+    font-size:10pt;
+    font-family:標楷體;
+}
+
+#attached_data2, #attached_data5{
+    width:205;
+    height:51px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:justify;text-justify:inter-ideograph;
+    line-height:12.0pt;
+    font-size:10.0pt;
+    font-family:標楷體;
+}
+
+#attached_data3, #attached_data6{
+    width:178;
+    height:51px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:justify;text-justify:inter-ideograph;
+    line-height:12.0pt;
+    font-size:10.0pt;
+    font-family:標楷體;
+}
+
+#attached_data4, #attached_data7{
+    width:431;
+    height:51px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:justify;text-justify:inter-ideograph;
+    line-height:12.0pt;
+    font-size:10pt;
+    font-family:標楷體;
+}
+
+#apply_person, #buliding_address{
+    width: 32;
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    margin-top:0cm;
+    margin-right:5.65pt;
+    margin-bottom:0cm;
+    margin-left:5.65pt;
+    margin-bottom:.0001pt;
+    text-align:center;
+    text-justify:distribute-all-lines;line-height:12.0pt;
+    font-size:12pt;
+    font-family:標楷體;
+}
+
+#name1, #idnumber1, #address1{
+    width:63;
+    height:44px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:justify;text-justify:distribute-all-lines;
+    line-height:12.0pt;
+    font-size:10.0pt;
+    font-family:標楷體;
+}
+
+#name2, #idnumber2{
+    width:243;
+    height:44px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:justify;text-justify:inter-ideograph;
+    line-height:12.0pt;
+    font-size:10.0pt;
+    font-family:標楷體;
+}
+
+#birth1, #phone1{
+    width:52;
+    height:44px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:justify;text-justify:distribute-all-lines;
+    line-height:12.0pt;
+    font-size:10.0pt;
+    font-family:標楷體;
+}
+
+#birth2, #phone2{
+    width:175;
+    height:44px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align: center;
+    line-height:12.0pt;
+    font-family:標楷體;
+}
+
+#space{
+    vertical-align: top;
+    width:324;
+    height:127px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    line-height:12.0pt;
+    font-size:8.0pt;
+    font-family:標楷體;
+}
+
+#address2{
+    width:616;
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:justify;text-justify:inter-ideograph;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+}
+
+#land_number1, #land_address1{
+    width:63;
+    height:50px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:center;
+    line-height:12.0pt;
+    font-family:標楷體;
+}
+
+#land_number2, #land_address2{
+    width:794;
+    height:50px;
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    line-height:12.0pt;
+    font-family:標楷體;
+}
+
+#specified_use1{
+    vertical-align: top;
+    width:95;
+    height:51px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    line-height:12.0pt;
+    font-size:11.0pt;
+    font-family:標楷體;
+}
+
+#specified_use2{
+    width:222;
+    height:51px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:center;
+    line-height:12.0pt;
+    font-family:標楷體;
+}
+
+#original_license_number1{
+    width:113;
+    height:51px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:center;
+    line-height:12.0pt;
+    font-size:11.0pt;
+    font-family:標楷體;
+}
+
+#original_license_number2{
+    width:459;
+    height:51px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:center;
+    line-height:12.0pt;
+    font-family:標楷體;
+}
+
+#base_area{
+    width:33;
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    margin-top:0cm;
+    margin-right:5.65pt;
+    margin-bottom:0cm;
+    margin-left:5.65pt;
+    margin-bottom:.0001pt;
+    text-align:center;
+    text-justify:distribute-all-lines;line-height:12.0pt;
+    font-size:12pt;
+    font-family:標楷體;
+}
+
+#arcade1, #buliding_area1, #total1{
+    width:62;
+    height:85px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:justify;text-justify:distribute-all-lines;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+}
+
+#arcade2, #buliding_area2, #total2{
+    width:222;
+    border-top:medium none;
+    height:85px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:center;
+    line-height:12.0pt;
+    font-family:標楷體;
+}
+
+#existing_space1, #statutory_space1, #construction_rate1{
+    width:84;
+    height:85px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:justify;text-justify:distribute-all-lines;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+}
+
+#existing_space2, #statutory_space2, #construction_rate2{
+    width:488;
+    height:85px;
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:center;
+    line-height:12.0pt;
+    font-family:標楷體;
+}
+
+#remark1{
+    width:33;
+    layout-flow:vertical-ideographic;
+    height:152px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:center;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+}
+
+#remark2{
+    width:887;
+    height:152px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    line-height:12.0pt;
+    font-family:標楷體;
+    vertical-align: top;
+}
+
+.Text1{
+    line-height:14.0pt;
+    font-size:10.0pt;
+    font-family:標楷體;
+    color:red; 
+    font-size:10.0pt;
+    font-family:標楷體;
+}
+
+.Text2{
+    line-height:14.0pt;
+    font-size:10.0pt;
+    font-family:標楷體;
+    color:red;
+    margin-left:18.9pt;
+    text-indent:-18.9pt;
+    font-size:10.0pt;
+    font-family:標楷體;
+}
+
+.Text3{
+    line-height:14.0pt;
+    font-size:10.0pt;
+    font-family:標楷體;
+    color:red; 
+}
