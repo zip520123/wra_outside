@@ -3,6 +3,7 @@ import {Button,Row, Col,PageHeader , Form ,FormGroup,FormControl,ControlLabel} f
 import DatePicker from "react-datepicker";
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+import './LicLoseApp.css'
 class LicLoseApp extends Component {
     constructor(props , context){
         super(props, context)
@@ -20,53 +21,83 @@ class LicLoseApp extends Component {
             const imgData = canvas.toDataURL('image/png');
             const pdf = new jsPDF();
             pdf.addImage(imgData, 'PNG' ,2, 2);
-            pdf.save("download.pdf");
+            pdf.save("列印切結書.pdf");
         })
+
+    }
+    printButtonClick2 = () => {
+        const input = document.getElementById('tableDiv2')
+        html2canvas(input)
+        .then((canvas) => {
+            const imgData = canvas.toDataURL('image/png');
+            const pdf = new jsPDF();
+            pdf.addImage(imgData, 'PNG' ,2, 2);
+            pdf.save("執照遺失申請書.pdf");
+        })
+
     }
     render(){
         const selectDate = this.state.selectDate
-        return <><div className='marginWrap'><Row>
-        <Col xs={12} xsOffset={0} md={12} mdOffset={0}>
+        return <><div className='marginWrap'>
+        <Row>
+            <Col xs={12} xsOffset={0} md={10} mdOffset={1}>
+            
         <PageHeader style={{textAlign: 'center'}}> 執照遺失切結書
         <small onClick={ this.props.history.goBack }> 回上一頁</small></PageHeader>
-            <h4>申請人 (*為必填欄位)</h4>
 
-            <Form style={{fontSize : '18px'}} action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/LicenseDeclaration`} method="post" accept-charset="UTF-8" inline>
-            <FormGroup bsSize="lg" controlId="" >
-                            <ControlLabel >*姓名:</ControlLabel>{' '}
+            <Form style={{fontSize : '18px'}} action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/LicenseDeclaration`} method="post" accept-charset="UTF-8" horizontal>
+                    <Col componentClass={ControlLabel} smOffset={1}>
+                        申請人 (*為必填欄位)
+                    </Col>
+                    <FormGroup>
+                        <Col componentClass={ControlLabel} sm={2}>
+                                *姓名:
+                        </Col>
+                        <Col sm={10}>
                             <FormControl name="Name" onChange={(e) =>{
                               this.setState({Name : e.target.value})
                             }} />
-                            
-                        </FormGroup>
-                        <br />
-                        <FormGroup bsSize="lg" controlId="">
-                            <ControlLabel>*住址:</ControlLabel>{' '}
+                        </Col>
+                    </FormGroup>
+                    <FormGroup>
+                        <Col componentClass={ControlLabel} sm={2}>
+                            *住址:
+                        </Col>
+                        <Col sm={10}>
                             <FormControl name="Address" onChange={(e) =>{
-                              this.setState({Address : e.target.value})
+                                this.setState({Address : e.target.value})
                             }}/>
-                        </FormGroup>
-                        <br />
-                        <FormGroup bsSize="lg" controlId="">
-                            <ControlLabel>*身分證字號:</ControlLabel>{' '}
-                            <FormControl name="Identity" onChange={(e) =>{
-                                this.setState({Identity : e.target.value})
+                        </Col>
+                    </FormGroup>
+                    <FormGroup>
+                        <Col componentClass={ControlLabel} sm={2}>
+                        *身分證字號:
+                        </Col>
+                        <Col sm={10}>
+                            <FormControl name="Identity_num" onChange={(e) =>{
+                                this.setState({Identity_num : e.target.value})
                             }}/>
-                        </FormGroup>
-                        <br />
-                        <FormGroup bsSize="lg" controlId="">
-                            <ControlLabel>*電話:</ControlLabel>{' '}
+                        </Col>
+                    </FormGroup>   
+                    <FormGroup>
+                        <Col componentClass={ControlLabel} sm={2}>
+                            *電話:
+                        </Col>
+                        <Col sm={10}>
                             <FormControl name="Phone" onChange={(e) =>{
                                 this.setState({Phone  : e.target.value})
                             }}/>
-                        </FormGroup>
-                        <br />
-                        <FormGroup bsSize="lg" controlId="">
-                            <ControlLabel>出生年月日</ControlLabel>{' '}
-                            <ControlLabel>民國</ControlLabel>
-                            <FormControl componentClass="select" placeholder="" name="BirthdayYear" onChange={(e)=>{
+                        </Col>
+                    </FormGroup>
+                        <Col componentClass={ControlLabel} sm={2}>
+                            *出生年月日
+                        </Col>
+                        <Col componentClass={ControlLabel} sm={1}>
+                            民國
+                        </Col>
+                        <Col componentClass="select" placeholder="" onChange={(e)=>{
                         this.setState({BirthdayYear : e.target.value})
-                    }}>
+                    }} sm={2}>
                                 <option value={null}></option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -175,10 +206,13 @@ class LicLoseApp extends Component {
                                 <option value="105">105</option>
                                 <option value="106">106</option>
                                 <option value="107">107</option>
-                            </FormControl>年
-                            <FormControl componentClass="select" placeholder="" name="BirthdayMonth" onChange={(e)=>{
+                            </Col>
+                            <Col componentClass={ControlLabel} sm={1} style={{textAlign :'left'}}>
+                            年
+                            </Col>
+                            <Col componentClass="select" placeholder=""  onChange={(e)=>{
                         this.setState({BirthdayMonth : e.target.value})
-                    }}>
+                    }}  sm={2}>
                                 <option value={null}></option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -192,10 +226,13 @@ class LicLoseApp extends Component {
                                 <option value="10">10</option>
                                 <option value="11">11</option>
                                 <option value="12">12</option>
-                            </FormControl>月
-                            <FormControl componentClass="select" placeholder="" name="BirthdayDay" onChange={(e)=>{
+                            </Col>
+                            <Col componentClass={ControlLabel} sm={1} style={{textAlign :'left'}}>
+                            月
+                            </Col>
+                            <Col componentClass="select" placeholder=""  onChange={(e)=>{
                         this.setState({BirthdayDay : e.target.value})
-                    }}>
+                    }} sm={2}>
                                 <option value={null}></option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -228,25 +265,126 @@ class LicLoseApp extends Component {
                                 <option value="29">29</option>
                                 <option value="30">30</option>
                                 <option value="31">31</option>
-                            </FormControl>日
+                            </Col>
+                            <Col componentClass={ControlLabel} sm={1} style={{textAlign :'left'}}>
+                            日
+                            </Col>
+                            <input type="hidden" id="Birthday" name="Birthday" value={selectDate.getFullYear()+ "/" +  (selectDate.getMonth() + 1) + "/" + selectDate.getDate()}></input>
+                        <FormGroup>
+                            <Col smOffset={1} componentClass={ControlLabel}>
+                            聲明作廢 (*為必填欄位)
+                            </Col>
                         </FormGroup>
-                        <h4>聲明作廢 (*為必填欄位)</h4>
-                        <ControlLabel>*刊登日</ControlLabel>
-                        <DatePicker className='form-control'
-                        dateFormat="yyyy/MM/dd"
-                        selected={this.state.startDate}
-                        onChange={date => {
-                            this.setState({
-                                startDate: date
-                            });
-                            console.log(date)
-                        }}
-                        />
-                        <input type="hidden" id="Time" name="Time" value={selectDate.getFullYear() + "/" + (selectDate.getMonth() + 1) + "/" + selectDate.getDate() }></input>
-                        <ControlLabel>*報紙名稱</ControlLabel>
-                        <ControlLabel>*原使用執照字</ControlLabel>
+                        <FormGroup>
+                            <Col sm={2} componentClass={ControlLabel}>*刊登日</Col>
+                            <Col sm={10}>
+                            <DatePicker className='form-control'
+                            dateFormat="yyyy/MM/dd"
+                            selected={this.state.selectDate}
+                            onChange={date => {
+                                this.setState({
+                                    selectDate: date
+                                });
+                                console.log(date)
+                            }}
+                            />
+                            <input type="hidden" id="PublicationYear" name="PublicationYear" value={selectDate.getYear() - 11}></input>
+                            <input type="hidden" id="PublicationMonth" name="PublicationMonth" value={ (selectDate.getMonth() + 1) }></input>
+                            <input type="hidden" id="PublicationDay" name="PublicationDay" value={selectDate.getDate() }></input>
+                            </Col>
+                        </FormGroup>
+                        <FormGroup>
+                            <Col sm={2} componentClass={ControlLabel}>*報紙名稱</Col>
+                            <Col sm={10}>
+                                <FormControl name="NewspaperName" onChange={(e) =>{
+                                    this.setState({NewspaperName : e.target.value})
+                                }}/>
+                            </Col>
+                        </FormGroup>
+                        <FormGroup>
+                        <Col sm={2} componentClass={ControlLabel}>*原使用執照字</Col>
+                        <Col sm={10}>
+                            <FormControl name="Licenseword" onChange={(e) =>{
+                                this.setState({Licenseword : e.target.value})
+                            }}/>
+                        </Col>
+                        </FormGroup>
+                        <Col xs={10} xsOffset={1} md={12} mdOffset={0}>
+        <div id="tableDiv" style={{width : '780px' , margin: '0 auto'}}>
+        <table id="content" class="MsoNormalTable" border="0">
+            <tbody>
+                <tr>
+                    <td id="content_1">
+                        <p id="title" >
+                            <span>切　　　結　　　書</span></p>
+                        <p class="content2" >
+                            <span>因</span><span>保管不慎遺失貴局所核發之　</span>
+                            <span>{this.state.Licenseword}</span><span>使用執照正本，業已刊登於　</span>
+                            <span>{this.state.selectDate.getYear() - 11}年{(this.state.selectDate.getMonth() + 1)}月{this.state.selectDate.getDate()}日&nbsp;
+                                {this.state.NewspaperName}</span><span>聲明作廢在案，今特向貴局申請補發使用執照正本乙份。爾後若涉及任何申報不實之情事，願負一切法律責任，惟口說無憑，特立此書以茲證明。</span></p>
+                        <p id="content3" >
+                            <span>此致</span></p>
+                        <p class="content5"><span>經濟部水利署臺北水源特定區管理局</span></p>
+                        <p class="content2">
+                            <span>&nbsp;</span></p>
+                        <p id="content4" >
+                            <span>立書人：</span></p>
+                        <p class="content2">
+                            <span>&nbsp;</span></p>
+                        <p class="content5"><span>
+                                中華民國　　　年　　　月　　　日</span></p>
+                        <p>&nbsp;</p>
+                        <p>
+                            &nbsp;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div id="tableDiv2" style={{width : '780px' , margin: '0 auto'}}>
+        <table id="content" class="MsoNormalTable" border="0">
+            <tbody>
+                <tr>
+                    <td id="content_1">
+                        <p id="title" class="MsoNormal">
+                            <span>執照遺失申請書</span></p>
+                        <p class="content2" >
+                            <span>因</span><span>保管不慎遺失貴局所核發之　</span>
+                            <span>{this.state.Licenseword}</span><span>使用執照正本，業已刊登於　{this.state.Licenseword}</span><span>使用執照正本，業已刊登於　</span>
+                            <span>{this.state.selectDate.getYear() - 11}年{(this.state.selectDate.getMonth() + 1)}月{this.state.selectDate.getDate()}日&nbsp;
+                                {this.state.NewspaperName}&nbsp;
+                                </span><span>聲明作廢在案，今特向貴局申請補發使用執照正本乙份。</span></p>
+                        <p id="content3" class="MsoNormal">
+                            <span>此致</span></p>
+                        <p class="content5"><span>經濟部水利署臺北水源特定區管理局</span></p>
+                        <p class="content2">
+                            <span>&nbsp;</span></p>
+                        <p id="content4" class="MsoNormal">
+                            <span>申請人：</span></p>
+                        <p class="content2">
+                            <span>&nbsp;</span></p>
+                        <p class="content5"><span>
+                                中華民國　　　年　　　月　　　日</span></p>
+                        <p>&nbsp;</p>
+                        <p>
+                            &nbsp;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+                        </Col>
+        <div style={{ maxWidth: 400 , margin: '0 auto 10px' }}>
+            <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block type="submit" disabled={this.checkButton()}>送出</Button>
+            <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={this.printButtonClick} block>
+                列印切結書
+            </Button>
+            <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={this.printButtonClick2} block>
+            執照遺失申請書
+            </Button>
+        </div>
             </Form>
-        </Col>
+            </Col>
         </Row>
         </div></>
     }

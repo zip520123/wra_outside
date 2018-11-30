@@ -10,6 +10,7 @@ import PhoCopyDraw from './application/PhoCopyDraw'
 import PublicLandApp from './application/PublicLandApp'
 import LegalLandApp from './application/LegalLandApp'
 import LicLoseApp from './application/LicLoseApp'
+import PublicApply from './application/PublicApply'
 class ArchView extends Component {
     clickHandler = (e) => {
         this.props.history.goBack()
@@ -803,6 +804,8 @@ class ArchView extends Component {
             </Col>
         </Row>
     </ div>
+    case '分區證明線上申辦':
+    return <PublicApply {...this.props}></PublicApply> 
     case '執照圖說影印':
     return <div className='marginWrap'>
     <PageHeader>

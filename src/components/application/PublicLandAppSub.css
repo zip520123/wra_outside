@@ -1,0 +1,416 @@
+div{
+    layout-grid: 18.0pt;
+}
+#public_land_consolidation{
+    border-spacing: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border: medium none;
+    margin-left: 1.4pt;
+}
+#title{
+    vertical-align: top;
+    width: 746px; 
+    height: 35.55pt; 
+    border: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+}
+#title1{
+    text-indent: 8.5pt; 
+    line-height: 30.0pt; 
+    margin-bottom: 6.0pt;
+    font-size: 18.0pt; 
+    font-family: 標楷體; 
+}
+#title2{
+    font-family: 標楷體;
+}
+#public, #private{
+    width: 36px;
+    vertical-align: top;
+    height: 29.3pt;
+    border-left: 1.0pt solid windowtext; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: justify; 
+    text-justify: distribute-all-lines;
+    font-size: 13.0pt; 
+    font-family: 標楷體;
+    text-align: center;
+}
+#public_land_mark{
+    widows: 22px;
+    vertical-align: top;
+    height: 29.3pt;
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: justify; 
+    text-justify: distribute-all-lines; 
+    line-height: 12.0pt;
+    font-size: 13.0pt; 
+    font-family: 標楷體;
+}
+#public_district1, #public_segment1, #public_smallsegment1, 
+#public_land_number1, #public_land_eye1{
+    width:75px;
+    height: 29.3pt; 
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: center;
+    font-size: 13.0pt; 
+    font-family: 標楷體;
+}
+#public_district2, #public_segment2, #public_smallsegment2, 
+#public_land_number2, #public_land_eye2, #public_area2, 
+#public_using_partitions2, #public_owner2{
+    width:273px;
+    height: 29.3pt; 
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: center;
+    font-size: 12.0pt; 
+    font-family: 標楷體;
+    vertical-align: top;
+}
+#private_land_mark{
+    width:23px;
+    vertical-align: top;
+    height: 29.3pt;
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: justify; 
+    text-justify: distribute-all-lines; 
+    line-height: 12.0pt;
+    font-size: 13.0pt; 
+    font-family: 標楷體;
+}
+#private_district1, #private_segment1, #private_smallsegment1, 
+#private_land_number1, #private_land_eye1{
+    width:77px;
+    height: 29.3pt; 
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: center;
+    font-size: 13.0pt; 
+    font-family: 標楷體;
+}
+
+#private_district2, #private_segment2, #private_smallsegment2, 
+#private_land_number2, #private_land_eye2, #private_area2, 
+#private_using_partitions2, #private_owner2{
+    width: 204px;
+    height: 29.3pt; 
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: center;
+    font-size: 12.0pt; 
+    font-family: 標楷體;
+    vertical-align: top;
+}
+
+#public_area1{
+    width: 97px;
+    height: 30.5pt; 
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: center;
+    font-size: 13.0pt;  
+}
+#private_area1{
+    width: 110px;
+    height: 30.5pt; 
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: center;
+    font-size: 13.0pt;  
+}
+.text1{
+    font-family: 標楷體;
+}
+.text2{
+    font-family: Arial,sans-serif
+}
+#public_using_partitions1, #public_owner1{
+    width: 97px;
+    height: 30.5pt; 
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: center;
+    font-size: 13.0pt;  
+    font-family: 標楷體;
+}
+#private_using_partitions1, #private_owner1{
+    width: 110px;
+    height: 30.5pt; 
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: center;
+    font-size: 13.0pt;  
+    font-family: 標楷體;
+}
+#apply_person, #description1{
+    width: 27.0px;
+    vertical-align: top;
+    height: 29.3pt;
+    border-left: 1.0pt solid windowtext;
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: justify; 
+    text-justify: distribute-all-lines;
+    font-size: 13.0pt; 
+    font-family: 標楷體;
+    text-align: center;
+}
+#name1, #phone1, #address1{
+    width: 22px;
+    height: 27.4pt; 
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: center;
+    font-size: 13.0pt; 
+    font-family: 標楷體;
+}
+#name2{
+    width:119px;
+
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: center;
+    font-size: 13.0pt; 
+    font-family: 標楷體;
+}
+#birth1, #id1{
+    width: 95px;
+    height: 27.4pt;
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: center;
+    font-size: 13.0pt; 
+    font-family: 標楷體;
+}
+#birth2, #id2{
+    width:134px;
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: center;
+    font-size: 13.0pt; 
+    font-family: 標楷體;
+}
+
+#description2{
+    width: 203px;
+    height: 27.4pt; 
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: justify; 
+    text-justify: distribute-all-lines; 
+    /*text-indent: -.55pt; */
+    line-height: 15pt; 
+    margin-left: 4.4pt;
+    font-size: 13.0pt; 
+    font-family: 標楷體;
+    vertical-align: text-top;
+}
+#phone2, #address2{
+    width: 348px;
+    vertical-align: top;
+    height: 44.25pt; 
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    font-size: 13.0pt; 
+    font-family: 標楷體;
+}
+#text{
+    height: 83.5px;
+    width: 746pt;
+    border-left: 1.0pt solid windowtext; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm; 
+    margin-bottom: 9.0pt;
+    font-size: 13.0pt; 
+    font-family: 標楷體;
+    vertical-align: text-top;
+}
+#picture{
+    width: 481px;
+    vertical-align: top;
+    height: 18.4pt; 
+    border-left: 1.0pt solid windowtext; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    font-size: 13.0pt; 
+    font-family: 標楷體;
+}
+#rule{
+    margin-left: 402.55pt;
+    font-family: 標楷體;
+}
+#remark1, #P_example1{
+    width: 285px;
+    vertical-align: top;
+    height: 18.4pt; 
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: center;
+    font-size: 13.0pt; 
+    font-family: 標楷體;
+}
+#remark2{
+    width: 285px;
+    height: 141.85pt;
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    padding-top: 0cm; 
+    padding-bottom: 0cm;
+    text-align: center;
+    font-size: 20.0pt; 
+    font-family: 標楷體;
+    
+}
+#P_example2{
+    width: 285px;
+    height: 370.65pt; 
+    border-left: medium none; 
+    border-right: 1.0pt solid windowtext; 
+    border-top: medium none; 
+    border-bottom: 1.0pt solid windowtext; 
+    padding-left: 1.4pt; 
+    padding-right: 1.4pt; 
+    /*padding-top: 0cm; */
+    padding-bottom: 0cm;
+    /*text-align: justify; */
+    /*text-justify: inter-ideograph;*/
+    font-size: 13.0pt; 
+    font-family: 標楷體;
+    
+    vertical-align: text-top;
+}

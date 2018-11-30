@@ -1,0 +1,55 @@
+#WordSection1{
+    layout-grid: 18.0pt;
+    width:687.4pt;
+}
+#content{
+    margin-left:auto; 
+    margin-right:auto;
+    margin-top: 50px;
+    border-collapse: collapse;
+    font-size: 20px;   
+}
+#content_1{
+    vertical-align: top;
+    
+    padding-left:5.4pt;
+    padding-right:5.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    
+    line-height:43.0pt;
+    font-size:24.0pt;
+    font-family:標楷體;
+}
+#title{
+    text-align: center;
+    line-height:43.0pt;
+    font-size:24.0pt;
+    font-family:標楷體;
+}
+.content2{
+    text-indent:40.0pt;
+    line-height:43.0pt;
+    font-size:18.0pt;
+    font-family:標楷體;
+}
+#content3{
+    text-indent:100.0pt;
+    line-height:43.0pt;
+    font-size:18.0pt;
+    font-family:標楷體;
+}
+#content4{
+    text-indent:320.0pt;
+    line-height:43.0pt;
+    font-size:18.0pt;
+    font-family:標楷體;
+
+}
+.content5{
+    text-align:justify;
+    text-justify:distribute-all-lines;
+    line-height:43.0pt;
+    font-size:18.0pt;
+    font-family:標楷體;
+}
