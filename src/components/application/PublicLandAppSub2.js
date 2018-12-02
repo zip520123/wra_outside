@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './PublicLandAppSub.css'
+
 class PublicLandAppSub2 extends Component {
     render(){
         return <><table id="public_land_consolidation" class="MsoNormalTable" border="1">

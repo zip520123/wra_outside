@@ -1,0 +1,555 @@
+.WordSection1{
+    layout-grid:18.0pt;
+    width:932px;
+    height:1343px;
+}
+#table{
+    border-spacing: 0;
+    padding: 0;
+    width:920px;
+    border-collapse:collapse;
+    border:medium none;
+}
+#title{
+    border-left:2.25pt solid red; 
+    border-right:2.25pt solid red; 
+    border-top:2.25pt solid red; 
+    width:910px;
+    border-bottom:1.0pt solid red;
+    height:57.4pt; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm
+}
+#text1{
+    text-align:center;
+    line-height:25.0pt;
+    font-size:20.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#text2{
+    text-align:right;
+    text-indent:270.0pt;
+    line-height:25.0pt;
+    word-break:break-all;
+    font-family:標楷體;
+    color:red;
+}
+#text3{
+    vertical-align: top;
+    width:910px;
+    border-top:medium none;
+    border-left:2.25pt solid red;
+    border-bottom:1.0pt solid red;
+    border-right:2.25pt solid red;
+    height:281.35pt; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+}
+.text4{
+    margin-top:0cm;
+    margin-right:6.0pt;
+    margin-bottom:0cm;
+    margin-left:287.9pt;
+    margin-bottom:.0001pt;
+    line-height:26.0pt;
+    layout-grid-mode:char;
+    font-size:18.0pt;
+    color:red;
+    font-family: 標楷體;
+}
+.text5{
+    margin-top:0cm;
+    margin-right:6.0pt;
+    margin-bottom:0cm;
+    margin-left:6.0pt;
+    margin-bottom:.0001pt;
+    text-align:justify;
+    text-justify:inter-ideograph;
+    text-indent:317.9pt;
+    layout-grid-mode:char;
+    font-size:18.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#text6{
+    margin-top:0cm;
+    margin-right:6.0pt;
+    margin-bottom:0cm;
+    margin-left:6.0pt;
+    margin-bottom:.0001pt;
+    text-align:justify;
+    text-justify:inter-ideograph;
+    text-indent:252.0pt;
+    layout-grid-mode:char;
+    color:red;
+    font-family: 標楷體;
+}
+#apply_person,#buliding_address{
+    width:25.4pt;
+    border-top:none;
+    border-left:solid red 2.25pt;
+    border-bottom:solid red 1.0pt;
+    border-right:solid red 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    layout-flow:vertical-ideographic;
+    height:22.75pt;
+    margin-top:0cm;
+    margin-right:5.65pt;
+    margin-bottom:0cm;
+    margin-left:5.65pt;
+    margin-bottom:.0001pt;
+    text-align:center;
+    text-justify:distribute-all-lines;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#name1, #id1, #address1{
+    width:49.5pt;
+    border-top:none;
+    border-left:none;
+    border-bottom:solid red 1.0pt;
+    border-right:solid red 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:22.75pt;
+    text-align:justify;
+    text-justify:distribute-all-lines;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#name2, #id2{
+    width:161.35pt;
+    border-top:none;
+    border-left:none;
+    border-bottom:solid red 1.0pt;
+    border-right:solid red 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:22.75pt;
+    text-align:justify;
+    text-justify:inter-ideograph;
+    text-indent:15.0pt;
+    line-height:12.0pt;
+    font-family:標楷體;
+}
+#birth1, #phone1{
+    width:49.5pt;
+    border-top:none;
+    border-left:none;
+    border-bottom:solid red 1.0pt;
+    border-right:solid red 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:22.75pt;
+    text-align:justify;
+    text-justify:distribute-all-lines;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#birth2, #phone2{
+    width:520px;
+    border-top:medium none;
+    border-left:medium none;
+    border-bottom:1.0pt solid red;
+    border-right:2.25pt solid red;
+    height:22.75pt; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-indent:48.0pt;
+    line-height:12.0pt;
+    font-family: 標楷體;
+}
+#address2{
+    width:804px;
+    border-top:medium none;
+    border-left:medium none;
+    border-bottom:1.0pt solid red;
+    border-right:2.25pt solid red;
+    height:22.75pt; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:justify;
+    text-justify:inter-ideograph;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#land_number1,#land_address1{
+    width:49.5pt;
+    border-top:none;
+    border-left:none;
+    border-bottom:solid red 1.0pt;
+    border-right:solid red 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:22.75pt;
+    text-align:center;
+    text-justify:distribute-all-lines;
+    line-height:12.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#land_number2, #land_address2{
+    width:804px;
+    border-top:medium none;
+    border-left:medium none;
+    border-bottom:1.0pt solid red;
+    border-right:2.25pt solid red;
+    height:22.75pt; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    line-height:12.0pt;
+    font-family:標楷體;
+}
+#usage1{
+    vertical-align: top;
+    width:74.9pt;
+    border-top:none;
+    border-left:solid red 2.25pt;
+    border-bottom:solid red 1.0pt;
+    border-right:solid red 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:22.75pt;
+    line-height:12.0pt;
+    font-family:標楷體;
+    color:red;
+    font-size: 9pt;
+}
+#usage2{
+    width:174.3pt;
+    border-top:none;
+    border-left:none;
+    border-bottom:solid red 1.0pt;
+    border-right:solid red 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:22.75pt;
+    line-height: 12.0pt;
+    text-align: center;
+    font-family: 標楷體;
+}
+#license_number1{
+    width:85.7pt;
+    border-top:none;
+    border-left:none;
+    border-bottom:solid red 1.0pt;
+    border-right:solid red 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:22.75pt;
+    text-align:center;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#license_number2{
+    width:458px;
+    border-top:medium none;
+    border-left:medium none;
+    border-bottom:1.0pt solid red;
+    border-right:2.25pt solid red;
+    height:22.75pt; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:center;
+    line-height:12.0pt  ;
+    font-family:標楷體;   
+}
+#base_area{
+    width:26.45pt;
+    border-top:none;
+    border-left:solid red 2.25pt;
+    border-bottom:solid red 1.0pt;
+    border-right:solid red 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:22.75pt;
+    margin-top:0cm;
+    margin-right:5.65pt;
+    margin-bottom:0cm;
+    margin-left:5.65pt;
+    margin-bottom:.0001pt;
+    text-align:center;
+    text-justify:distribute-all-lines;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#arcade1,#buliding_area1,#total1{
+    width:48.45pt;
+    border-top:none;
+    border-left:none;
+    border-bottom:solid red 1.0pt;
+    border-right:solid red 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:22.75pt;
+    text-align:justify;
+    text-justify:distribute-all-lines;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#arcade2,#buliding_area2,#total2{
+    width:174.3pt;
+    border-top:none;
+    border-left:none;
+    border-bottom:solid red 1.0pt;
+    border-right:solid red 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:22.75pt;
+    text-align:center;
+    line-height:12.0pt;
+    font-family:標楷體;
+}
+#open_space1,#legal_space1,#construction_rate1{
+    width:62.75pt;
+    border-top:none;border-left:none;
+    border-bottom:solid red 1.0pt;
+    border-right:solid red 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:22.75pt;
+    text-align:justify;
+    text-justify:distribute-all-lines;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#open_space2,#legal_space2,#construction_rate2{
+    width:488px;
+    border-top:medium none;
+    border-left:medium none;
+    border-bottom:1.0pt solid red;
+    border-right:2.25pt solid red;
+    height:22.75pt; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:center;
+    line-height:12.0pt;
+    font-family:標楷體;
+}
+#remark1{
+    width:26.45pt;
+    border-top:medium none;
+    border-left:2.25pt solid red;
+    border-bottom:2.25pt solid red;
+    border-right:1.0pt solid red;
+    height:205px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:center;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#remark2{
+    vertical-align: top;
+    width:870px;
+    border-top:medium none;
+    border-left:medium none;
+    border-bottom:2.25pt solid red;
+    border-right:2.25pt solid red;
+    height:205px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    line-height:12.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#text7{
+    margin-top:2.7pt;
+    margin-right:0cm;
+    margin-bottom:2.7pt;
+    margin-left:0cm;
+    line-height:14.0pt;
+    font-size:10.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#table2{
+    border-spacing: 0;
+    padding: 0;
+    width:915px;
+    border-collapse:collapse;
+    border:medium none;
+    height:294;
+    border-bottom:solid red 2.25pt;
+}
+#base_number1{
+    width:90.55pt;
+    border-top:2.25pt;
+    border-left:2.25pt;
+    border-bottom:1.0pt;
+    border-right:1.0pt;
+    border-style:solid;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:17.0pt;
+    text-align:center;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#base_area_down1{
+    width:124.85pt;
+    border-top:solid red 2.25pt;
+    border-left:none;
+    border-bottom:solid red 1.0pt;
+    border-right:solid red 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:17.0pt;
+    text-align:center;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#buliding_area_down1{
+    width:117.3pt;
+    border-top:solid red 2.25pt;
+    border-left:none;
+    border-bottom:solid red 1.0pt;
+    border-right:solid red 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:17.0pt;
+    text-align:center;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#legal_area_down1{
+    width:117.35pt;
+    border-top:solid red 2.25pt;
+    border-left:none;
+    border-bottom:solid red 1.0pt;
+    border-right:solid red 1.0pt;
+    padding:0cm 1.4pt 0cm 1.4pt;
+    height:17.0pt;
+    text-align:center;
+    line-height:12.0pt;
+    font-size:9.0pt;
+    font-family:標楷體;
+    color:red;
+}
+#construction_rate_down1{
+    width:311px;
+    border-top:2.25pt solid red;
+    border-left:medium none;
+    border-bottom:1.0pt solid red;
+    border-right:2.25pt solid red;
+    height:17.0pt; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt;
+     padding-top:0cm; 
+     padding-bottom:0cm;
+     text-align:center;
+     line-height:12.0pt;
+     font-size:9.0pt;
+     font-family:標楷體;
+     color:red;
+}
+#base_number2,#base_number3,#base_number4,#base_number5,#base_number6{
+    vertical-align: middle;
+    width:90.55pt;
+    border-top:medium none;
+    border-left:2.25pt solid red;
+    border-bottom:1.0pt solid red;
+    border-right:1.0pt solid red;
+    height:54px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:center;
+    line-height:12.0pt;
+    font-family:標楷體;
+}
+#base_area_down2,#base_area_down3,#base_area_down4,#base_area_down5,#base_area_down6{
+    vertical-align: middle;
+    width:124.85pt;
+    border-top:medium none;
+    border-left:1pt solid red;
+    border-bottom:1.0pt solid red;
+    border-right:1.0pt solid red;
+    height:54px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:center;
+    line-height:12.0pt;
+    font-family:標楷體;
+}
+#buliding_area_down2,#buliding_area_down3,#buliding_area_down4,#buliding_area_down5,#buliding_area_down6{
+    vertical-align: middle;
+    width:117.3pt;
+    border-top:medium none;
+    border-left:1pt solid red;
+    border-bottom:1.0pt solid red;
+    border-right:1.0pt solid red;
+    height:54px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:center;
+    line-height:12.0pt;
+    font-family:標楷體;
+}
+#legal_area_down2,#legal_area_down3,#legal_area_down4,#legal_area_down5,#legal_area_down6{
+    vertical-align: middle;
+    width:117.35pt;
+    border-top:medium none;
+    border-left:1pt solid red;
+    border-bottom:1.0pt solid red;
+    border-right:1.0pt solid red;
+    height:54px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:center;
+    line-height:12.0pt;
+    font-family:標楷體;
+}
+#construction_rate_down2,#construction_rate_down3,#construction_rate_down4,
+#construction_rate_down5,#construction_rate_down6{
+    vertical-align: middle;
+    width:311px;
+    border-top:medium none;
+    border-left:1pt solid red;
+    border-bottom:1.0pt solid red;
+    border-right:2.25pt solid red;
+    height:54px; 
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+    text-align:center;
+    line-height:12.0pt;
+    font-family:標楷體;
+}

@@ -3,6 +3,9 @@ import {Button,Row, Col,PageHeader , Form ,FormGroup,FormControl,ControlLabel} f
 import './LegalLandApp.css'
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+import LegalLandAppSub1 from './LegalLandAppSub1'
+import LegalLandAppSub2 from './LegalLandAppSub2'
+
 class LegalLandApp extends Component {
     constructor(props , context){
         super(props, context)
@@ -12,12 +15,12 @@ class LegalLandApp extends Component {
     checkButton = () => {
         return false
     }
-    printButtonClick = () => {
-        const input = document.getElementById('tableDiv')
+    printButtonClick = (id) => {
+        const input = document.getElementById(id)
         html2canvas(input)
         .then((canvas) => {
             const imgData = canvas.toDataURL('image/png');
-            const pdf = new jsPDF();
+            const pdf = new jsPDF({format :[400,260]});
             pdf.addImage(imgData, 'PNG' ,2, 2);
             pdf.save("download.pdf");
         })
@@ -251,7 +254,7 @@ class LegalLandApp extends Component {
                     this.setState({LocationNum : e.target.value})
                     }}/>地號
                     <FormControl name="LocationDen" onChange={(e) =>{
-                    this.setState({LocationDen  : e.target.value})
+                    this.setState({LocationDen : e.target.value})
                     }}/>等
                     <FormControl name="LocationBi" onChange={(e) =>{
                     this.setState({LocationBi : e.target.value})
@@ -329,7 +332,7 @@ class LegalLandApp extends Component {
                             <p class="MsoNormal">
                             <span>法 定 空 地 分 割 證 明 申 請 書</span></p>
                             <p id="date" class="MsoNormal">{(new Date()).getYear() + 1900}
-                            <span>年<span >&nbsp;{(new Date()).getMonth() + 1}&nbsp;</span>月<span>&nbsp;{(new Date()).getDay()}&nbsp;</span>日</span></p></td>
+                            <span>年<span >&nbsp;{(new Date()).getMonth() + 1}&nbsp;</span>月<span>&nbsp;{(new Date()).getDate()}&nbsp;</span>日</span></p></td>
                         <td id="receive_number1">
                             <p><span>收文字號</span></p>
                         </td>
@@ -672,12 +675,31 @@ class LegalLandApp extends Component {
             <p class="Text3"><b><span>（附註）<span>1.</span>申請人應以土地所有權人名義為之，其在二人以上時應造列名冊。<span>2.</span>申請書中「＊」各欄，申請人請勿填寫。<span>3.</span>填寫字跡應力求清晰整齊，最好打字。</span></b></p>
         
                         </div>
-                    </Col>
 
+                        <div id="tableDiv2" style={{width : '780px' , margin: '0 auto'}}>
+                            <LegalLandAppSub1 {...this.state} />
+                        </div>
+                        <div id="tableDiv3" >
+                            <LegalLandAppSub2 {...this.state} />
+                        </div>
+                        <div id="tableDiv4" style={{width : '780px' , margin: '0 auto'}}>
+                            <LegalLandAppSub1 {...this.state} />
+                        </div>
+                    </Col>
+                    
                     <div style={{ maxWidth: 400 , margin: '0 auto 10px' }}>
                         <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block type="submit" disabled={this.checkButton()}>送出</Button>
-                        <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={this.printButtonClick} block>
-                            列印
+                        <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={e=>this.printButtonClick('tableDiv')} block>
+                            列印第１頁
+                        </Button>
+                        <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={e=>this.printButtonClick('tableDiv2')} block>
+                            列印第２頁
+                        </Button>
+                        <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={e=>this.printButtonClick('tableDiv3')} block>
+                            列印第３頁
+                        </Button>
+                        <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={e=>this.printButtonClick('tableDiv4')} block>
+                            列印第４頁
                         </Button>
                     </div>
 

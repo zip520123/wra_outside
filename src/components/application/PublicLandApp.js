@@ -4,6 +4,7 @@ import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import PublicLandAppSub1 from './PublicLandAppSub1'
 import PublicLandAppSub2 from './PublicLandAppSub2'
+import PublicLandAppSub3 from './PublicLandAppSub3'
 class PublicLandApp extends Component {
     constructor(props , context){
         super(props, context)
@@ -17,19 +18,18 @@ class PublicLandApp extends Component {
     checkButton = () => {
         return false
     }
-    printButtonClick = () => {
-        const input = document.getElementById('tableDiv')
+    printButtonClick = (id) => {
+        const input = document.getElementById(id)
         html2canvas(input)
         .then((canvas) => {
             const imgData = canvas.toDataURL('image/png');
-            const pdf = new jsPDF({
-                format:[595.28, 441.89]
-            });
+            const pdf = new jsPDF({format:[400,260]});
             pdf.addImage(imgData, 'PNG' ,2, 2);
             pdf.save("download.pdf");
 
         })
     }
+    
     render(){
         const selectDate = this.state.selectDate
         return <><div className='marginWrap'><Row>
@@ -382,11 +382,22 @@ class PublicLandApp extends Component {
                 <PublicLandAppSub2 {...this.state} />
             </div>
             </Col>
+            <Col xs={10} xsOffset={1} md={12} mdOffset={0}>
+            <div id="tableDiv3" style={{width : '780px' , margin: '0 auto'}}>
+                <PublicLandAppSub3 {...this.state} />
+            </div>
+            </Col>
                 
             <div style={{ maxWidth: 400 , margin: '0 auto 10px' }}>
                 <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block type="submit" disabled={this.checkButton()}>送出</Button>
-                <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={this.printButtonClick} block>
-                    列印
+                <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={e=>{this.printButtonClick('tableDiv')}} block>
+                    列印第1頁
+                </Button>
+                <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={e=>{this.printButtonClick('tableDiv2')}} block>
+                    列印第2頁
+                </Button>
+                <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={e=>{this.printButtonClick('tableDiv3')}} block>
+                    列印第3頁
                 </Button>
             </div>
         </Form>

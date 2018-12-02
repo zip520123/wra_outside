@@ -1,0 +1,32 @@
+#table1{
+    layout-grid:18.0pt; 
+    
+    height:1343px;
+    border-top:red 2.25pt solid;
+    border-right:red 2.25pt solid;
+    border-left:red 2.25pt solid;
+    border-bottom:red 2.25pt solid;
+}
+#format{
+    border-spacing: 0;
+    padding: 0;
+    
+    border-collapse:collapse;
+    border:none;
+    
+}
+#text_text_format{
+    vertical-align: top;
+    
+    border:none;
+    
+    padding-left:1.4pt; 
+    padding-right:1.4pt; 
+    padding-top:0cm; 
+    padding-bottom:0cm;
+}
+#text1{
+    font-size:11.0pt;
+    font-family:標楷體;
+    color:red;
+}
