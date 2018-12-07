@@ -92,8 +92,8 @@ class DirtyWaterView extends Component {
                         <Panel.Title componentClass="h3">應備文件：如下列附件</Panel.Title>
                         </Panel.Heading>
                         <Panel.Body>
-                            <DownloadLink url="https://www.wratb.gov.tw/media/2017/簽證技師報告.pdf" name="簽證技師報告.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/2018/既有建物自設污水處理設施-國有土地專用-自主檢查表.pdf" name="既有建物自設污水處理設施（國有土地專用）自主檢查表.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/2017/簽證技師報告" name="簽證技師報告" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/2018/既有建物自設污水處理設施-國有土地專用-自主檢查表" name="既有建物自設污水處理設施（國有土地專用）自主檢查表" />
                         </Panel.Body>
                     </Panel>
                 </Col>
@@ -128,10 +128,10 @@ class DirtyWaterView extends Component {
                         <Panel.Title componentClass="h3">應備文件：如下列附件</Panel.Title>
                         </Panel.Heading>
                         <Panel.Body>
-                            <DownloadLink url="https://www.wratb.gov.tw/media/2022/污水下水道用戶排水設備接管申請表.pdf" name="污水下水道用戶排水設備接管申請表.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/2021/污水下水道用戶排水設備接管設計檢核表.pdf" name="污水下水道用戶排水設備接管設計檢核表.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/2020/用戶排水設備接管竣工資料卡.pdf" name="用戶排水設備接管竣工資料卡.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/2019/用戶排水設備接管竣工查驗紀錄.pdf" name="用戶排水設備接管竣工查驗紀錄.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/2022/污水下水道用戶排水設備接管申請表" name="污水下水道用戶排水設備接管申請表" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/2021/污水下水道用戶排水設備接管設計檢核表" name="污水下水道用戶排水設備接管設計檢核表" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/2020/用戶排水設備接管竣工資料卡" name="用戶排水設備接管竣工資料卡" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/2019/用戶排水設備接管竣工查驗紀錄" name="用戶排水設備接管竣工查驗紀錄" />
                         </Panel.Body>
                     </Panel>
                 </Col>
@@ -163,11 +163,11 @@ class DirtyWaterView extends Component {
                         <Panel.Title componentClass="h3">應備文件：如下列附件</Panel.Title>
                         </Panel.Heading>
                         <Panel.Body>
-                            <DownloadLink url="https://www.wratb.gov.tw/media/2027/專用下水道申請審查表.pdf" name="專用下水道申請審查表.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/2026/專用下水道專業技師檢核表.pdf" name="專用下水道專業技師檢核表.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/2025/各處理單元檢核表.pdf" name="各處理單元檢核表.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/2024/專用下水道簽證技師報告.pdf" name="專用下水道簽證技師報告.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/2023/既設專用污水下水道系統資料表.pdf" name="既設專用污水下水道系統資料表.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/2027/專用下水道申請審查表" name="專用下水道申請審查表" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/2026/專用下水道專業技師檢核表" name="專用下水道專業技師檢核表" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/2025/各處理單元檢核表" name="各處理單元檢核表" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/2024/專用下水道簽證技師報告" name="專用下水道簽證技師報告" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/2023/既設專用污水下水道系統資料表" name="既設專用污水下水道系統資料表" />
                         </Panel.Body>
                     </Panel>
                 </Col>

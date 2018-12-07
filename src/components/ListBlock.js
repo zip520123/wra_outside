@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 class Atag extends Component {
   handleClick = (e) => {
     e.preventDefault();
-    // this.props.drawerOnClick(this.props.href)
     console.log(this.props.href)
   }
   render(){
@@ -73,7 +72,7 @@ export const EnvBlock = () => (
       </Panel.Heading>
       <Panel.Body collapsible>
       <ABlank url="http://child.wratb.gov.tw/Learn_wratb/reserve.aspx" name="環境教育課程活動申請表" />
-      <ABlank url="http://child.wratb.gov.tw/SewageApplication/" name="污水場參訪申請（線上申請）" />
+      <ABlank url="http://child.wratb.gov.tw/SewageApplication/" name="污水廠參訪申請（線上申請）" />
       </Panel.Body>
       </>
 )

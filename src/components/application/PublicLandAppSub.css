@@ -8,7 +8,7 @@ div{
     border: medium none;
     margin-left: 1.4pt;
 }
-#title{
+#PublicLandAppSub1_title{
     vertical-align: top;
     width: 746px; 
     height: 35.55pt; 
@@ -216,7 +216,7 @@ div{
     font-size: 13.0pt;  
     font-family: 標楷體;
 }
-#apply_person, #description1{
+#PublicLandAppSub1_apply_person, #description1{
     width: 27.0px;
     vertical-align: top;
     height: 29.3pt;
@@ -234,7 +234,7 @@ div{
     font-family: 標楷體;
     text-align: center;
 }
-#name1, #phone1, #address1{
+#PublicLandAppSub1_name1, #PublicLandAppSub1_phone1, #PublicLandAppSub1_address1{
     width: 22px;
     height: 27.4pt; 
     border-left: medium none; 
@@ -249,7 +249,7 @@ div{
     font-size: 13.0pt; 
     font-family: 標楷體;
 }
-#name2{
+#PublicLandAppSub1_name2{
     width:119px;
 
     border-left: medium none; 
@@ -264,7 +264,7 @@ div{
     font-size: 13.0pt; 
     font-family: 標楷體;
 }
-#birth1, #id1{
+#PublicLandAppSub1_birth1, #PublicLandAppSub1_id1{
     width: 95px;
     height: 27.4pt;
     border-left: medium none; 
@@ -279,8 +279,8 @@ div{
     font-size: 13.0pt; 
     font-family: 標楷體;
 }
-#birth2, #id2{
-    width:134px;
+#PublicLandAppSub1_birth2, #PublicLandAppSub1_id2{
+    width:520px;
     border-left: medium none; 
     border-right: 1.0pt solid windowtext; 
     border-top: medium none; 
@@ -314,7 +314,7 @@ div{
     font-family: 標楷體;
     vertical-align: text-top;
 }
-#phone2, #address2{
+#PublicLandAppSub1_phone2, #PublicLandAppSub1_address2{
     width: 348px;
     vertical-align: top;
     height: 44.25pt; 
@@ -361,10 +361,10 @@ div{
     font-family: 標楷體;
 }
 #rule{
-    margin-left: 402.55pt;
+
     font-family: 標楷體;
 }
-#remark1, #P_example1{
+#PublicLandAppSub1_remark1, #P_example1{
     width: 285px;
     vertical-align: top;
     height: 18.4pt; 
@@ -380,7 +380,7 @@ div{
     font-size: 13.0pt; 
     font-family: 標楷體;
 }
-#remark2{
+#PublicLandAppSub1_remark2{
     width: 285px;
     height: 141.85pt;
     border-left: medium none; 

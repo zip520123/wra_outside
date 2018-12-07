@@ -464,7 +464,7 @@ class PhoCopyDraw extends Component {
                 <td colSpan="2">&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日</td>
             </tr>
             <tr>
-                <td rowSpan="3" id="apply_person">申請人<br />(所有權人)</td>
+                <td rowSpan="3" >申請人<br />(所有權人)</td>
                 <td >姓名及簽章</td>
                 <td colSpan="3">{this.state.Name}&nbsp;</td>
                 <td colSpan="2">身分證字號</td>

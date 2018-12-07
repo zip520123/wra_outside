@@ -153,11 +153,12 @@ class PublicApply extends Component {
                     </tbody></Table>
                 </Col>
             </FormGroup>
-            <Col componentClass='div' id="tableDiv" sm={10} smOffset={1} >
+            <hr/>
+            <Col componentClass='div' id="tableDiv" sm={10} smOffset={1} style={{width : '1080px' }}>
             
             <table id="table_county" border="1">
                 <tr>
-                    <td id="title" colspan="6">都市計畫土地使用分區(或公共設施用地)證明申請書</td>
+                    <td colspan="6">都市計畫土地使用分區(或公共設施用地)證明申請書</td>
                 </tr>
                 <tr id="person">
                     <td width="10%">姓名</td>
@@ -217,7 +218,7 @@ class PublicApply extends Component {
                     </td>
                 </tr>
                 <tr>
-                    <td id="apply_person" colspan="6" >申請人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td colspan="6" >申請人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（簽名蓋章）<br /><br /><br /><br /><br /><br /><br /></td>
                 </tr>

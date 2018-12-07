@@ -35,37 +35,37 @@ class FilePageView extends Component {
             <div style={this.cellStyle}>
                 <h1 style={this.centerTextStyle}>
                 檔卷應用申請書
-                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表.pdf" name="檔卷應用申請書" /> */}
+                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表" name="檔卷應用申請書" /> */}
                 </h1>
             </div>
             <div style={this.cellStyle}>
                 <h1 style={this.centerTextStyle}>
                 檔卷應用委任書
-                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表.pdf" name="環境教育課程活動申請表" /> */}
+                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表" name="環境教育課程活動申請表" /> */}
                 </h1>
             </div>
             <div style={this.cellStyle}>
                 <h1 style={this.centerTextStyle}>
                 申請檔卷應用流程圖
-                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表.pdf" name="環境教育課程活動申請表" /> */}
+                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表" name="環境教育課程活動申請表" /> */}
                 </h1>
             </div>
             <div style={this.cellStyle}>
                 <h1 style={this.centerTextStyle}>
                 提供政府資訊重製或複製收費表準表
-                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表.pdf" name="環境教育課程活動申請表" /> */}
+                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表" name="環境教育課程活動申請表" /> */}
                 </h1>
             </div>
             <div style={this.cellStyle}>
                 <h1 style={this.centerTextStyle}>
                 檔卷應用申請書填寫範例
-                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表.pdf" name="環境教育課程活動申請表" /> */}
+                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表" name="環境教育課程活動申請表" /> */}
                 </h1>
             </div>
             <div style={this.cellStyle}>
                 <h1 style={this.centerTextStyle}>
                 檔案應用服務十問
-                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表.pdf" name="環境教育課程活動申請表" /> */}
+                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表" name="環境教育課程活動申請表" /> */}
                 </h1>
             </div>
         </div>

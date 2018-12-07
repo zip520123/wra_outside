@@ -255,7 +255,7 @@ class UseLinceseApplication extends Component {
     </FormGroup>
     
     <div id="tableDiv" style={{width : '780px' , margin:'0 auto'}}>
-    <div class="WordSection1" id="WordSection1">
+    <div >
                     <p class="MsoNormal" id="MsoNormal_title">
                     <span>使&nbsp; 用&nbsp; 執&nbsp; 照&nbsp; 
                     存&nbsp; 根&nbsp; 聯&nbsp; 申&nbsp; 請&nbsp; 書</span></p>

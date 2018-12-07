@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import archButton from './resource/mainPageButton/archButton.png'
 import drtyWaterButton from './resource/mainPageButton/drtyWaterButton.png'
 import envEduButton from './resource/mainPageButton/envEduButton.png'
-import exampleFormButton from './resource/mainPageButton/exampleFormButton.png'
+import newExampleFormButton from './resource/mainPageButton/newExampleFormButton.png'
 import fileUseButton from './resource/mainPageButton/fileUseButton.png'
 import formSearchButton from './resource/mainPageButton/formSearchButton.png'
 import waterKeepBackButton from './resource/mainPageButton/waterKeepBack.png'
@@ -89,7 +89,7 @@ class HomePage extends Component {
                 </Link>
                 <Link to={`/exampleForm`}>
                     <div style={{...cellStyle }}>
-                        <img style={imageStyle} src={exampleFormButton} alt=""/>
+                        <img style={imageStyle} src={newExampleFormButton} alt=""/>
                     </div>
                 </Link>
                 <Link to={`/formSearch`}>

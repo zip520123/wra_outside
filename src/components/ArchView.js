@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route , Link } from 'react-router-dom'
 import { BannerView } from './HomePage.js'
 import GoBackView from './GoBackView'
-import { DivLink ,ABlank} from './ListBlock'
+import { DivLink } from './ListBlock'
 import {PageHeader, Panel , Row , Col } from 'react-bootstrap'
 import {PanelView , DownloadLink} from './RightView'
 import UseLinceseApplication from './application/UseLinceseApplication'
@@ -212,16 +212,16 @@ class ArchView extends Component {
                     <Panel.Title componentClass="h3">肆、作業內容：</Panel.Title>
                     </Panel.Heading>
                     <Panel.Body>流程圖說明：如後附件。
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1861/建造執照-變更設計-設計建築師簽證負責項目表.pdf" name="建造執照（變更設計）設計建築師簽證負責項目表.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1860/建築師簽證案件自主檢查表.pdf" name="建築師簽證案件自主檢查表.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1859/建築物結構與設備專業技師簽證報告.pdf" name="建築物結構與設備專業技師簽證報告.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1858/結構抽查項目表.pdf" name="結構抽查項目表.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1857/拆除同意書.pdf" name="拆除同意書.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1856/違章建物自行拆除切結書.pdf" name="違章建物自行拆除切結書.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1855/加強山坡地建築管理與技術規範檢核表.pdf" name="加強山坡地建築管理與技術規範檢核表.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1854/公寓大廈規約草約.pdf" name="公寓大廈規約草約.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1853/建造執照作業流程圖.pdf" name="建造執照作業流程圖.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1852/山坡地雜或雜併建照申請案加強查核表.pdf" name="山坡地雜或雜併建照申請案加強查核表.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1861/建造執照-變更設計-設計建築師簽證負責項目表" name="建造執照（變更設計）設計建築師簽證負責項目表" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1860/建築師簽證案件自主檢查表" name="建築師簽證案件自主檢查表" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1859/建築物結構與設備專業技師簽證報告" name="建築物結構與設備專業技師簽證報告" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1858/結構抽查項目表" name="結構抽查項目表" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1857/拆除同意書" name="拆除同意書" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1856/違章建物自行拆除切結書" name="違章建物自行拆除切結書" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1855/加強山坡地建築管理與技術規範檢核表" name="加強山坡地建築管理與技術規範檢核表" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1854/公寓大廈規約草約" name="公寓大廈規約草約" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1853/建造執照作業流程圖" name="建造執照作業流程圖" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1852/山坡地雜或雜併建照申請案加強查核表" name="山坡地雜或雜併建照申請案加強查核表" />
                     </Panel.Body>
                 </Panel>
               </Col>
@@ -271,16 +271,14 @@ class ArchView extends Component {
                                 <Panel.Title componentClass="h3">肆、作業內容：</Panel.Title>
                                 </Panel.Heading>
                                 <Panel.Body>流程圖說明：如後附件。
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1861/建造執照-變更設計-設計建築師簽證負責項目表.pdf" name="建造執照（變更設計）設計建築師簽證負責項目表.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1860/建築師簽證案件自主檢查表.pdf" name="建築師簽證案件自主檢查表.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1859/建築物結構與設備專業技師簽證報告.pdf" name="建築物結構與設備專業技師簽證報告.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1858/結構抽查項目表.pdf" name="結構抽查項目表.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1857/拆除同意書.pdf" name="拆除同意書.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1856/違章建物自行拆除切結書.pdf" name="違章建物自行拆除切結書.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1855/加強山坡地建築管理與技術規範檢核表.pdf" name="加強山坡地建築管理與技術規範檢核表.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1854/公寓大廈規約草約.pdf" name="公寓大廈規約草約.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1853/建造執照作業流程圖.pdf" name="建造執照作業流程圖.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1852/山坡地雜或雜併建照申請案加強查核表.pdf" name="山坡地雜或雜併建照申請案加強查核表.pdf" />
+                                    {/* <DownloadLink url="https://www.wratb.gov.tw/media/1861/建造執照-變更設計-設計建築師簽證負責項目表" name="建造執照（變更設計）設計建築師簽證負責項目表" /> */}
+                                    <DownloadLink url="" name="拆除同意書" />
+                                    <DownloadLink url="" name="拆除執照申請申請人名冊" />
+                                    <DownloadLink url="" name="拆除執照申請作業流程說明" />
+                                    <DownloadLink url="" name="拆除執照申請委託書" />
+                                    <DownloadLink url="" name="拆除執照申請書" />
+                                    <DownloadLink url="" name="拆除執照審查表" />
+                                    <DownloadLink url="" name="違章建物自行拆除切結書" />
                                 </Panel.Body>
                             </Panel>
                         </Col>
@@ -318,11 +316,11 @@ class ArchView extends Component {
                             <Panel.Title componentClass="h3">參、作業內容：</Panel.Title>
                             </Panel.Heading>
                             <Panel.Body>流程圖說明：如後附件。
-                                <DownloadLink url="https://www.wratb.gov.tw/media/1873/招牌廣告及樹立廣告安全證明書.pdf" name="招牌廣告及樹立廣告安全證明書.pdf" />
-                                <DownloadLink url="https://www.wratb.gov.tw/media/1872/招牌廣告及樹立廣告許可申請書.pdf" name="招牌廣告及樹立廣告許可申請書.pdf" />
-                                <DownloadLink url="https://www.wratb.gov.tw/media/1871/招牌廣告及樹立廣告許可作業流程說明.pdf" name="招牌廣告及樹立廣告許可作業流程說明.pdf" />
-                                <DownloadLink url="https://www.wratb.gov.tw/media/1870/招牌廣告及樹立廣告設置處所使用權同意書.pdf" name="招牌廣告及樹立廣告設置處所使用權同意書.pdf" />
-                                <DownloadLink url="https://www.wratb.gov.tw/media/1869/廣告物設計圖說範例.pdf" name="廣告物設計圖說範例.pdf" />
+                                <DownloadLink url="https://www.wratb.gov.tw/media/1873/招牌廣告及樹立廣告安全證明書" name="招牌廣告及樹立廣告安全證明書" />
+                                <DownloadLink url="https://www.wratb.gov.tw/media/1872/招牌廣告及樹立廣告許可申請書" name="招牌廣告及樹立廣告許可申請書" />
+                                <DownloadLink url="https://www.wratb.gov.tw/media/1871/招牌廣告及樹立廣告許可作業流程說明" name="招牌廣告及樹立廣告許可作業流程說明" />
+                                <DownloadLink url="https://www.wratb.gov.tw/media/1870/招牌廣告及樹立廣告設置處所使用權同意書" name="招牌廣告及樹立廣告設置處所使用權同意書" />
+                                <DownloadLink url="https://www.wratb.gov.tw/media/1869/廣告物設計圖說範例" name="廣告物設計圖說範例" />
                             </Panel.Body>
                         </Panel>
                     </Col>
@@ -373,15 +371,15 @@ class ArchView extends Component {
                         <Panel.Title componentClass="h3">檔案下載</Panel.Title>
                         </Panel.Heading>
                         <Panel.Body>
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1888/各分項工程施工自主檢查表.pdf" name="各分項工程施工自主檢查表.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1887/建築工程必須勘驗部分申報表.pdf" name="建築工程必須勘驗部分申報表.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1886/建築工程勘驗申報書.pdf" name="建築工程勘驗申報書.pdf " />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1885/建築物施工中營造業專任工程人員督察紀錄表.pdf" name="建築物施工中營造業專任工程人員督察紀錄表.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1884/建築物施工日誌.pdf" name="建築物施工日誌.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1883/建築物監造-監督-查核-報告表.pdf" name="建築物監造(監督、查核)報告表.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1882/領得建造-雜項-執照建築基地入侵紅火蟻現場清查紀錄表.pdf" name="領得建造(雜項)執照建築基地入侵紅火蟻現場清查紀錄表.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1881/委託書.pdf" name="委託書.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1880/監造人現地勘驗查核報告表.pdf" name="監造人現地勘驗查核報告表.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1888/各分項工程施工自主檢查表" name="各分項工程施工自主檢查表" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1887/建築工程必須勘驗部分申報表" name="建築工程必須勘驗部分申報表" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1886/建築工程勘驗申報書" name="建築工程勘驗申報書" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1885/建築物施工中營造業專任工程人員督察紀錄表" name="建築物施工中營造業專任工程人員督察紀錄表" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1884/建築物施工日誌" name="建築物施工日誌" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1883/建築物監造-監督-查核-報告表" name="建築物監造(監督、查核)報告表" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1882/領得建造-雜項-執照建築基地入侵紅火蟻現場清查紀錄表" name="領得建造(雜項)執照建築基地入侵紅火蟻現場清查紀錄表" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1881/委託書" name="放樣申報委託書" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1880/監造人現地勘驗查核報告表" name="監造人現地勘驗查核報告表" />
                             
                         </Panel.Body>
                     </Panel>
@@ -428,11 +426,11 @@ class ArchView extends Component {
                         <Panel.Title componentClass="h3">檔案下載</Panel.Title>
                         </Panel.Heading>
                         <Panel.Body>
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1893/起造人名冊.pdf" name="起造人名冊.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1892/剩餘土石方處理計畫書.pdf" name="剩餘土石方處理計畫書.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1891/開工申報書.pdf" name="開工申報書.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1890/開工查報表.pdf" name="開工查報表.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1889/領得建造-雜項-執照建築基地入侵紅火蟻現場清查紀錄表.pdf" name="領得建造(雜項)執照建築基地入侵紅火蟻現場清查紀錄表.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1893/起造人名冊" name="起造人名冊" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1892/剩餘土石方處理計畫書" name="剩餘土石方處理計畫書" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1891/開工申報書" name="開工申報書" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1890/開工查報表" name="開工查報表" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1889/領得建造-雜項-執照建築基地入侵紅火蟻現場清查紀錄表" name="領得建造(雜項)執照建築基地入侵紅火蟻現場清查紀錄表" />
                         </Panel.Body>
                     </Panel>
                 </Col>
@@ -487,15 +485,15 @@ class ArchView extends Component {
                     <Panel.Title componentClass="h3">肆、流程圖：如後附件。</Panel.Title>
                     </Panel.Heading>
                     <Panel.Body>
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1927/申請建築執照送件審圖手續人員名單.pdf" name="申請建築執照送件審圖手續人員名單.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1926/委託書.pdf" name="委託書.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1925/室內裝修施工業者及人員聘任切結書.pdf" name="室內裝修施工業者及人員聘任切結書.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1923/室內裝修竣工查驗合格證明書.pdf" name="室內裝修竣工查驗合格證明書.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1922/室內裝修竣工查驗作業流程表.pdf" name="室內裝修竣工查驗作業流程表.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1921/建築物室內裝修竣工材料書.pdf" name="建築物室內裝修竣工材料書.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1920/建築物室內裝修竣工查驗表.pdf" name="建築物室內裝修竣工查驗表.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1919/建築執照各項專業報告書檢討切結書.pdf" name="建築執照各項專業報告書檢討切結書.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1918/違章項目簽證表.pdf" name="違章項目簽證表.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1927/申請建築執照送件審圖手續人員名單" name="申請建築執照送件審圖手續人員名單" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1926/委託書" name="室內裝修許可竣工查驗委託書" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1925/室內裝修施工業者及人員聘任切結書" name="室內裝修施工業者及人員聘任切結書" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1923/室內裝修竣工查驗合格證明書" name="室內裝修竣工查驗合格證明書" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1922/室內裝修竣工查驗作業流程表" name="室內裝修竣工查驗作業流程表" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1921/建築物室內裝修竣工材料書" name="建築物室內裝修竣工材料書" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1920/建築物室內裝修竣工查驗表" name="建築物室內裝修竣工查驗表" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1919/建築執照各項專業報告書檢討切結書" name="建築執照各項專業報告書檢討切結書" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1918/違章項目簽證表" name="違章項目簽證表" />
                     </Panel.Body>
                 </Panel>
             </Col>
@@ -560,8 +558,8 @@ class ArchView extends Component {
                     <Panel.Title componentClass="h3">肆、流程圖：如後附件。</Panel.Title>
                     </Panel.Heading>
                     <Panel.Body>
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1875/申請書.pdf" name="申請書.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1874/現有巷道申請作業流程說明.pdf" name="現有巷道申請作業流程說明.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1875/申請書" name="現有巷道認定申請書" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1874/現有巷道申請作業流程說明" name="現有巷道申請作業流程說明" />
                     </Panel.Body>
                 </Panel>
             </Col>
@@ -619,13 +617,13 @@ class ArchView extends Component {
                 <Panel.Title componentClass="h3">檔案下載</Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>
-                <DownloadLink url="https://www.wratb.gov.tw/media/1900/各分項工程施工自主檢查表.pdf" name="各分項工程施工自主檢查表.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1899/建築工程必須勘驗部分申報表.pdf" name="建築工程必須勘驗部分申報表.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1898/建築工程勘驗申報書.pdf" name="建築工程勘驗申報書.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1897/建築物施工中營造業專任工程人員督察紀錄表.pdf" name="建築物施工中營造業專任工程人員督察紀錄表.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1896/建築物施工日誌.pdf" name="建築物施工日誌.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1895/建築物監造-監督-查核-報告表.pdf" name="建築物監造(監督、查核)報告表.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/1894/領得建造-雜項-執照建築基地入侵紅火蟻現場清查紀錄表.pdf" name="領得建造(雜項)執照建築基地入侵紅火蟻現場清查紀錄表.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1900/各分項工程施工自主檢查表" name="各分項工程施工自主檢查表" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1899/建築工程必須勘驗部分申報表" name="建築工程必須勘驗部分申報表" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1898/建築工程勘驗申報書" name="建築工程勘驗申報書" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1897/建築物施工中營造業專任工程人員督察紀錄表" name="建築物施工中營造業專任工程人員督察紀錄表" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1896/建築物施工日誌" name="建築物施工日誌" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1895/建築物監造-監督-查核-報告表" name="建築物監造(監督、查核)報告表" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/1894/領得建造-雜項-執照建築基地入侵紅火蟻現場清查紀錄表" name="領得建造(雜項)執照建築基地入侵紅火蟻現場清查紀錄表" />
                 </Panel.Body>
             </Panel>
         </Col>
@@ -671,15 +669,15 @@ class ArchView extends Component {
                     <Panel.Title componentClass="h3">檔案下載</Panel.Title>
                     </Panel.Heading>
                     <Panel.Body>
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1936/申請建築執照送件審圖手續人員名單.pdf" name="申請建築執照送件審圖手續人員名單.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1935/委託書.pdf" name="委託書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1934/室內裝修查核圖說合格證明書.pdf" name="室內裝修查核圖說合格證明書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1933/室內裝修圖說審查申請書.pdf" name="室內裝修圖說審查申請書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1932/室內裝修圖說審查流程表.pdf" name="室內裝修圖說審查流程表.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1931/室內裝修簽證表.pdf" name="室內裝修簽證表.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1930/建築物使用權同意書.pdf" name="建築物使用權同意書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1929/建築師安全鑑定書.pdf" name="建築師安全鑑定書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1928/違章項目簽證表.pdf" name="違章項目簽證表.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1936/申請建築執照送件審圖手續人員名單" name="申請建築執照送件審圖手續人員名單" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1935/委託書" name="室內裝修許可書面審查委託書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1934/室內裝修查核圖說合格證明書" name="室內裝修查核圖說合格證明書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1933/室內裝修圖說審查申請書" name="室內裝修圖說審查申請書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1932/室內裝修圖說審查流程表" name="室內裝修圖說審查流程表" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1931/室內裝修簽證表" name="室內裝修簽證表" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1930/建築物使用權同意書" name="建築物使用權同意書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1929/建築師安全鑑定書" name="建築師安全鑑定書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1928/違章項目簽證表" name="違章項目簽證表" />
                     </Panel.Body>
                 </Panel>
             </Col>
@@ -732,17 +730,17 @@ class ArchView extends Component {
                     <Panel.Title componentClass="h3">伍、作業內容：一、流程說明：如流程圖。</Panel.Title>
                     </Panel.Heading>
                     <Panel.Body>
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1947/申請建築執照送件審圖手續人員名單.pdf" name="申請建築執照送件審圖手續人員名單.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1946/使用執照之變更使用工程完竣報告表.pdf" name="使用執照之變更使用工程完竣報告表.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1945/委託書.pdf" name="委託書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1944/建築師安全鑑定書.pdf" name="建築師安全鑑定書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1943/建築執照各項專業報告書檢討切結書.pdf" name="建築執照各項專業報告書檢討切結書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1942/違建項目簽證表.pdf" name="違建項目簽證表.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1941/變更使用執照申請書.pdf" name="變更使用執照申請書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1940/變更使用執照竣工勘驗審查表.pdf" name="變更使用執照竣工勘驗審查表.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1939/變更使用執照概要表.pdf" name="變更使用執照概要表.pdf" />
-                    <DownloadLink url="hhttps://www.wratb.gov.tw/media/1938/變更使用執照檢討項目簽證表.pdf" name="變更使用執照檢討項目簽證表.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1937/變更竣工審查流程圖.pdf" name="變更竣工審查流程圖.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1947/申請建築執照送件審圖手續人員名單" name="申請建築執照送件審圖手續人員名單" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1946/使用執照之變更使用工程完竣報告表" name="使用執照之變更使用工程完竣報告表" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1945/委託書" name="變更使用執照申請竣工查驗委託書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1944/建築師安全鑑定書" name="建築師安全鑑定書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1943/建築執照各項專業報告書檢討切結書" name="建築執照各項專業報告書檢討切結書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1942/違建項目簽證表" name="違建項目簽證表" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1941/變更使用執照申請書" name="變更使用執照申請書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1940/變更使用執照竣工勘驗審查表" name="變更使用執照竣工勘驗審查表" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1939/變更使用執照概要表" name="變更使用執照概要表" />
+                    <DownloadLink url="hhttps://www.wratb.gov.tw/media/1938/變更使用執照檢討項目簽證表" name="變更使用執照檢討項目簽證表" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1937/變更竣工審查流程圖" name="變更竣工審查流程圖" />
                     </Panel.Body>
                 </Panel>
             </Col>
@@ -793,10 +791,10 @@ class ArchView extends Component {
                     <Panel.Title componentClass="h3">伍、作業內容：流程圖如後附件。</Panel.Title>
                     </Panel.Heading>
                     <Panel.Body>
-                    <DownloadLink url="https://www.wratb.gov.tw/media/2006/土地使用分區證明核發流程圖.pdf" name="土地使用分區證明核發流程圖.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/2005/土地使用分區證明書-填寫範例.pdf" name="土地使用分區證明書(填寫範例).pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/2004/土地清冊.pdf" name="土地清冊.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/2003/土地清冊-填寫範例.pdf" name="土地清冊(填寫範例).pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/2006/土地使用分區證明核發流程圖" name="土地使用分區證明核發流程圖" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/2005/土地使用分區證明書-填寫範例" name="土地使用分區證明書(填寫範例)" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/2004/土地清冊" name="土地清冊" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/2003/土地清冊-填寫範例" name="土地清冊(填寫範例)" />
                     <DownloadLink url="https://www.wratb.gov.tw/media/2002/使用分區流程圖.gif" name="使用分區流程圖.gif" />
                     <DownloadLink url="https://www.wratb.gov.tw/media/2001/使用分區申請書.doc" name="使用分區申請書.doc" />
                     </Panel.Body>
@@ -875,7 +873,7 @@ class ArchView extends Component {
                 <Panel.Title componentClass="h3">檔案下載</Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>
-                <DownloadLink url="https://www.wratb.gov.tw/media/2007/影印圖說申請書.pdf" name="影印圖說申請書.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/2007/影印圖說申請書" name="影印圖說申請書" />
                 </Panel.Body>
             </Panel>
         </Col>
@@ -931,8 +929,9 @@ class ArchView extends Component {
                 <Panel.Title componentClass="h3">檔案下載</Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>
-                <DownloadLink url="https://www.wratb.gov.tw/media/2009/公有畸零地合併使用證明申請作業流程說明.pdf" name="公有畸零地合併使用證明申請作業流程說明.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/2008/公有畸零地合併使用證明申請書.pdf" name="公有畸零地合併使用證明申請書.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/2009/公有畸零地合併使用證明申請作業流程說明" name="公有畸零地合併使用證明申請作業流程說明" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/2008/公有畸零地合併使用證明申請書" name="公有畸零地合併使用證明申請書" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/2008/公有畸零地合併使用證明申請書" name="公有畸零地合併使用證明申請書(1010725修正)" />
                 </Panel.Body>
             </Panel>
         </Col>
@@ -983,10 +982,10 @@ class ArchView extends Component {
                 <Panel.Title componentClass="h3">陸、作業內容：流程說明：如後附件。</Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>
-                <DownloadLink url="https://www.wratb.gov.tw/media/1879/建築線申請作業流程說明.pdf" name="建築線申請作業流程說明.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1878/土地供公共通行同意書.pdf" name="土地供公共通行同意書.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1877/建築線申請書.pdf" name="建築線申請書.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1876/建築線指定委託書.pdf" name="建築線指定委託書.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1879/建築線申請作業流程說明" name="建築線申請作業流程說明" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1878/土地供公共通行同意書" name="土地供公共通行同意書" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1877/建築線申請書" name="建築線申請書" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1876/建築線指定委託書" name="建築線指定委託書" />
                 </Panel.Body>
             </Panel>
         </Col>
@@ -1068,20 +1067,20 @@ class ArchView extends Component {
                 <Panel.Title componentClass="h3">參、作業內容：流程說明：如後附件。</Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>
-                <DownloadLink url="https://www.wratb.gov.tw/media/1914/委託書.pdf" name="委託書.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1913/原承造人放棄承攬同意書.pdf" name="原承造人放棄承攬同意書.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1912/原監造人放棄監造同意書.pdf" name="原監造人放棄監造同意書.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1911/起造人同意書-承造.pdf" name="起造人同意書(承造).pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1910/起造人同意書-監造.pdf" name="起造人同意書(監造).pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1909/新承造人承攬同意書.pdf" name="新承造人承攬同意書.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1908/新監人承攬同意書.pdf" name="新監人承攬同意書.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1907/變更承造人申報書.pdf" name="變更承造人申報書.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1906/變更承造人名冊.pdf" name="變更承造人名冊.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1905/變更起-承-監造人作業流程表.pdf" name="變更起、承、監造人作業流程表.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1904/變更起造人申報書.pdf" name="變更起造人申報書.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1903/變更起造人名冊.pdf" name="變更起造人名冊.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1902/變更監造人申報書.pdf" name="變更監造人申報書.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1901/變更監造人名冊.pdf" name="變更監造人名冊.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1914/變更起、承、監造人申請委託書" name="委託書" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1913/原承造人放棄承攬同意書" name="原承造人放棄承攬同意書" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1912/原監造人放棄監造同意書" name="原監造人放棄監造同意書" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1911/起造人同意書-承造" name="起造人同意書(承造)" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1910/起造人同意書-監造" name="起造人同意書(監造)" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1909/新承造人承攬同意書" name="新承造人承攬同意書" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1908/新監人承攬同意書" name="新監人承攬同意書" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1907/變更承造人申報書" name="變更承造人申報書" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1906/變更承造人名冊" name="變更承造人名冊" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1905/變更起-承-監造人作業流程表" name="變更起、承、監造人作業流程表" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1904/變更起造人申報書" name="變更起造人申報書" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1903/變更起造人名冊" name="變更起造人名冊" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1902/變更監造人申報書" name="變更監造人申報書" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1901/變更監造人名冊" name="變更監造人名冊" />
                 </Panel.Body>
             </Panel>
         </Col>
@@ -1111,9 +1110,9 @@ return <div className='marginWrap'>
                 <Panel.Title componentClass="h3">參、作業內容：流程說明：如後附件。</Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>
-                <DownloadLink url="https://www.wratb.gov.tw/media/1917/竣工展期申請書.pdf" name="竣工展期申請書.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1916/開工-竣工展期申請作業流程.pdf" name="開工、竣工展期申請作業流程.pdf" />
-                <DownloadLink url="https://www.wratb.gov.tw/media/1915/開工展期申請書.pdf" name="開工展期申請書.pdf" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1917/竣工展期申請書" name="竣工展期申請書" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1916/開工-竣工展期申請作業流程" name="開工、竣工展期申請作業流程" />
+                <DownloadLink url="https://www.wratb.gov.tw/media/1915/開工展期申請書" name="開工展期申請書" />
                 </Panel.Body>
             </Panel>
         </Col>
@@ -1171,11 +1170,11 @@ return <div className='marginWrap'>
             <Panel.Title componentClass="h3">陸、作業內容：流程說明：如後附件。</Panel.Title>
             </Panel.Heading>
             <Panel.Body>
-            <DownloadLink url="https://www.wratb.gov.tw/media/2014/委託書.pdf" name="委託書.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/2013/法定空地分割申請書.pdf" name="法定空地分割申請書.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/2012/法定空地證明申請作業流程說明.pdf" name="法定空地證明申請作業流程說明.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/2011/法定空地證明申請作業範本.pdf" name="法定空地證明申請作業範本.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/2010/法定空地證明申請書.pdf" name="法定空地證明申請書.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/2014/委託書" name="法定空地分割委託書" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/2013/法定空地分割申請書" name="法定空地分割申請書" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/2012/法定空地證明申請作業流程說明" name="法定空地證明申請作業流程說明" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/2011/法定空地證明申請作業範本" name="法定空地證明申請作業範本" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/2010/法定空地證明申請書" name="法定空地證明申請書" />
             </Panel.Body>
         </Panel>
     </Col>
@@ -1234,7 +1233,7 @@ return <div className='marginWrap'>
                     <Panel.Title componentClass="h3">肆、作業內容：流程說明。</Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>
-                    <DownloadLink url="https://www.wratb.gov.tw/media/2015/合法房屋證明申請表.pdf" name="合法房屋證明申請表.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/2015/合法房屋證明申請表" name="合法房屋證明申請表" />
                 </Panel.Body>
             </Panel>
         </Col>
@@ -1288,16 +1287,16 @@ return <div className='marginWrap'>
                     <Panel.Title componentClass="h3">伍、作業內容：變更書面流程圖：如後附件。</Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1957/申請建築執照送件審圖手續人員名單.pdf" name="申請建築執照送件審圖手續人員名單.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1956/委託書.pdf" name="委託書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1955/建築物使用權同意書.pdf" name="建築物使用權同意書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1954/建築師安全鑑定書.pdf" name="建築師安全鑑定書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1953/違建項目簽證表.pdf" name="違建項目簽證表.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1952/變更使用執照申請書.pdf" name="變更使用執照申請書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1951/變更使用執照概要表.pdf" name="變更使用執照概要表.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1950/變更使用執照檢討項目簽證表.pdf" name="變更使用執照檢討項目簽證表.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1949/變更使用說明書.pdf" name="變更使用說明書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1948/變更書面流程圖.pdf" name="變更書面流程圖.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1957/申請建築執照送件審圖手續人員名單" name="申請建築執照送件審圖手續人員名單" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1956/委託書" name="變更使用執照申請書面審查委託書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1955/建築物使用權同意書" name="建築物使用權同意書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1954/建築師安全鑑定書" name="建築師安全鑑定書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1953/違建項目簽證表" name="違建項目簽證表" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1952/變更使用執照申請書" name="變更使用執照申請書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1951/變更使用執照概要表" name="變更使用執照概要表" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1950/變更使用執照檢討項目簽證表" name="變更使用執照檢討項目簽證表" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1949/變更使用說明書" name="變更使用說明書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1948/變更書面流程圖" name="變更書面流程圖" />
                 </Panel.Body>
             </Panel>
         </Col>
@@ -1359,17 +1358,17 @@ return <div className='marginWrap'>
                 </Panel.Heading>
                 <Panel.Body>
                 一、流程圖：如後附件。<br />二、流程說明：如後附件。
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1968/申請建築執照送件審圖手續人員名單.pdf" name="申請建築執照送件審圖手續人員名單.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1967/委託書.pdf" name="委託書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1966/建築物使用項目更動報備申請書.pdf" name="建築物使用項目更動報備申請書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1965/建築物使用項目更動報備作業流程圖.pdf" name="建築物使用項目更動報備作業流程圖.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1964/建築物使用項目更動報備作業流程說明.pdf" name="建築物使用項目更動報備作業流程說明.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1963/建築物使用權同意書.pdf" name="建築物使用權同意書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1962/建築師安全鑑定書.pdf" name="建築師安全鑑定書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1961/建築執照各項專業報告書檢討切結書.pdf" name="建築執照各項專業報告書檢討切結書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1960/違建項目簽證表.pdf" name="違建項目簽證表.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1959/變更使用執照平行分會各目的事業主管機關事項表.pdf" name="變更使用執照平行分會各目的事業主管機關事項表.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1958/變更使用執照更動預審表.pdf" name="變更使用執照更動預審表.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1968/申請建築執照送件審圖手續人員名單" name="申請建築執照送件審圖手續人員名單" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1967/委託書" name="建築物使用項目更動報備委託書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1966/建築物使用項目更動報備申請書" name="建築物使用項目更動報備申請書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1965/建築物使用項目更動報備作業流程圖" name="建築物使用項目更動報備作業流程圖" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1964/建築物使用項目更動報備作業流程說明" name="建築物使用項目更動報備作業流程說明" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1963/建築物使用權同意書" name="建築物使用權同意書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1962/建築師安全鑑定書" name="建築師安全鑑定書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1961/建築執照各項專業報告書檢討切結書" name="建築執照各項專業報告書檢討切結書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1960/違建項目簽證表" name="違建項目簽證表" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1959/變更使用執照平行分會各目的事業主管機關事項表" name="變更使用執照平行分會各目的事業主管機關事項表" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1958/變更使用執照更動預審表" name="變更使用執照更動預審表" />
                 </Panel.Body>
             </Panel>
         </Col>
@@ -1404,10 +1403,10 @@ return <div className='marginWrap'>
                 </Panel.Heading>
                 <Panel.Body>
                 一、流程說明：如後附件。
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1972/分-併-戶同意書.pdf" name="分 (併)戶同意書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1971/分戶牆拆除說明書.pdf" name="分戶牆拆除說明書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1970/建築物分-併-戶核備申請書.pdf" name="建築物分 (併)戶核備申請書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1969/建築物變更戶數申請作業流程說明.pdf" name="建築物變更戶數申請作業流程說明.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1972/分-併-戶同意書" name="分 (併)戶同意書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1971/分戶牆拆除說明書" name="分戶牆拆除說明書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1970/建築物分-併-戶核備申請書" name="建築物分 (併)戶核備申請書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1969/建築物變更戶數申請作業流程說明" name="建築物變更戶數申請作業流程說明" />
                 </Panel.Body>
             </Panel>
         </Col>
@@ -1437,7 +1436,7 @@ return <div className='marginWrap'>
                 </Panel.Heading>
                 <Panel.Body>
                 流程說明：如後附件。
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1973/機械遊樂設施檢查申報作業流程表.pdf" name="機械遊樂設施檢查申報作業流程表.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1973/機械遊樂設施檢查申報作業流程表" name="機械遊樂設施檢查申報作業流程表" />
                     
                 </Panel.Body>
             </Panel>
@@ -1491,14 +1490,14 @@ return <div className='marginWrap'>
                 </Panel.Heading>
                 <Panel.Body>
                 流程說明：如後附件。
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1981/公共安全檢查標準作業程序流程說明.pdf" name="公共安全檢查標準作業程序流程說明.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1980/表一-建築物防火避難設施與設備安全檢查申報書.pdf" name="表一：建築物防火避難設施與設備安全檢查申報書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1979/表二-建築物防火避難設施與設備安全檢查申報結果通知書.pdf" name="表二：建築物防火避難設施與設備安全檢查申報結果通知書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1978/表三-專業檢查人名冊.pdf" name="表三：專業檢查人名冊.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1977/表四-建築物防火避難設施與設備安全檢-複-查報告書.pdf" name="表四：建築物防火避難設施與設備安全檢(複)查報告書.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1976/表五-建築物防火避難設施檢查記錄簡圖.pdf" name="表五：建築物防火避難設施檢查記錄簡圖.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1975/表六-建築物設備安全檢查記錄簡圖.pdf" name="表六：建築物設備安全檢查記錄簡圖.pdf" />
-                    <DownloadLink url="https://www.wratb.gov.tw/media/1974/表七-建築物防火避難設施與設備安全檢查改善計畫書.pdf" name="表七：建築物防火避難設施與設備安全檢查改善計畫書.pdf" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1981/公共安全檢查標準作業程序流程說明" name="公共安全檢查標準作業程序流程說明" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1980/表一-建築物防火避難設施與設備安全檢查申報書" name="表一：建築物防火避難設施與設備安全檢查申報書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1979/表二-建築物防火避難設施與設備安全檢查申報結果通知書" name="表二：建築物防火避難設施與設備安全檢查申報結果通知書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1978/表三-專業檢查人名冊" name="表三：專業檢查人名冊" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1977/表四-建築物防火避難設施與設備安全檢-複-查報告書" name="表四：建築物防火避難設施與設備安全檢(複)查報告書" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1976/表五-建築物防火避難設施檢查記錄簡圖" name="表五：建築物防火避難設施檢查記錄簡圖" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1975/表六-建築物設備安全檢查記錄簡圖" name="表六：建築物設備安全檢查記錄簡圖" />
+                    <DownloadLink url="https://www.wratb.gov.tw/media/1974/表七-建築物防火避難設施與設備安全檢查改善計畫書" name="表七：建築物防火避難設施與設備安全檢查改善計畫書" />
                     
                 </Panel.Body>
             </Panel>
@@ -1554,9 +1553,9 @@ return <div className='marginWrap'>
             </Panel.Heading>
             <Panel.Body>
             一、流程圖：如後附件。<br />二、流程說明：如後附件。
-            <DownloadLink url="https://www.wratb.gov.tw/media/1984/使照遺失程序流程圖.pdf" name="使照遺失程序流程圖.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/1983/使照遺失程序流程說明.pdf" name="使照遺失程序流程說明.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/1982/執照遺失切結書.pdf" name="執照遺失切結書.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1984/使照遺失程序流程圖" name="使照遺失程序流程圖" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1983/使照遺失程序流程說明" name="使照遺失程序流程說明" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1982/執照遺失切結書" name="執照遺失切結書" />
             </Panel.Body>
         </Panel>
     </Col>
@@ -1640,9 +1639,9 @@ return <div className='marginWrap'>
             </Panel.Heading>
             <Panel.Body>
             <h4>一、流程圖。<br />二、流程說明。</h4>
-            <DownloadLink url="https://www.wratb.gov.tw/media/1987/使用執照謄本申請書.pdf" name="使用執照謄本申請書.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/1986/使照謄本核發流程圖.pdf" name="使照謄本核發流程圖.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/1985/使照謄本核發流程說明.pdf" name="使照謄本核發流程說明.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1987/使用執照謄本申請書" name="使用執照謄本申請書" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1986/使照謄本核發流程圖" name="使照謄本核發流程圖" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1985/使照謄本核發流程說明" name="使照謄本核發流程說明" />
             </Panel.Body>
         </Panel>
     </Col>
@@ -1733,19 +1732,19 @@ return <div className='marginWrap'>
             </Panel.Heading>
             <Panel.Body>
             <h4>流程圖：如後附件。</h4>
-            <DownloadLink url="https://www.wratb.gov.tw/media/2000/公寓大廈管理公共基金-計算表.pdf" name="公寓大廈管理公共基金、計算表.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/1999/使用執照核發審查作業流程圖.pdf" name="使用執照核發審查作業流程圖.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/1998/使照申請書.pdf" name="使照申請書.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/1997/委託書.pdf" name="委託書.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/1996/建築物概要表.pdf" name="建築物概要表.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/1995/按圖施工證明書.pdf" name="按圖施工證明書.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/1994/挑空清冊及結構安全報告書.pdf" name="挑空清冊及結構安全報告書.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/1993/修改竣工圖併案變更設計申請書.pdf" name="修改竣工圖併案變更設計申請書.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/1992/起造人名冊.pdf" name="起造人名冊.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/1991/損鄰陳情住戶名冊.pdf" name="損鄰陳情住戶名冊.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/1990/監造證明書.pdf" name="監造證明書.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/1989/營造業承攬工程竣工查報表.pdf" name="營造業承攬工程竣工查報表.pdf" />
-            <DownloadLink url="https://www.wratb.gov.tw/media/1988/領得建造-雜項-執照建築基地入侵紅火蟻現場清查紀錄表.pdf" name="領得建造(雜項)執照建築基地入侵紅火蟻現場清查紀錄表.pdf" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/2000/公寓大廈管理公共基金-計算表" name="公寓大廈管理公共基金、計算表" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1999/使用執照核發審查作業流程圖" name="使用執照核發審查作業流程圖" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1998/使照申請書" name="使照申請書" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1997/使用執照申請委託書" name="委託書" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1996/建築物概要表" name="建築物概要表" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1995/按圖施工證明書" name="按圖施工證明書" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1994/挑空清冊及結構安全報告書" name="挑空清冊及結構安全報告書" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1993/修改竣工圖併案變更設計申請書" name="修改竣工圖併案變更設計申請書" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1992/起造人名冊" name="起造人名冊" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1991/損鄰陳情住戶名冊" name="損鄰陳情住戶名冊" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1990/監造證明書" name="監造證明書" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1989/營造業承攬工程竣工查報表" name="營造業承攬工程竣工查報表" />
+            <DownloadLink url="https://www.wratb.gov.tw/media/1988/領得建造-雜項-執照建築基地入侵紅火蟻現場清查紀錄表" name="領得建造(雜項)執照建築基地入侵紅火蟻現場清查紀錄表" />
             </Panel.Body>
         </Panel>
     </Col>

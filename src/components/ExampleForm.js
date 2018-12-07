@@ -22,13 +22,14 @@ class ExampleForm extends Component {
     clickHandler = (e) => {
         this.props.history.goBack()
     }
+    centerTextStyle = {
+        transform: 'translateY(1000%)'
+    }
     render() {
-        var centerTextStyle = {
-            transform: 'translateY(1000%)'
-        }
         return (<>
         <div style={style}>
-                <h1 style={centerTextStyle}>示範表單</h1>
+        <a style={{color: 'white'}} href={`https://www.wratb.gov.tw/13805/13832/意見信箱/`} target="_blank" rel="noopener noreferrer"><h1 style={this.centerTextStyle}>意見信箱</h1></a>
+                {/* <h1 style={centerTextStyle}>示範表單</h1> */}
             </div>
             <BannerView />
             <GoBackView clickHandler={this.clickHandler}></GoBackView>

@@ -36,7 +36,7 @@ class PublicLandApp extends Component {
         <Col xs={12} xsOffset={0} md={12} mdOffset={0}>
         <PageHeader style={{textAlign: 'center'}}> 公有畸零地合併使用申請書
         <small onClick={ this.props.history.goBack }> 回上一頁</small></PageHeader>
-        <Form style={{fontSize : '18px'}} action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/OwnerLicense`} method="post" accept-charset="UTF-8" inline>
+        <Form style={{fontSize : '18px'}} action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/CombineFloorForm`} method="post" accept-charset="UTF-8" inline>
             <h4>公有 (*為必填欄位)</h4>
             <FormGroup bsSize="lg" controlId="">
             <ControlLabel>*土地標示</ControlLabel>{' '}
@@ -387,6 +387,7 @@ class PublicLandApp extends Component {
                 <PublicLandAppSub3 {...this.state} />
             </div>
             </Col>
+            
                 
             <div style={{ maxWidth: 400 , margin: '0 auto 10px' }}>
                 <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block type="submit" disabled={this.checkButton()}>送出</Button>
@@ -399,6 +400,7 @@ class PublicLandApp extends Component {
                 <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={e=>{this.printButtonClick('tableDiv3')}} block>
                     列印第3頁
                 </Button>
+                
             </div>
         </Form>
         </Col>

@@ -315,7 +315,7 @@ class LicLoseApp extends Component {
             <tbody>
                 <tr>
                     <td id="content_1">
-                        <p id="title" >
+                        <p style={{textAlign: 'center'}}>
                             <span>切　　　結　　　書</span></p>
                         <p class="content2" >
                             <span>因</span><span>保管不慎遺失貴局所核發之　</span>
@@ -346,7 +346,7 @@ class LicLoseApp extends Component {
             <tbody>
                 <tr>
                     <td id="content_1">
-                        <p id="title" class="MsoNormal">
+                        <p style={{textAlign: 'center'}}>
                             <span>執照遺失申請書</span></p>
                         <p class="content2" >
                             <span>因</span><span>保管不慎遺失貴局所核發之　</span>

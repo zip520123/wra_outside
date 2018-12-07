@@ -111,11 +111,11 @@ class WaterKeepView extends Component {
                         <Panel.Title componentClass="h3">檔案下載</Panel.Title>
                         </Panel.Heading>
                         <Panel.Body>
-                            <DownloadLink url="https://www.wratb.gov.tw/media/2032/新北市政府水土保持計畫行政審核表.pdf" name="新北市政府水土保持計畫行政審核表.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/2031/新北市政府簡易水土保持申報書審核程序標準作業流程說明.pdf" name="新北市政府簡易水土保持申報書審核程序標準作業流程說明.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/2030/新北市政府簡易水土保持申報書審核標準作業流程圖.pdf" name="新北市政府簡易水土保持申報書審核標準作業流程圖.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/2029/新北市政府簡易水土保持申報書審核標準作業程序.pdf" name="新北市政府簡易水土保持申報書審核標準作業程序.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/2028/簡易水土保持申報書.pdf" name="簡易水土保持申報書.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/2032/新北市政府水土保持計畫行政審核表" name="新北市政府水土保持計畫行政審核表" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/2031/新北市政府簡易水土保持申報書審核程序標準作業流程說明" name="新北市政府簡易水土保持申報書審核程序標準作業流程說明" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/2030/新北市政府簡易水土保持申報書審核標準作業流程圖" name="新北市政府簡易水土保持申報書審核標準作業流程圖" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/2029/新北市政府簡易水土保持申報書審核標準作業程序" name="新北市政府簡易水土保持申報書審核標準作業程序" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/2028/簡易水土保持申報書" name="簡易水土保持申報書" />
                         </Panel.Body>
                     </Panel>
                 </Col>
@@ -161,9 +161,9 @@ class WaterKeepView extends Component {
                     <Panel.Title componentClass="h3">檔案下載</Panel.Title>
                     </Panel.Heading>
                     <Panel.Body>
-                        <DownloadLink url="https://www.wratb.gov.tw/media/2035/申請書範本.pdf" name="申請書範本.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/2034/空白申請書.pdf" name="空白申請書.pdf" />
-                        <DownloadLink url="https://www.wratb.gov.tw/media/2033/標準流程.pdf" name="標準流程.pdf" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/2035/申請書範本" name="申請書範本" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/2034/空白申請書" name="空白申請書" />
+                        <DownloadLink url="https://www.wratb.gov.tw/media/2033/標準流程" name="標準流程" />
                     </Panel.Body>
                 </Panel>
             </Col>

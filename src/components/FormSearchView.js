@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Route } from 'react-router-dom'
+import { DivLink ,ABlank} from './ListBlock'
 import { BannerView } from './HomePage.js'
 import GoBackView from './GoBackView'
-var style = {width : '32%' ,
+
+class FormSearchView extends Component {
+    clickHandler = (e) => {
+        this.props.history.goBack()
+    }
+    cellStyle = {width : '32%' ,
         height : '99%' ,
         float: 'left',
         backgroundColor:'#2c4e4c' , 
@@ -19,21 +25,30 @@ var style = {width : '32%' ,
         justifyContent: 'center',
         alignItems: 'center'
         }
-class FormSearchView extends Component {
-    clickHandler = (e) => {
-        this.props.history.goBack()
+    centerTextStyle = {
+        transform: 'translateY(1000%)'
     }
     render() {
-        var centerTextStyle = {
-            transform: 'translateY(1000%)'
-        }
         return (<>
-        <div style={style}>
-                <h1 style={centerTextStyle}>申辦進度查詢</h1>
-            </div>
-            <BannerView />
-            <GoBackView clickHandler={this.clickHandler}></GoBackView>
+            
+            <Route
+                exact
+                path={this.props.match.path}
+                render={this.defaultLayer}
+            />
+            
         </>)
     }
+    defaultLayer = () => {
+        return <>
+
+        <div style={this.cellStyle}>
+        <a style={{color: 'white'}} href={`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/search`} target="_blank" rel="noopener noreferrer"><h1 style={this.centerTextStyle}>申辦進度查詢</h1></a>
+
+        </div>
+        <BannerView />
+        <GoBackView clickHandler={this.clickHandler}></GoBackView></>
+    }
+ 
 }
 export default FormSearchView

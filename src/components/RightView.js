@@ -1,8 +1,21 @@
 import React, { Component } from 'react';
-import {PageHeader, Panel , Row , Col , Button} from 'react-bootstrap'
+import {PageHeader, Panel , Row , Col ,Label } from 'react-bootstrap'
 
 export const DownloadLink = ({url , name}) => (
-    <div><a href={url} target="_blank" rel="noopener noreferrer" download><h4>{name}</h4></a></div>
+    //<div><a href={url} target="_blank" rel="noopener noreferrer" download><h4>{name}</h4></a></div>
+    <div>
+        <h4>{name}{' '}
+        <a style={{textDecoration: 'none'}} href={`/files/doc/${name}.doc`} target="_blank" rel="noopener noreferrer" download> 
+            <Label bsStyle="primary">Doc</Label>{' '}
+        </a>
+        <a style={{textDecoration: 'none'}} href={`/files/pdf/${name}.pdf`} target="_blank" rel="noopener noreferrer" download>
+            <Label bsStyle="danger">Pdf</Label>{' '}
+        </a>
+        <a style={{textDecoration: 'none'}} href={`/files/odt/${name}.odt`} target="_blank" rel="noopener noreferrer" download>
+            <Label bsStyle="default">Odt</Label>
+        </a>
+        </h4>
+    </div>
   )
 export const PanelView = ({title , body , button}) => (
                     <Panel bsStyle="primary">
@@ -113,16 +126,16 @@ class RightView extends Component {
                         <Panel.Title componentClass="h3">肆、作業內容：</Panel.Title>
                         </Panel.Heading>
                         <Panel.Body>流程圖說明：如後附件。
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1861/建造執照-變更設計-設計建築師簽證負責項目表.pdf" name="建造執照（變更設計）設計建築師簽證負責項目表.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1860/建築師簽證案件自主檢查表.pdf" name="建築師簽證案件自主檢查表.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1859/建築物結構與設備專業技師簽證報告.pdf" name="建築物結構與設備專業技師簽證報告.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1858/結構抽查項目表.pdf" name="結構抽查項目表.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1857/拆除同意書.pdf" name="拆除同意書.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1856/違章建物自行拆除切結書.pdf" name="違章建物自行拆除切結書.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1855/加強山坡地建築管理與技術規範檢核表.pdf" name="加強山坡地建築管理與技術規範檢核表.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1854/公寓大廈規約草約.pdf" name="公寓大廈規約草約.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1853/建造執照作業流程圖.pdf" name="建造執照作業流程圖.pdf" />
-                            <DownloadLink url="https://www.wratb.gov.tw/media/1852/山坡地雜或雜併建照申請案加強查核表.pdf" name="山坡地雜或雜併建照申請案加強查核表.pdf" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1861/建造執照-變更設計-設計建築師簽證負責項目表" name="建造執照（變更設計）設計建築師簽證負責項目表" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1860/建築師簽證案件自主檢查表" name="建築師簽證案件自主檢查表" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1859/建築物結構與設備專業技師簽證報告" name="建築物結構與設備專業技師簽證報告" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1858/結構抽查項目表" name="結構抽查項目表" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1857/拆除同意書" name="拆除同意書" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1856/違章建物自行拆除切結書" name="違章建物自行拆除切結書" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1855/加強山坡地建築管理與技術規範檢核表" name="加強山坡地建築管理與技術規範檢核表" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1854/公寓大廈規約草約" name="公寓大廈規約草約" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1853/建造執照作業流程圖" name="建造執照作業流程圖" />
+                            <DownloadLink url="https://www.wratb.gov.tw/media/1852/山坡地雜或雜併建照申請案加強查核表" name="山坡地雜或雜併建照申請案加強查核表" />
                         </Panel.Body>
                     </Panel>
                   </Col>
@@ -173,16 +186,16 @@ class RightView extends Component {
                                 <Panel.Title componentClass="h3">肆、作業內容：</Panel.Title>
                                 </Panel.Heading>
                                 <Panel.Body>流程圖說明：如後附件。
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1861/建造執照-變更設計-設計建築師簽證負責項目表.pdf" name="建造執照（變更設計）設計建築師簽證負責項目表.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1860/建築師簽證案件自主檢查表.pdf" name="建築師簽證案件自主檢查表.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1859/建築物結構與設備專業技師簽證報告.pdf" name="建築物結構與設備專業技師簽證報告.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1858/結構抽查項目表.pdf" name="結構抽查項目表.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1857/拆除同意書.pdf" name="拆除同意書.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1856/違章建物自行拆除切結書.pdf" name="違章建物自行拆除切結書.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1855/加強山坡地建築管理與技術規範檢核表.pdf" name="加強山坡地建築管理與技術規範檢核表.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1854/公寓大廈規約草約.pdf" name="公寓大廈規約草約.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1853/建造執照作業流程圖.pdf" name="建造執照作業流程圖.pdf" />
-                                    <DownloadLink url="https://www.wratb.gov.tw/media/1852/山坡地雜或雜併建照申請案加強查核表.pdf" name="山坡地雜或雜併建照申請案加強查核表.pdf" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1861/建造執照-變更設計-設計建築師簽證負責項目表" name="建造執照（變更設計）設計建築師簽證負責項目表" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1860/建築師簽證案件自主檢查表" name="建築師簽證案件自主檢查表" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1859/建築物結構與設備專業技師簽證報告" name="建築物結構與設備專業技師簽證報告" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1858/結構抽查項目表" name="結構抽查項目表" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1857/拆除同意書" name="拆除同意書" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1856/違章建物自行拆除切結書" name="違章建物自行拆除切結書" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1855/加強山坡地建築管理與技術規範檢核表" name="加強山坡地建築管理與技術規範檢核表" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1854/公寓大廈規約草約" name="公寓大廈規約草約" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1853/建造執照作業流程圖" name="建造執照作業流程圖" />
+                                    <DownloadLink url="https://www.wratb.gov.tw/media/1852/山坡地雜或雜併建照申請案加強查核表" name="山坡地雜或雜併建照申請案加強查核表" />
                                 </Panel.Body>
                             </Panel>
                         </Col>

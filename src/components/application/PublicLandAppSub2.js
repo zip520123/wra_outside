@@ -5,7 +5,7 @@ class PublicLandAppSub2 extends Component {
         return <><table id="public_land_consolidation" class="MsoNormalTable" border="1">
         <tbody>
             <tr>
-                <td id="title" colspan="11" valign="top">
+                <td id="PublicLandAppSub1_title" colspan="11" valign="top">
                     <p class="MsoNormal"><span id="title1">經濟部水利署臺北水源特定區管理局<b>公有地合併使用證明書</b></span>
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -180,7 +180,7 @@ class PublicLandAppSub2 extends Component {
                 </td>
             </tr>
             <tr>
-                <td id="apply_person" rowspan="4">
+                <td id="PublicLandAppSub1_apply_person" rowspan="4">
                     <p><b><span>&nbsp;</span></b></p>
                     <p><b><span>申</span></b></p>
                     <p><b><span>&nbsp;</span></b></p>
@@ -188,17 +188,17 @@ class PublicLandAppSub2 extends Component {
                     <p><b><span>&nbsp;</span></b></p>
                     <p><b><span>人</span></b></p>
                 </td>
-                <td id="name1" rowspan="2">
+                <td id="PublicLandAppSub1_name1" rowspan="2">
                     <p><span>姓</span></p>
                     <p><span>名</span></p>
                 </td>
-                <td id="name2" colspan="2" rowspan="2">
+                <td id="PublicLandAppSub1_name2" colspan="2" rowspan="2">
                     <p><span>&nbsp;{this.props.Name}</span></p>
                 </td>
-                <td id="birth1">
+                <td id="PublicLandAppSub1_birth1">
                     <p><span>出生年月日</span></p>
                 </td>
-                <td id="birth2">
+                <td id="PublicLandAppSub1_birth2">
                     <p><span>&nbsp;{this.props.BirthdayYear}年{this.props.BirthdayMonth}月{this.props.BirthdayDay }日</span></p>
                 </td>
                 <td id="description1" rowspan="4">
@@ -226,27 +226,27 @@ class PublicLandAppSub2 extends Component {
                 </td>
             </tr>
             <tr>
-                <td id="id1">
+                <td id="PublicLandAppSub1_id1">
                     <p><span>身分證編號</span></p>
                 </td>
-                <td id="id2">
+                <td id="PublicLandAppSub1_id2">
                     <p><span>&nbsp;{this.props.Identity}</span></p>
                 </td>
             </tr>
             <tr>
-                <td id="phone1">
+                <td id="PublicLandAppSub1_phone1">
                     <p><span>電話</span></p>
                 </td>
-                <td id="phone2" colspan="4">
+                <td id="PublicLandAppSub1_phone2" colspan="4">
                     <p class="MsoNormal"><span>&nbsp;{this.props.Phone }</span></p>
                 </td>
             </tr>
             <tr>
-                <td id="address1">
+                <td id="PublicLandAppSub1_address1">
                     <p><span>住</span></p>
                     <p><span>址</span></p>
                 </td>
-                <td id="address2" colspan="4">
+                <td id="PublicLandAppSub1_address2" colspan="4">
                     <p class="MsoNormal"><span>&nbsp;{this.props.Address}</span></p>
                 </td>
             </tr>
@@ -290,15 +290,15 @@ class PublicLandAppSub2 extends Component {
                 <td id="picture" colspan="10" rowspan="4">
                     <p class="MsoNormal">
                         <span>附<span>&nbsp;</span>圖：</span></p>
-                    <p id="rule">
+                    <p >
                         <span>比例尺：１／</span></p>
                 </td>
-                <td id="remark1">
+                <td id="PublicLandAppSub1_remark1">
                     <p><span>備<span lang="EN-US">&nbsp;&nbsp;&nbsp;</span>註</span></p>
                 </td>
             </tr>
             <tr>
-                <td id="remark2">
+                <td id="PublicLandAppSub1_remark2">
                     <p class="MsoNormal"><span>&nbsp;</span></p>
                 </td>
             </tr>
