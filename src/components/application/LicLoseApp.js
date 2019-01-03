@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button,Row, Col,PageHeader , Form ,FormGroup,FormControl,ControlLabel} from 'react-bootstrap'
+import {Button,Row, Col,PageHeader , Form ,FormGroup,FormControl,ControlLabel, Modal} from 'react-bootstrap'
 import DatePicker from "react-datepicker";
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
@@ -8,7 +8,8 @@ class LicLoseApp extends Component {
     constructor(props , context){
         super(props, context)
         this.state = {
-            selectDate: new Date()
+            selectDate: new Date(),
+            showCheckModal : false
         }
     }
     checkButton = () => {
@@ -36,6 +37,16 @@ class LicLoseApp extends Component {
         })
 
     }
+    showModal = () => {
+        this.setState({showCheckModal : true})
+    }
+    closeModal = () => {
+        this.setState({showCheckModal : false})
+    }
+    modalSubmit = () => {
+        let form = document.getElementById('form') 
+        form.submit()
+    }
     render(){
         const selectDate = this.state.selectDate
         return <><div className='marginWrap'>
@@ -45,7 +56,7 @@ class LicLoseApp extends Component {
         <PageHeader style={{textAlign: 'center'}}> 執照遺失切結書
         <small onClick={ this.props.history.goBack }> 回上一頁</small></PageHeader>
 
-            <Form style={{fontSize : '18px'}} action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/LicenseDeclaration`} method="post" accept-charset="UTF-8" horizontal>
+            <Form id="form" style={{fontSize : '18px'}} action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/LicenseDeclaration`} method="post" accept-charset="UTF-8" horizontal>
                     <Col componentClass={ControlLabel} smOffset={1}>
                         申請人 (*為必填欄位)
                     </Col>
@@ -310,6 +321,7 @@ class LicLoseApp extends Component {
                         </Col>
                         </FormGroup>
                         <Col xs={10} xsOffset={1} md={12} mdOffset={0}>
+                        <hr/>
         <div id="tableDiv" style={{width : '780px' , margin: '0 auto'}}>
         <table id="content" class="MsoNormalTable" border="0">
             <tbody>
@@ -375,7 +387,8 @@ class LicLoseApp extends Component {
         </div>
                         </Col>
         <div style={{ maxWidth: 400 , margin: '0 auto 10px' }}>
-            <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block type="submit" disabled={this.checkButton()}>送出</Button>
+            {/* <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block type="submit" disabled={this.checkButton()}>送出</Button> */}
+            <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block disabled={this.checkButton()} onClick={e=>this.showModal()}>送出</Button>
             <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={this.printButtonClick} block>
                 列印切結書
             </Button>
@@ -386,6 +399,16 @@ class LicLoseApp extends Component {
             </Form>
             </Col>
         </Row>
+        <Modal show={this.state.showCheckModal} onHide={this.closeModal}>
+                <Modal.Header closeButton>
+                    <Modal.Title>確定送出？</Modal.Title>
+                </Modal.Header>
+                
+                <Modal.Footer>
+                    <Button onClick={this.modalSubmit} bsStyle="primary">確定</Button>
+                    <Button onClick={this.closeModal}>取消</Button>
+                </Modal.Footer>
+            </Modal>
         </div></>
     }
 }

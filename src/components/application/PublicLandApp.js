@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Row,Col,PageHeader,Form,ControlLabel,FormControl,FormGroup,Checkbox,Button} from 'react-bootstrap'
+import {Row,Col,PageHeader,Form,ControlLabel,FormControl,FormGroup,Modal,Button} from 'react-bootstrap'
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import PublicLandAppSub1 from './PublicLandAppSub1'
@@ -9,7 +9,8 @@ class PublicLandApp extends Component {
     constructor(props , context){
         super(props, context)
         this.state = {
-            selectDate: new Date()
+            selectDate: new Date(),
+            showCheckModal : false
         }
     }
     readOnlyCheckBox = (state) =>{
@@ -29,14 +30,23 @@ class PublicLandApp extends Component {
 
         })
     }
-    
+    showModal = () => {
+        this.setState({showCheckModal : true})
+    }
+    closeModal = () => {
+        this.setState({showCheckModal : false})
+    }
+    modalSubmit = () => {
+        let form = document.getElementById('form') 
+        form.submit()
+    }
     render(){
         const selectDate = this.state.selectDate
         return <><div className='marginWrap'><Row>
         <Col xs={12} xsOffset={0} md={12} mdOffset={0}>
         <PageHeader style={{textAlign: 'center'}}> 公有畸零地合併使用申請書
         <small onClick={ this.props.history.goBack }> 回上一頁</small></PageHeader>
-        <Form style={{fontSize : '18px'}} action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/CombineFloorForm`} method="post" accept-charset="UTF-8" inline>
+        <Form id="form" style={{fontSize : '18px'}} action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/CombineFloorForm`} method="post" accept-charset="UTF-8" inline>
             <h4>公有 (*為必填欄位)</h4>
             <FormGroup bsSize="lg" controlId="">
             <ControlLabel>*土地標示</ControlLabel>{' '}
@@ -371,7 +381,7 @@ class PublicLandApp extends Component {
                     <FormControl name="Depth" onChange={(e) =>{
                         this.setState({Depth : e.target.value})
                     }}/>公尺
-
+            <hr/>
             <Col xs={10} xsOffset={1} md={12} mdOffset={0}>
             <div id="tableDiv" style={{width : '780px' , margin: '0 auto'}}>
                 <PublicLandAppSub1 {...this.state} />
@@ -386,11 +396,11 @@ class PublicLandApp extends Component {
             <div id="tableDiv3" style={{width : '780px' , margin: '0 auto'}}>
                 <PublicLandAppSub3 {...this.state} />
             </div>
+            <hr/>
             </Col>
-            
-                
-            <div style={{ maxWidth: 400 , margin: '0 auto 10px' }}>
-                <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block type="submit" disabled={this.checkButton()}>送出</Button>
+            <div style={{ maxWidth: 400 , margin: '0px auto 10px'}}>
+            <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block disabled={this.checkButton()} onClick={e=>this.showModal()}>送出</Button>
+                {/* <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block type="submit" disabled={this.checkButton()}>送出</Button> */}
                 <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={e=>{this.printButtonClick('tableDiv')}} block>
                     列印第1頁
                 </Button>
@@ -405,6 +415,16 @@ class PublicLandApp extends Component {
         </Form>
         </Col>
         </Row>
+        <Modal show={this.state.showCheckModal} onHide={this.closeModal}>
+                <Modal.Header closeButton>
+                    <Modal.Title>確定送出？</Modal.Title>
+                </Modal.Header>
+                
+                <Modal.Footer>
+                    <Button onClick={this.modalSubmit} bsStyle="primary">確定</Button>
+                    <Button onClick={this.closeModal}>取消</Button>
+                </Modal.Footer>
+            </Modal>
             </div></>
     }
 }

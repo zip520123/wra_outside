@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button,Checkbox,Row, Col,PageHeader , Form ,FormGroup,FormControl,ControlLabel} from 'react-bootstrap'
+import {Button,Checkbox,Row, Col,PageHeader , Form ,FormGroup,FormControl,ControlLabel,Modal} from 'react-bootstrap'
 import './UseLinceseApplication.css'
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
@@ -25,6 +25,16 @@ class UseLinceseApplication extends Component {
             pdf.save("download.pdf");
         })
     }
+    showModal = () => {
+        this.setState({showCheckModal : true})
+    }
+    closeModal = () => {
+        this.setState({showCheckModal : false})
+    }
+    modalSubmit = () => {
+        let form = document.getElementById('form') 
+        form.submit()
+    }
     render() {
         return <><div className='marginWrap'>
         <Row>
@@ -32,7 +42,7 @@ class UseLinceseApplication extends Component {
             <PageHeader style={{textAlign: 'center'}}> 使用執照存根聯申請書
  <small onClick={ this.props.history.goBack }> 回上一頁</small></PageHeader>
  <h4 >建物座落地址</h4>
- <Form style={{fontSize : '18px'}} action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/OwnerLicense`} method="post" accept-charset="UTF-8" inline>
+ <Form id="form" style={{fontSize : '18px'}} action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/OwnerLicense`} method="post" accept-charset="UTF-8" inline>
     <FormGroup bsSize="lg" controlId="">
         <ControlLabel>整編前:</ControlLabel>{' '}
         <FormControl componentClass="select" placeholder="" name="BCDistrict" onChange={e => {this.setState({BCDistrict : e.target.value})}}>
@@ -253,7 +263,7 @@ class UseLinceseApplication extends Component {
           this.setState({ViceFax  : e.target.value})
         }}/>
     </FormGroup>
-    
+    <hr/>
     <div id="tableDiv" style={{width : '780px' , margin:'0 auto'}}>
     <div >
                     <p class="MsoNormal" id="MsoNormal_title">
@@ -447,7 +457,8 @@ class UseLinceseApplication extends Component {
     </div>
 
     <div style={{ maxWidth: 400 , margin: '0 auto 10px' }}>
-        <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block type="submit" disabled={this.checkButton()}>送出</Button>
+        {/* <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block type="submit" disabled={this.checkButton()}>送出</Button> */}
+        <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block disabled={this.checkButton()} onClick={e=>this.showModal()}>送出</Button>
         <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={this.printButtonClick} block>
                 列印
             </Button>
@@ -455,6 +466,16 @@ class UseLinceseApplication extends Component {
     </Form>
     </Col>
     </Row>
+    <Modal show={this.state.showCheckModal} onHide={this.closeModal}>
+                <Modal.Header closeButton>
+                    <Modal.Title>確定送出？</Modal.Title>
+                </Modal.Header>
+                
+                <Modal.Footer>
+                    <Button onClick={this.modalSubmit} bsStyle="primary">確定</Button>
+                    <Button onClick={this.closeModal}>取消</Button>
+                </Modal.Footer>
+            </Modal>
     </div></>
     }
 }

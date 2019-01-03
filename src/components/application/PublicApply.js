@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Row,Col,PageHeader,Form,ControlLabel,FormControl,FormGroup,Table,Button} from 'react-bootstrap'
+import {Row,Col,PageHeader,Form,ControlLabel,FormControl,FormGroup,Table,Button,Modal} from 'react-bootstrap'
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import { FieldGroup } from './../SewageApplication'
@@ -7,6 +7,7 @@ class PublicApply extends Component {
     constructor(props , context){
         super(props, context)
         this.state = {
+            showCheckModal : false
         }
     }
     readOnlyCheckBox = (state) =>{
@@ -25,14 +26,24 @@ class PublicApply extends Component {
             pdf.save("download.pdf");
         })
     }
+    showModal = () => {
+        this.setState({showCheckModal : true})
+    }
+    closeModal = () => {
+        this.setState({showCheckModal : false})
+    }
+    modalSubmit = () => {
+        let form = document.getElementById('form') 
+        form.submit()
+    }
     render() {
         return <><div className='marginWrap'>
         <Row>
             <Col xs={12} xsOffset={0} md={12} mdOffset={0}>
             <PageHeader style={{textAlign: 'center'}}>都市計畫使用分區(或公共設施用地)證明申請資料填報作業
             <small onClick={ this.props.history.goBack }> 回上一頁</small></PageHeader>
-            
-            <Form style={{fontSize : '18px'}} action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/CityplanForm`} method="post" accept-charset="UTF-8" horizontal>
+
+            <Form id="form" style={{fontSize : '18px'}} action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/CityplanForm`} method="post" accept-charset="UTF-8" horizontal>
             <Col componentClass={ControlLabel} smOffset={1}>
                 請在此輸入申請者之基本資料(*為必填欄位)
             </Col>
@@ -230,10 +241,12 @@ class PublicApply extends Component {
                     <td id="content_2" colspan="5">二、所附地籍圖等資料將不予歸還。</td>
                 </tr>
             </table>
+            <hr/>
             </Col>
-
-            <div style={{ maxWidth: 400 , margin: '0 auto 10px' }}>
-                <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block type="submit" disabled={this.checkButton()}>送出</Button>
+            
+            <div style={{ maxWidth: 400 , margin: '0 auto 100px' , marginTop:'10px'}}>
+                {/* <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block type="submit" disabled={this.checkButton()}>送出</Button> */}
+                <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block disabled={this.checkButton()} onClick={e=>this.showModal()}>送出</Button>
                 <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={this.printButtonClick} block>
                     列印
                 </Button>
@@ -241,6 +254,16 @@ class PublicApply extends Component {
             </Form>
             </Col>
         </Row>
+        <Modal show={this.state.showCheckModal} onHide={this.closeModal}>
+                <Modal.Header closeButton>
+                    <Modal.Title>確定送出？</Modal.Title>
+                </Modal.Header>
+                
+                <Modal.Footer>
+                    <Button onClick={this.modalSubmit} bsStyle="primary">確定</Button>
+                    <Button onClick={this.closeModal}>取消</Button>
+                </Modal.Footer>
+            </Modal>
         </div></>
     }
 }

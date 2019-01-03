@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Row,Col,PageHeader,Form,ControlLabel,FormControl,FormGroup,Checkbox,Button} from 'react-bootstrap'
+import {Row,Col,PageHeader,Form,ControlLabel,FormControl,FormGroup,Checkbox,Button, Modal} from 'react-bootstrap'
 import './PhoCopyDraw.css'
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
@@ -7,6 +7,7 @@ class PhoCopyDraw extends Component {
     constructor(props , context){
         super(props, context)
         this.state = {
+            showCheckModal : false
         }
     }
     readOnlyCheckBox = (state) =>{
@@ -25,6 +26,16 @@ class PhoCopyDraw extends Component {
             pdf.save("download.pdf");
         })
     }
+    showModal = () => {
+        this.setState({showCheckModal : true})
+    }
+    closeModal = () => {
+        this.setState({showCheckModal : false})
+    }
+    modalSubmit = () => {
+        let form = document.getElementById('form') 
+        form.submit()
+    }
     render(){
         return <div className='marginWrap'>
         <Row>
@@ -32,7 +43,7 @@ class PhoCopyDraw extends Component {
             <PageHeader style={{textAlign: 'center'}}> 影印圖說申請書
             <small onClick={ this.props.history.goBack }> 回上一頁</small></PageHeader>
             <h4 >建物座落地址</h4>
-            <Form style={{fontSize : '18px'}} action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/PrintPicForm`} method="post" accept-charset="UTF-8" inline>
+            <Form id="form" style={{fontSize : '18px'}} action= {`${process.env.REACT_APP_DEVELOPMENT_JASON_IP}/api/SewageForm/PrintPicForm`} method="post" accept-charset="UTF-8" inline>
                 <FormGroup bsSize="lg" controlId="">
                     <ControlLabel>整編前:</ControlLabel>{' '}
                     <FormControl componentClass="select" placeholder="" name="BCDistrict" onChange={(e)=>{
@@ -294,6 +305,7 @@ class PhoCopyDraw extends Component {
                     }}/>
                 </FormGroup>
         <Col xs={10} xsOffset={1} md={12} mdOffset={0}>
+        <hr/>
             <div id="tableDiv" style={{width : '780px' , margin: '0 auto'}}>
         <table id="table_copy" border="1" width="100%">
             <caption style={{textAlign: 'center'}}>影印圖說申請書</caption>
@@ -503,7 +515,8 @@ class PhoCopyDraw extends Component {
         </div>
         </Col>
         <div style={{ maxWidth: 400 , margin: '0 auto 10px' }}>
-            <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block type="submit" disabled={this.checkButton()}>送出</Button>
+            {/* <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block type="submit" disabled={this.checkButton()}>送出</Button> */}
+            <Button bsStyle="primary" style={{height: '50px' ,fontSize: '18px'}} block disabled={this.checkButton()} onClick={e=>this.showModal()}>送出</Button>
             <Button bsSize="large" style={{height: '50px' ,fontSize: '18px'}} onClick={this.printButtonClick} block>
                 列印
             </Button>
@@ -512,6 +525,16 @@ class PhoCopyDraw extends Component {
             </Form>
             </Col>
         </Row>
+        <Modal show={this.state.showCheckModal} onHide={this.closeModal}>
+                <Modal.Header closeButton>
+                    <Modal.Title>確定送出？</Modal.Title>
+                </Modal.Header>
+                
+                <Modal.Footer>
+                    <Button onClick={this.modalSubmit} bsStyle="primary">確定</Button>
+                    <Button onClick={this.closeModal}>取消</Button>
+                </Modal.Footer>
+            </Modal>
         </div>
     }
 }
