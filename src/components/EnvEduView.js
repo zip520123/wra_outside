@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
 import { Route ,Link} from 'react-router-dom'
-import { BannerView } from './HomePage.js'
-import GoBackView from './GoBackView'
+import { RWDBannerView } from './HomePage.js'
+import { RWDGoBackView } from './GoBackView'
 import { DivLink } from './ListBlock'
-import { PageHeader  } from 'react-bootstrap'
+import { PageHeader, Col,Row } from 'react-bootstrap'
 import SewageApplication from './SewageApplication'
 import EnvEduApplication from './EnvEduApplication'
 class EnvEduView extends Component {
     cellStyle = {
         width: '100%',
-        height : '49%',
+        height : '100%',
         backgroundColor:'#2c4e4c',
         color:'white',
         borderStyle: 'solid',
         borderWidth: '5px',
         borderColor: '#d1c0a6',
         padding : '20px',
-        marginTop: '10px',
-        marginLeft: '10px',
-        marginRight: '0px',
-        marginBottom: '10px',
     }
     centerTextStyle = {
         position: 'relative',
@@ -28,11 +24,11 @@ class EnvEduView extends Component {
         margin: '0px',
         textAlign: 'center'
     }
+    marginStyle = {margin: '10px',height: '49%'}
     clickHandler = (e) => {
         this.props.history.goBack()
     }
     render() {
-        
         return (<>
             <Route path={`${this.props.match.path}/:topicId`} component={this.topicIdLayer} />
             <Route
@@ -40,34 +36,27 @@ class EnvEduView extends Component {
                 path={this.props.match.path}
                 render={this.defaultLayer}
             />
-            {/* <div style={{width : '33%',float: 'left',height: '100%'}}>
-                <div style={cellStyle}>
-                    <h1 style={centerTextStyle}>
-                    <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表" name="環境教育課程活動申請表" />
-                    </h1>
-                </div>
-                <div style={cellStyle}>
-                <h1 style={centerTextStyle}><AWhite url="http://child.wratb.gov.tw/SewageApplication/" name='污水廠參訪申請（線上申請）'></AWhite>
-                </h1>
-                </div>
-            </div> */}
-             
-            
         </>)
-
-
     }
     defaultLayer = () => {
-       return <><div style={{width : '33%',float: 'left',height: '100%'}}>
-                <DivLink name='環境教育課程活動申請表' match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
-                <Link to={`${this.props.match.url}/污水廠參訪申請（線上申請）`}>
-                    <div style={this.cellStyle}>
-                        <h1 style={this.centerTextStyle}>污水廠參訪申請<br />（線上申請）</h1>
-                    </div> 
-                </Link>
-            </div>
-            <BannerView />
-            <GoBackView clickHandler={this.clickHandler}></GoBackView></>
+       return <>
+            <Row style={{height:'100%'}}>
+                <Col xs={12} md={4} style={{height : '100%'}}>
+                    <div style={this.marginStyle}>
+                        <DivLink name='環境教育課程活動申請表' match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                    </div>
+                    <div style={this.marginStyle}>
+                        <Link to={`${this.props.match.url}/污水廠參訪申請（線上申請）`}>
+                            <div style={this.cellStyle}>
+                                <h1 style={this.centerTextStyle}>污水廠參訪申請<br />（線上申請）</h1>
+                            </div> 
+                        </Link>
+                    </div>
+                </Col>
+                <RWDBannerView />
+                <RWDGoBackView clickHandler={this.clickHandler} />
+            </Row>
+            </>
     }
     topicIdLayer = ({match})=>{
         const id = match.params.topicId
