@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { BannerView } from './HomePage.js'
-import GoBackView from './GoBackView'
-import { AWhite } from './ListBlock'
+import { RWDBannerView } from './HomePage.js'
+import { RWDGoBackView } from './GoBackView'
+import { Row , Col } from 'react-bootstrap'
 class FilePageView extends Component {
     clickHandler = (e) => {
         this.props.history.goBack()
@@ -31,46 +31,44 @@ class FilePageView extends Component {
     render() {
         
         return <>
-            <div style={this.div33widthStyle}>
-            <div style={this.cellStyle}>
-                <h1 style={this.centerTextStyle}>
-                檔卷應用申請書
-                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表" name="檔卷應用申請書" /> */}
-                </h1>
-            </div>
-            <div style={this.cellStyle}>
-                <h1 style={this.centerTextStyle}>
-                檔卷應用委任書
-                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表" name="環境教育課程活動申請表" /> */}
-                </h1>
-            </div>
-            <div style={this.cellStyle}>
-                <h1 style={this.centerTextStyle}>
-                申請檔卷應用流程圖
-                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表" name="環境教育課程活動申請表" /> */}
-                </h1>
-            </div>
-            <div style={this.cellStyle}>
-                <h1 style={this.centerTextStyle}>
-                提供政府資訊重製或複製收費表準表
-                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表" name="環境教育課程活動申請表" /> */}
-                </h1>
-            </div>
-            <div style={this.cellStyle}>
-                <h1 style={this.centerTextStyle}>
-                檔卷應用申請書填寫範例
-                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表" name="環境教育課程活動申請表" /> */}
-                </h1>
-            </div>
-            <div style={this.cellStyle}>
-                <h1 style={this.centerTextStyle}>
-                檔案應用服務十問
-                {/* <AWhite url="https://www.wratb.gov.tw/media/2016/環境教育課程活動申請表" name="環境教育課程活動申請表" /> */}
-                </h1>
-            </div>
-        </div>
-            <BannerView ></BannerView>
-            <GoBackView clickHandler={this.clickHandler}></GoBackView>
+            
+            <Row style={{height:'100%'}}>
+                <Col xs={12} md={4} style={{height : '100%'}}>
+                    <div style={this.cellStyle}>
+                        <h1 style={this.centerTextStyle}>
+                        檔卷應用申請書
+                        </h1>
+                    </div>
+                    <div style={this.cellStyle}>
+                        <h1 style={this.centerTextStyle}>
+                        檔卷應用委任書
+                        </h1>
+                    </div>
+                    <div style={this.cellStyle}>
+                        <h1 style={this.centerTextStyle}>
+                        申請檔卷應用流程圖
+                        </h1>
+                    </div>
+                    <div style={this.cellStyle}>
+                        <h1 style={this.centerTextStyle}>
+                        提供政府資訊重製或複製收費表準表
+                        </h1>
+                    </div>
+                    <div style={this.cellStyle}>
+                        <h1 style={this.centerTextStyle}>
+                        檔卷應用申請書填寫範例
+                        </h1>
+                    </div>
+                    <div style={this.cellStyle}>
+                        <h1 style={this.centerTextStyle}>
+                        檔案應用服務十問
+                        </h1>
+                    </div>
+                </Col>
+            </Row>
+        
+            <RWDBannerView />
+            <RWDGoBackView clickHandler={this.clickHandler}/>
         </>
     }
 }

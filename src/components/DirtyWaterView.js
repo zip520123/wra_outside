@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
-import { BannerView } from './HomePage.js'
-import GoBackView from './GoBackView'
+import { RWDBannerView } from './HomePage.js'
+import { RWDGoBackView } from './GoBackView'
 import { DivLink } from './ListBlock'
 import {PageHeader, Panel , Row , Col } from 'react-bootstrap'
 import {PanelView , DownloadLink} from './RightView'
@@ -44,19 +44,16 @@ class DirtyWaterView extends Component {
     }
     defaultLayer = () => {
         return <>
-             <div style={{width : '33%',float: 'left',height: '100%'}}>
-                {/* <div style={this.cellStyle}>
-                    <h1 style={this.centerTextStyle} >
-                    <AWhite url="https://www.wratb.gov.tw/media/18063/放流水申請表.odt" name="處理水申請" />
-                    </h1>
-                </div> */}
+            <Row style={{height:'100%'}}>
+            <Col xs={12} md={4} style={{height : '100%'}}>
                 <DivLink name="處理水申請" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle} />
                 <DivLink name="既有建築物自設污水處理設施（國有土地專用）申請" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle} />
                 <DivLink name="污水下水道用戶排水設備接管" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle} />
                 <DivLink name="專用下水道納管申請" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle} />
-            </div>
-            <BannerView />
-            <GoBackView clickHandler={this.clickHandler}></GoBackView>
+            </Col>
+            <RWDBannerView />
+            <RWDGoBackView clickHandler={this.clickHandler} />
+            </Row>
         </>
     }
     topicIdLayer = ({match})=>{

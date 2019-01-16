@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { BannerView } from './HomePage.js'
-import GoBackView from './GoBackView'
-var style = {width : '32%' ,
+import { RWDBannerView } from './HomePage.js'
+import { RWDGoBackView } from './GoBackView'
+import { Row , Col } from 'react-bootstrap'
+var style = {width : '100%' ,
         height : '99%' ,
         float: 'left',
         backgroundColor:'#2c4e4c' , 
@@ -27,12 +28,15 @@ class ExampleForm extends Component {
     }
     render() {
         return (<>
-        <div style={style}>
-        <a style={{color: 'white'}} href={`https://www.wratb.gov.tw/13805/13832/意見信箱/`} target="_blank" rel="noopener noreferrer"><h1 style={this.centerTextStyle}>意見信箱</h1></a>
-                {/* <h1 style={centerTextStyle}>示範表單</h1> */}
-            </div>
-            <BannerView />
-            <GoBackView clickHandler={this.clickHandler}></GoBackView>
+        <Row style={{height:'100%'}}>
+            <Col xs={12} md={4} style={{height : '100%'}}>
+                <div style={style}>
+                    <a style={{color: 'white'}} href={`https://www.wratb.gov.tw/13805/13832/意見信箱/`} target="_blank" rel="noopener noreferrer"><h1 style={this.centerTextStyle}>意見信箱</h1></a>
+                </div>
+            </Col>
+            <RWDBannerView />
+            <RWDGoBackView clickHandler={this.clickHandler}/>
+        </Row>
         </>)
     }
 }

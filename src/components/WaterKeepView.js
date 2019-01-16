@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
-import { BannerView } from './HomePage.js'
-import GoBackView from './GoBackView'
+import { RWDBannerView } from './HomePage.js'
+import { RWDGoBackView } from './GoBackView'
 import {PageHeader, Panel , Row , Col } from 'react-bootstrap'
 import {PanelView , DownloadLink} from './RightView'
 import { DivLink } from './ListBlock'
@@ -28,11 +28,11 @@ class WaterKeepView extends Component {
         marginRight: '0px',
         marginBottom: '10px',
     }
+    
     clickHandler = (e) => {
         this.props.history.goBack()
     }
     render() {
-        
         return (<>
         <Route path={`${this.props.match.path}/:topicId`} component={this.topicIdLayer} />
             <Route
@@ -45,16 +45,18 @@ class WaterKeepView extends Component {
     }
     defaultLayer = () => {
         return <>
-             <div style={{width : '33%',float: 'left',height: '100%'}}>
-
-            <DivLink name="簡易水土保持申報書" match={this.props.match} cellStyle=     {this.cellStyle} centerTextStyle={this.centerTextStyle}>
-            </DivLink>
-            <DivLink name="山坡地土地可利用限度查定結果異議複查申請" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}>
-            </DivLink>
-                 
-            </div>
-            <BannerView />
-            <GoBackView clickHandler={this.clickHandler}></GoBackView>
+            <Row style={{height:'100%'}}>
+                <Col xs={12} md={4} style={{height : '100%'}}>
+                <DivLink name="簡易水土保持申報書" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}>
+                </DivLink>
+                <DivLink name="山坡地土地可利用限度查定結果異議複查申請" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}>
+                </DivLink>
+                    
+                </Col>
+                <RWDBannerView />
+                <RWDGoBackView clickHandler={this.clickHandler} />
+            </Row>
+            
         </>
     }
     topicIdLayer = ({match})=>{

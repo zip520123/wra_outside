@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route , Link } from 'react-router-dom'
-import { BannerView } from './HomePage.js'
-import GoBackView from './GoBackView'
+import { RWDBannerView } from './HomePage.js'
+import { RWDGoBackView } from './GoBackView'
 import { DivLink } from './ListBlock'
 import {PageHeader, Panel , Row , Col } from 'react-bootstrap'
 import {PanelView , DownloadLink} from './RightView'
@@ -25,7 +25,6 @@ class ArchView extends Component {
             />
         </>)
     }
-    div33widthStyle = {width : '33%',float: 'left',height: '100%'}
     centerTextStyle = {
         position: 'relative',
         transform: 'translateY(-50%)',
@@ -48,14 +47,17 @@ class ArchView extends Component {
         marginBottom: '10px',
     }
     defaultLayer = () => {
-        return <><div style={this.div33widthStyle}>
-        <DivLink name="建築管理-建築管理" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
-        <DivLink name="建築管理-施工管理" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
-        <DivLink name="建築管理-使用管理" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
-        <DivLink name="建築管理-其他項" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
-        </div>
-        <BannerView />
-        <GoBackView clickHandler={this.clickHandler}></GoBackView>
+        return <>
+        <Row style={{height:'100%'}}>
+            <Col xs={12} md={4} style={{height : '100%'}}>
+                <DivLink name="建築管理-建築管理" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                <DivLink name="建築管理-施工管理" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                <DivLink name="建築管理-使用管理" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+                <DivLink name="建築管理-其他項" match={this.props.match} cellStyle={this.cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
+            </Col>
+            <RWDBannerView />
+            <RWDGoBackView clickHandler={this.clickHandler} />
+        </Row>
     </>
     }
     topicIdLayer = ({match})=>{
@@ -65,37 +67,39 @@ class ArchView extends Component {
             case '建築管理-建築管理':
             cellStyle = {...this.cellStyle , height : '15.5%'} 
             return (
-                <><div style={this.div33widthStyle}>
+                <>
+                <Col xs={12} md={4} style={{height : '100%'}}>
                     <DivLink name="建造執照申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="拆除執照申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="招牌廣告及樹立廣告許可申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="現有巷道認定申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="建築線申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="無障礙生活環境宣導專頁" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
-                </div>
-                <BannerView />
-                <GoBackView clickHandler={this.clickHandler}></GoBackView>
+                </Col>
+                <RWDBannerView />
+                <RWDGoBackView clickHandler={this.clickHandler}/>
                 </>
               );
             
             case '建築管理-施工管理':
             cellStyle = {...this.cellStyle , height : '19%'} 
             return (
-                <><div style={this.div33widthStyle}>
+                <>
+                <Col xs={12} md={4} style={{height : '100%'}}>
                     <DivLink name="施工勘驗（放樣申報）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="施工勘驗（開工申報）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="施工勘驗（各層施工勘驗）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="變更起、承、監造人申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="開工、竣工展期申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
-                </div>
-                <BannerView />
-                <GoBackView clickHandler={this.clickHandler}></GoBackView>
+                </Col>
+                <RWDBannerView />
+                <RWDGoBackView clickHandler={this.clickHandler}/>
                 </>
               );
             case '建築管理-使用管理':
             cellStyle = {...this.cellStyle , height : '7.2%'} 
             return (
-                <><div style={this.div33widthStyle}>
+                <><Col xs={12} md={4} style={{height : '100%'}}>
                     <DivLink name="室內裝修許可（竣工查驗）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="室內裝修許可（書面審查）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="變更使用執照申請（竣工查驗）" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
@@ -108,23 +112,23 @@ class ArchView extends Component {
                     <DivLink name="使用執照存根申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="使用執照申請" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="使用執照更正" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
-                </div>
-                <BannerView />
-                <GoBackView clickHandler={this.clickHandler}></GoBackView>
+                </Col>
+                <RWDBannerView />
+                <RWDGoBackView clickHandler={this.clickHandler} />
                 </>
               );
             case '建築管理-其他項':
             cellStyle = {...this.cellStyle , height : '19%'} 
             return (
-                <><div style={this.div33widthStyle}>
+                <><Col xs={12} md={4} style={{height : '100%'}}>
                     <DivLink name="土地使用分區證明" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="執照圖說影印" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="公有畸零地合併使用證明" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="法定空地分割" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
                     <DivLink name="合法房屋證明" match={this.props.match} cellStyle={cellStyle} centerTextStyle={this.centerTextStyle}></DivLink>
-                </div>
-                <BannerView />
-                <GoBackView clickHandler={this.clickHandler}></GoBackView>
+                </Col>
+                <RWDBannerView />
+                <RWDGoBackView clickHandler={this.clickHandler}/>
                 </>
               );
             case '建造執照申請':
@@ -205,7 +209,7 @@ class ArchView extends Component {
             </Col>
           </Row>
           <Row>
-              <Col xs={6} md={6}>
+              <Col xs={12} md={6}>
               {/* <PanelView title="肆、作業內容： " body="流程圖說明：如後附件。" /> */}
                 <Panel bsStyle="primary">
                     <Panel.Heading>
@@ -1787,9 +1791,9 @@ return <div className='marginWrap'>
 </Row>
 </ div>
             default :
-            return <div style={this.div33widthStyle}><PageHeader>
+            return <Col xs={12} md={4} style={{height : '100%'}}><PageHeader>
             {id} <small onClick={this.clickHandler}>回上一頁</small>
-        </PageHeader></div>
+        </PageHeader></Col>
         
         }
         

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import { BannerView } from './HomePage.js'
-import GoBackView from './GoBackView'
-var style = {width : '32%' ,
+import { RWDBannerView } from './HomePage.js'
+import { Row , Col } from 'react-bootstrap'
+import { RWDGoBackView } from './GoBackView'
+var style = {width : '100%' ,
         height : '99%' ,
-        float: 'left',
+        
         backgroundColor:'#2c4e4c' , 
         color:'white',
         borderStyle: 'solid',
@@ -28,11 +28,15 @@ class WaterKeepBackView extends Component {
             transform: 'translateY(1000%)'
         }
         return (<>
-            <div style={style}>
-                <h1 style={centerTextStyle}><a style={{color: 'white'}} href="http://child.wratb.gov.tw/ct_welfare/WRAllowance" target="_blank" rel="noopener noreferrer">水源保育與回饋</a></h1>
-            </div>
-            <BannerView />
-            <GoBackView clickHandler={this.clickHandler}></GoBackView>
+            <Row style={{height:'100%'}}>
+                <Col xs={12} md={4} style={{height : '100%'}}>
+                    <div style={style}>
+                        <h1 style={centerTextStyle}><a style={{color: 'white'}} href="http://child.wratb.gov.tw/ct_welfare/WRAllowance" target="_blank" rel="noopener noreferrer">水源保育與回饋</a></h1>
+                    </div>
+                </Col>
+                <RWDBannerView />
+                <RWDGoBackView clickHandler={this.clickHandler} />
+            </Row>
         </>)
     }
 }
