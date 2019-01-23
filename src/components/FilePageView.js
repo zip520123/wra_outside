@@ -6,7 +6,6 @@ class FilePageView extends Component {
     clickHandler = (e) => {
         this.props.history.goBack()
     }
-    div33widthStyle = {width : '33%',float: 'left',height: '100%'}
     cellStyle = {
         width: '100%',
         height : '15.5%',
@@ -31,7 +30,6 @@ class FilePageView extends Component {
     render() {
         
         return <>
-            
             <Row style={{height:'100%'}}>
                 <Col xs={12} md={4} style={{height : '100%'}}>
                     <div style={this.cellStyle}>
@@ -65,10 +63,11 @@ class FilePageView extends Component {
                         </h1>
                     </div>
                 </Col>
-            </Row>
+            
         
             <RWDBannerView />
             <RWDGoBackView clickHandler={this.clickHandler}/>
+            </Row>
         </>
     }
 }

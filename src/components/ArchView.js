@@ -759,11 +759,11 @@ class ArchView extends Component {
         <Col xs={12} md={6}>
         <Panel bsStyle="primary">
                     <Panel.Heading>
-                    <Panel.Title componentClass="h3">線上申請</Panel.Title>
+                    <Panel.Title componentClass="h3">線上預約</Panel.Title>
                     </Panel.Heading>
                     <Panel.Body>
-                    <Link to={`/arch/分區證明線上申辦`} ><h4>線上申請（請點此）</h4></Link>
-                    {/* <ABlank url="http://child.wratb.gov.tw/apply/PublicApply.aspx" name="線上申請（請點此）" /> */}
+                    <Link to={`/arch/分區證明線上申辦`} ><h4>線上預約（請點此）</h4></Link>
+                    {/* <ABlank url="http://child.wratb.gov.tw/apply/PublicApply.aspx" name="線上預約（請點此）" /> */}
                     </Panel.Body>
                 </Panel>
         </Col>
@@ -817,11 +817,11 @@ class ArchView extends Component {
     <Col xs={12} md={6}>
     <Panel bsStyle="primary">
                 <Panel.Heading>
-                <Panel.Title componentClass="h3">線上申請</Panel.Title>
+                <Panel.Title componentClass="h3">線上預約</Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>
-                <Link to={`/arch/影印圖說申請書`} ><h4>線上申請（請點此）</h4></Link>
-                {/* <ABlank url="http://child.wratb.gov.tw/apply/PhoCopyDraw.aspx" name="線上申請（請點此）" /> */}
+                <Link to={`/arch/影印圖說申請書`} ><h4>線上預約（請點此）</h4></Link>
+                {/* <ABlank url="http://child.wratb.gov.tw/apply/PhoCopyDraw.aspx" name="線上預約（請點此）" /> */}
                 </Panel.Body>
             </Panel>
     </Col>
@@ -894,11 +894,11 @@ class ArchView extends Component {
     <Col xs={12} md={6}>
     <Panel bsStyle="primary">
                 <Panel.Heading>
-                <Panel.Title componentClass="h3">線上申請</Panel.Title>
+                <Panel.Title componentClass="h3">線上預約</Panel.Title>
                 </Panel.Heading>
                 <Panel.Body>
-                <Link to={`/arch/公有畸零地合併使用申請書`} ><h4>線上申請（請點此）</h4></Link>
-                {/* <ABlank url="http://child.wratb.gov.tw/apply/PublicLandApp.aspx" name="線上申請（請點此）" /> */}
+                <Link to={`/arch/公有畸零地合併使用申請書`} ><h4>線上預約（請點此）</h4></Link>
+                {/* <ABlank url="http://child.wratb.gov.tw/apply/PublicLandApp.aspx" name="線上預約（請點此）" /> */}
                 </Panel.Body>
             </Panel>
     </Col>
@@ -1131,11 +1131,11 @@ return <div className='marginWrap'>
 <Col xs={12} md={6}>
 <Panel bsStyle="primary">
             <Panel.Heading>
-            <Panel.Title componentClass="h3">線上申請</Panel.Title>
+            <Panel.Title componentClass="h3">線上預約</Panel.Title>
             </Panel.Heading>
             <Panel.Body>
-            <Link to={`/arch/法定空地分割證明申請書`} ><h4>線上申請（請點此）</h4></Link>
-            {/* <ABlank url="http://child.wratb.gov.tw/apply/LegalLandApp.aspx" name="線上申請（請點此）" /> */}
+            <Link to={`/arch/法定空地分割證明申請書`} ><h4>線上預約（請點此）</h4></Link>
+            {/* <ABlank url="http://child.wratb.gov.tw/apply/LegalLandApp.aspx" name="線上預約（請點此）" /> */}
             </Panel.Body>
         </Panel>
 </Col>
@@ -1517,11 +1517,11 @@ return <div className='marginWrap'>
 <Col xs={12} md={6}>
 <Panel bsStyle="primary">
             <Panel.Heading>
-            <Panel.Title componentClass="h3">線上申請</Panel.Title>
+            <Panel.Title componentClass="h3">線上預約</Panel.Title>
             </Panel.Heading>
             <Panel.Body>
-            <Link to={`/arch/執照遺失切結書`} ><h4>線上申請（請點此）</h4></Link>
-            {/* <ABlank url="http://child.wratb.gov.tw/apply/LicLoseApp.aspx" name="線上申請（請點此）" /> */}
+            <Link to={`/arch/執照遺失切結書`} ><h4>線上預約（請點此）</h4></Link>
+            {/* <ABlank url="http://child.wratb.gov.tw/apply/LicLoseApp.aspx" name="線上預約（請點此）" /> */}
             </Panel.Body>
         </Panel>
 </Col>
@@ -1576,10 +1576,10 @@ return <div className='marginWrap'>
 <Col xs={12} md={6}>
 <Panel bsStyle="primary">
             <Panel.Heading>
-            <Panel.Title componentClass="h3">線上申請</Panel.Title>
+            <Panel.Title componentClass="h3">線上預約</Panel.Title>
             </Panel.Heading>
             <Panel.Body>
-            <Link to={`/arch/使用執照存根聯申請書`} ><h4>線上申請（請點此）</h4></Link>
+            <Link to={`/arch/使用執照存根聯申請書`} ><h4>線上預約（請點此）</h4></Link>
             </Panel.Body>
         </Panel>
 </Col>

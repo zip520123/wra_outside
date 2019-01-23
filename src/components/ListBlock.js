@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
 import {PanelGroup,Panel} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-class Atag extends Component {
-  handleClick = (e) => {
-    e.preventDefault();
-    console.log(this.props.href)
-  }
-  render(){
-    return <div><Link to={`/form/${this.props.name}`}>{this.props.name}</Link></div>
-  }
-}
+
 const ALink = ({name , match}) => (
   <div><Link to={`${match.url}/${name}`}><h4>{name}</h4></Link></div>
 )

@@ -48,7 +48,7 @@ export const BannerView = () => (
 export const RWDBannerView = () => (
     <Col xs={12} md={4} style={{
         height : '100%',
-        
+
         maxWidth: '100%',
         maxHeight: '100%',}}>
         <div style={{
@@ -72,7 +72,7 @@ class HomePage extends Component {
             borderStyle: 'solid',
             borderWidth: '5px',
             borderColor: '#d1c0a6',
-            padding: '5%',
+            // padding: '5%',
             textAlign: 'center',
             alignItems: 'center',
             justifyContent: 'center'
