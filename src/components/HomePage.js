@@ -72,7 +72,6 @@ class HomePage extends Component {
             borderStyle: 'solid',
             borderWidth: '5px',
             borderColor: '#d1c0a6',
-            // padding: '5%',
             textAlign: 'center',
             alignItems: 'center',
             justifyContent: 'center'
@@ -80,19 +79,21 @@ class HomePage extends Component {
         var imageStyle = {
             verticalAlign: 'middle',
             maxWidth: '100%',
-            maxHeight: '100%'
+            maxHeight: '100%',
+            padding: '5%'
         }
         var marginStyle = {margin : '10px' , height : '24%'}
         return (<>
         <Row style={{height : '100%'}}>
             <Col xs={12} md={4} style={{height : '100%'}}>
-                <div style={marginStyle}>
-                    <Link to={`/arch`}>
+                <Link to={`/arch`}>
+                    <div style={marginStyle}>
                         <div style={{...rwdCell }}>
                             <img style={imageStyle} src={archButton} alt=""/>
                         </div>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
+            
                 <div style={marginStyle}>
                     <Link to={`/envEdu`}>
                         <div style={{...rwdCell }}>
