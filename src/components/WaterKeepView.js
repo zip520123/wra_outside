@@ -133,7 +133,7 @@ class WaterKeepView extends Component {
                 <PanelView title="案件說明：" body="服務說明：針對已查定之山坡地土地可利用限度，其查定結果有異議者，接受其申請複查並實地複查" />
             </Col>
             <Col xs={12} md={6}>
-            <PanelView title="申請對象：" body="土地所有權人" />
+                <PanelView title="申請對象：" body="土地所有權人" />
             </Col>
         </Row>
         <Row>
